@@ -53,14 +53,6 @@
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter andRange:(Range *)oRange;
 
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary*)toDictionary;
-
-- (void)incBy:(double)amount;
-
-- (void)decBy:(double)amount;
-
 
 @end
 

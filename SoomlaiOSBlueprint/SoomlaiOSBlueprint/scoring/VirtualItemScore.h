@@ -44,19 +44,4 @@
  */
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter andAssociatedItemId:(NSString *)oAssociatedItemId;
 
-/**
- Constructor.
- Generates an instance of `VirtualItemScore` from an `NSDictionary`.
- 
- @param dict An `NSDictionary` representation of the wanted `VirtualItemScore`.
- */
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-/**
- Converts the current `VirtualItemScore` to an `NSDictionary`.
- 
- @return This instance of `VirtualItemScore` as an `NSDictionary`.
- */
-- (NSDictionary*)toDictionary;
-
 @end
