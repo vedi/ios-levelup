@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
+		EF73CCA21932293000A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
+		EF73CCA619323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
+		EF73CCA719323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
+		EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
+		EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
 		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
 		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
 		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
@@ -50,6 +56,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF73CC9F1932292D00A171E5 /* RangeScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeScore.h; sourceTree = "<group>"; };
+		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
+		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gate.h; sourceTree = "<group>"; };
+		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gate.m; sourceTree = "<group>"; };
+		EF73CCA81932420300A171E5 /* GatesStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesStorage.h; path = data/GatesStorage.h; sourceTree = "<group>"; };
+		EF73CCA91932420300A171E5 /* GatesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesStorage.m; path = data/GatesStorage.m; sourceTree = "<group>"; };
 		EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSBlueprint.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSBlueprint-Prefix.pch"; sourceTree = "<group>"; };
@@ -94,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF73CCA319323E1B00A171E5 /* gates */ = {
+			isa = PBXGroup;
+			children = (
+				EF73CCA419323E3200A171E5 /* Gate.h */,
+				EF73CCA519323E3200A171E5 /* Gate.m */,
+			);
+			name = gates;
+			sourceTree = "<group>";
+		};
 		EFCDC71C192E1EB5001D0824 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +146,7 @@
 		EFCDC72A192E1EB5001D0824 /* SoomlaiOSBlueprint */ = {
 			isa = PBXGroup;
 			children = (
+				EF73CCA319323E1B00A171E5 /* gates */,
 				EFCDC75D192E2210001D0824 /* data */,
 				EFCDC750192E218F001D0824 /* scoring */,
 				EFCDC72B192E1EB5001D0824 /* Supporting Files */,
@@ -169,6 +191,8 @@
 				EFCDC754192E218F001D0824 /* Score.m */,
 				EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */,
 				EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */,
+				EF73CC9F1932292D00A171E5 /* RangeScore.h */,
+				EF73CCA01932292D00A171E5 /* RangeScore.m */,
 			);
 			path = scoring;
 			sourceTree = "<group>";
@@ -180,6 +204,8 @@
 				EFCDC75F192E2248001D0824 /* BPJSONConsts.m */,
 				EFFB7A3A192E3E8100BB8BB5 /* ScoresStorage.h */,
 				EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */,
+				EF73CCA81932420300A171E5 /* GatesStorage.h */,
+				EF73CCA91932420300A171E5 /* GatesStorage.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -266,10 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */,
 				EFCDC759192E218F001D0824 /* Score.m in Sources */,
+				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
 				EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
 				EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */,
 				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */,
 				EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF73CCA21932293000A171E5 /* RangeScore.m in Sources */,
 				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
 				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
 				EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */,
+				EF73CCA719323E3200A171E5 /* Gate.m in Sources */,
 				EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */,
 				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
 				EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */,
