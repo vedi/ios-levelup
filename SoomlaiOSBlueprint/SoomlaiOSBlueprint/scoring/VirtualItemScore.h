@@ -17,6 +17,8 @@
 #import "Score.h"
 
 @interface VirtualItemScore : Score {
+
+    @private
     NSString* associatedItemId;
 }
 

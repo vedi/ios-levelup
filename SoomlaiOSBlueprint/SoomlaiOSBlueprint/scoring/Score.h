@@ -17,11 +17,11 @@
 @interface Score : NSObject {
     
     @private
-    NSString* name;
-    NSString* scoreId;
-    double startValue;
-    double tempScore;
-    BOOL higherBetter;
+    NSString*   name;
+    NSString*   scoreId;
+    double      startValue;
+    double      tempScore;
+    BOOL        higherBetter;
 }
 
 @property (strong, nonatomic) NSString* name;
