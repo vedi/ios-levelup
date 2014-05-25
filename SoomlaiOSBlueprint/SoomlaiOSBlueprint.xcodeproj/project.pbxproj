@@ -58,8 +58,8 @@
 /* Begin PBXFileReference section */
 		EF73CC9F1932292D00A171E5 /* RangeScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeScore.h; sourceTree = "<group>"; };
 		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
-		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gate.h; sourceTree = "<group>"; };
-		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gate.m; sourceTree = "<group>"; };
+		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gate.h; path = gates/Gate.h; sourceTree = "<group>"; };
+		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gate.m; path = gates/Gate.m; sourceTree = "<group>"; };
 		EF73CCA81932420300A171E5 /* GatesStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesStorage.h; path = data/GatesStorage.h; sourceTree = "<group>"; };
 		EF73CCA91932420300A171E5 /* GatesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesStorage.m; path = data/GatesStorage.m; sourceTree = "<group>"; };
 		EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSBlueprint.a; sourceTree = BUILT_PRODUCTS_DIR; };
