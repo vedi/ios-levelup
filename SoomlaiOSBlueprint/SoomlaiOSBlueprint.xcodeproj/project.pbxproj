@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
+		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
+		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
+		EFCDC73D192E1EB6001D0824 /* libSoomlaiOSBlueprint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */; };
+		EFCDC743192E1EB6001D0824 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFCDC741192E1EB6001D0824 /* InfoPlist.strings */; };
+		EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */; };
+		EFCDC759192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
+		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
+		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */; };
+		EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */; };
+		EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
+		EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
+		EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
+		EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
+		EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */; };
+		EFFB7A4C1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCDC71D192E1EB5001D0824 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCDC724192E1EB5001D0824;
+			remoteInfo = SoomlaiOSBlueprint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFCDC723192E1EB5001D0824 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSBlueprint.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSBlueprint-Prefix.pch"; sourceTree = "<group>"; };
+		EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoomlaiOSBlueprintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDC736192E1EB6001D0824 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EFCDC740192E1EB6001D0824 /* SoomlaiOSBlueprintTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoomlaiOSBlueprintTests-Info.plist"; sourceTree = "<group>"; };
+		EFCDC742192E1EB6001D0824 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoomlaiOSBlueprintTests.m; sourceTree = "<group>"; };
+		EFCDC753192E218F001D0824 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		EFCDC754192E218F001D0824 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		EFCDC75E192E2248001D0824 /* BPJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPJSONConsts.h; path = data/BPJSONConsts.h; sourceTree = "<group>"; };
+		EFCDC75F192E2248001D0824 /* BPJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPJSONConsts.m; path = data/BPJSONConsts.m; sourceTree = "<group>"; };
+		EFFB7A3A192E3E8100BB8BB5 /* ScoresStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoresStorage.h; path = data/ScoresStorage.h; sourceTree = "<group>"; };
+		EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoresStorage.m; path = data/ScoresStorage.m; sourceTree = "<group>"; };
+		EFFB7A3E192E406900BB8BB5 /* Blueprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blueprint.h; sourceTree = "<group>"; };
+		EFFB7A3F192E406900BB8BB5 /* Blueprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blueprint.m; sourceTree = "<group>"; };
+		EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualItemScore.h; sourceTree = "<group>"; };
+		EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualItemScore.m; sourceTree = "<group>"; };
+		EFFB7A491931EC5200BB8BB5 /* BlueprintEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueprintEventHandling.h; sourceTree = "<group>"; };
+		EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueprintEventHandling.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFCDC722192E1EB5001D0824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDC732192E1EB6001D0824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC73D192E1EB6001D0824 /* libSoomlaiOSBlueprint.a in Frameworks */,
+				EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */,
+				EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFCDC71C192E1EB5001D0824 = {
+			isa = PBXGroup;
+			children = (
+				EFCDC72A192E1EB5001D0824 /* SoomlaiOSBlueprint */,
+				EFCDC73E192E1EB6001D0824 /* SoomlaiOSBlueprintTests */,
+				EFCDC727192E1EB5001D0824 /* Frameworks */,
+				EFCDC726192E1EB5001D0824 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFCDC726192E1EB5001D0824 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */,
+				EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCDC727192E1EB5001D0824 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC728192E1EB5001D0824 /* Foundation.framework */,
+				EFCDC736192E1EB6001D0824 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFCDC72A192E1EB5001D0824 /* SoomlaiOSBlueprint */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC75D192E2210001D0824 /* data */,
+				EFCDC750192E218F001D0824 /* scoring */,
+				EFCDC72B192E1EB5001D0824 /* Supporting Files */,
+				EFFB7A3E192E406900BB8BB5 /* Blueprint.h */,
+				EFFB7A3F192E406900BB8BB5 /* Blueprint.m */,
+				EFFB7A491931EC5200BB8BB5 /* BlueprintEventHandling.h */,
+				EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */,
+			);
+			path = SoomlaiOSBlueprint;
+			sourceTree = "<group>";
+		};
+		EFCDC72B192E1EB5001D0824 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFCDC73E192E1EB6001D0824 /* SoomlaiOSBlueprintTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */,
+				EFCDC73F192E1EB6001D0824 /* Supporting Files */,
+			);
+			path = SoomlaiOSBlueprintTests;
+			sourceTree = "<group>";
+		};
+		EFCDC73F192E1EB6001D0824 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC740192E1EB6001D0824 /* SoomlaiOSBlueprintTests-Info.plist */,
+				EFCDC741192E1EB6001D0824 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFCDC750192E218F001D0824 /* scoring */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC753192E218F001D0824 /* Score.h */,
+				EFCDC754192E218F001D0824 /* Score.m */,
+				EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */,
+				EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */,
+			);
+			path = scoring;
+			sourceTree = "<group>";
+		};
+		EFCDC75D192E2210001D0824 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC75E192E2248001D0824 /* BPJSONConsts.h */,
+				EFCDC75F192E2248001D0824 /* BPJSONConsts.m */,
+				EFFB7A3A192E3E8100BB8BB5 /* ScoresStorage.h */,
+				EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprint" */;
+			buildPhases = (
+				EFCDC721192E1EB5001D0824 /* Sources */,
+				EFCDC722192E1EB5001D0824 /* Frameworks */,
+				EFCDC723192E1EB5001D0824 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoomlaiOSBlueprint;
+			productName = SoomlaiOSBlueprint;
+			productReference = EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFCDC734192E1EB6001D0824 /* SoomlaiOSBlueprintTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprintTests" */;
+			buildPhases = (
+				EFCDC731192E1EB6001D0824 /* Sources */,
+				EFCDC732192E1EB6001D0824 /* Frameworks */,
+				EFCDC733192E1EB6001D0824 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */,
+			);
+			name = SoomlaiOSBlueprintTests;
+			productName = SoomlaiOSBlueprintTests;
+			productReference = EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFCDC71D192E1EB5001D0824 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Soomla;
+			};
+			buildConfigurationList = EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSBlueprint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFCDC71C192E1EB5001D0824;
+			productRefGroup = EFCDC726192E1EB5001D0824 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */,
+				EFCDC734192E1EB6001D0824 /* SoomlaiOSBlueprintTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFCDC733192E1EB6001D0824 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC743192E1EB6001D0824 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFCDC721192E1EB5001D0824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EFCDC759192E218F001D0824 /* Score.m in Sources */,
+				EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */,
+				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDC731192E1EB6001D0824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
+				EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */,
+				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */,
+				EFFB7A4C1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */;
+			targetProxy = EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFCDC741192E1EB6001D0824 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCDC742192E1EB6001D0824 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFCDC746192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SOOMLA_HOME = /Users/gurdotan/source;
+			};
+			name = Debug;
+		};
+		EFCDC747192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				SOOMLA_HOME = /Users/gurdotan/source;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFCDC749192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaiOSBlueprint.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
+					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EFCDC74A192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaiOSBlueprint.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
+					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EFCDC74C192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SoomlaiOSBlueprintTests/SoomlaiOSBlueprintTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EFCDC74D192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				INFOPLIST_FILE = "SoomlaiOSBlueprintTests/SoomlaiOSBlueprintTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSBlueprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC746192E1EB6001D0824 /* Debug */,
+				EFCDC747192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC749192E1EB6001D0824 /* Debug */,
+				EFCDC74A192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprintTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC74C192E1EB6001D0824 /* Debug */,
+				EFCDC74D192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFCDC71D192E1EB5001D0824 /* Project object */;
+}
