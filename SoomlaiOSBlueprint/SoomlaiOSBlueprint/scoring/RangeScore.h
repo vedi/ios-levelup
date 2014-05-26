@@ -53,7 +53,6 @@
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter andRange:(Range *)oRange;
 
-
 @end
 
 

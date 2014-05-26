@@ -26,13 +26,7 @@
 
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName {
-    self = [super init];
-    if ([self class] == [Score class]) {
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                       reason:@"Error, attempting to instantiate AbstractClass directly." userInfo:nil];
-    }
-    
-    if (self) {
+    if (self = [super init]) {
         self.scoreId = oScoreId;
         self.name = oName;
         self.startValue = 0;
@@ -43,13 +37,7 @@
 }
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter {
-    self = [super init];
-    if ([self class] == [Score class]) {
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                       reason:@"Error, attempting to instantiate AbstractClass directly." userInfo:nil];
-    }
-    
-    if (self) {
+    if (self = [super init]) {
         self.scoreId = oScoreId;
         self.name = oName;
         self.startValue = 0;
@@ -60,13 +48,7 @@
 }
 
 - (id)initWithDictionary:(NSDictionary *)dict {
-    self = [super init];
-    if ([self class] == [Score class]) {
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                       reason:@"Error, attempting to instantiate AbstractClass directly." userInfo:nil];
-    }
-    
-    if (self) {
+    if (self = [super init]) {
         self.scoreId = [dict objectForKey:BP_SCORE_SCOREID];
         self.name = [dict objectForKey:BP_NAME];
         self.startValue = [[dict objectForKey:BP_SCORE_STARTVAL] doubleValue];

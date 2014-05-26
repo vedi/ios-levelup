@@ -48,7 +48,9 @@
 }
 
 - (void)tryOpen {
-    if ([GatesStorage isOpen:self]) return;
+    if ([GatesStorage isOpen:self]) {
+        return;
+    }
     
     [self tryOpenInner];
 }
