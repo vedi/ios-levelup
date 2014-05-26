@@ -10,7 +10,6 @@
 
 
 // TODO: Document abstract class
-
 @interface Gate : NSObject {
     
     @private
@@ -27,6 +26,7 @@
 
 - (void)tryOpen;
 
+// ABSTRACT
 - (void)tryOpenInner;
 
 - (void)forceOpen:(BOOL)open;

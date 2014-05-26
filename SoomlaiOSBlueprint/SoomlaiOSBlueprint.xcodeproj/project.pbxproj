@@ -13,6 +13,22 @@
 		EF73CCA719323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
 		EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
 		EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
+		EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
+		EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
+		EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */; };
+		EF7BA0F019331CDA00FCF3C9 /* GatesListAND.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */; };
+		EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F21933204900FCF3C9 /* GatesListOR.m */; };
+		EF7BA0F41933204900FCF3C9 /* GatesListOR.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F21933204900FCF3C9 /* GatesListOR.m */; };
+		EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */; };
+		EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */; };
+		EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */; };
+		EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */; };
+		EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1021933637A00FCF3C9 /* RecordGate.m */; };
+		EF7BA1041933637A00FCF3C9 /* RecordGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1021933637A00FCF3C9 /* RecordGate.m */; };
+		EF7BA107193379E600FCF3C9 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA106193379E600FCF3C9 /* World.m */; };
+		EF7BA108193379E600FCF3C9 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA106193379E600FCF3C9 /* World.m */; };
+		EF7BA10B19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
+		EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
 		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
 		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
 		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
@@ -62,6 +78,22 @@
 		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gate.m; path = gates/Gate.m; sourceTree = "<group>"; };
 		EF73CCA81932420300A171E5 /* GatesStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesStorage.h; path = data/GatesStorage.h; sourceTree = "<group>"; };
 		EF73CCA91932420300A171E5 /* GatesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesStorage.m; path = data/GatesStorage.m; sourceTree = "<group>"; };
+		EF7BA0E91932555700FCF3C9 /* GatesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesList.h; path = gates/GatesList.h; sourceTree = "<group>"; };
+		EF7BA0EA1932555700FCF3C9 /* GatesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesList.m; path = gates/GatesList.m; sourceTree = "<group>"; };
+		EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesListAND.h; path = gates/GatesListAND.h; sourceTree = "<group>"; };
+		EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesListAND.m; path = gates/GatesListAND.m; sourceTree = "<group>"; };
+		EF7BA0F11933204900FCF3C9 /* GatesListOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesListOR.h; path = gates/GatesListOR.h; sourceTree = "<group>"; };
+		EF7BA0F21933204900FCF3C9 /* GatesListOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesListOR.m; path = gates/GatesListOR.m; sourceTree = "<group>"; };
+		EF7BA0F51933209F00FCF3C9 /* BalanceGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceGate.h; path = gates/BalanceGate.h; sourceTree = "<group>"; };
+		EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceGate.m; path = gates/BalanceGate.m; sourceTree = "<group>"; };
+		EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PurchasableGate.h; path = gates/PurchasableGate.h; sourceTree = "<group>"; };
+		EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PurchasableGate.m; path = gates/PurchasableGate.m; sourceTree = "<group>"; };
+		EF7BA1011933637A00FCF3C9 /* RecordGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordGate.h; path = gates/RecordGate.h; sourceTree = "<group>"; };
+		EF7BA1021933637A00FCF3C9 /* RecordGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordGate.m; path = gates/RecordGate.m; sourceTree = "<group>"; };
+		EF7BA105193379E600FCF3C9 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		EF7BA106193379E600FCF3C9 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldCompletionGate.h; path = gates/WorldCompletionGate.h; sourceTree = "<group>"; };
+		EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldCompletionGate.m; path = gates/WorldCompletionGate.m; sourceTree = "<group>"; };
 		EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSBlueprint.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSBlueprint-Prefix.pch"; sourceTree = "<group>"; };
@@ -111,6 +143,20 @@
 			children = (
 				EF73CCA419323E3200A171E5 /* Gate.h */,
 				EF73CCA519323E3200A171E5 /* Gate.m */,
+				EF7BA0E91932555700FCF3C9 /* GatesList.h */,
+				EF7BA0EA1932555700FCF3C9 /* GatesList.m */,
+				EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */,
+				EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */,
+				EF7BA0F11933204900FCF3C9 /* GatesListOR.h */,
+				EF7BA0F21933204900FCF3C9 /* GatesListOR.m */,
+				EF7BA0F51933209F00FCF3C9 /* BalanceGate.h */,
+				EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */,
+				EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */,
+				EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */,
+				EF7BA1011933637A00FCF3C9 /* RecordGate.h */,
+				EF7BA1021933637A00FCF3C9 /* RecordGate.m */,
+				EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */,
+				EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */,
 			);
 			name = gates;
 			sourceTree = "<group>";
@@ -154,6 +200,8 @@
 				EFFB7A3F192E406900BB8BB5 /* Blueprint.m */,
 				EFFB7A491931EC5200BB8BB5 /* BlueprintEventHandling.h */,
 				EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */,
+				EF7BA105193379E600FCF3C9 /* World.h */,
+				EF7BA106193379E600FCF3C9 /* World.m */,
 			);
 			path = SoomlaiOSBlueprint;
 			sourceTree = "<group>";
@@ -292,14 +340,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */,
 				EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */,
 				EFCDC759192E218F001D0824 /* Score.m in Sources */,
+				EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */,
 				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
 				EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
 				EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */,
+				EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */,
 				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EF7BA107193379E600FCF3C9 /* World.m in Sources */,
+				EF7BA10B19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
 				EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */,
+				EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */,
 				EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
+				EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */,
+				EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,12 +365,20 @@
 			files = (
 				EF73CCA21932293000A171E5 /* RangeScore.m in Sources */,
 				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */,
 				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
 				EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EF7BA0F019331CDA00FCF3C9 /* GatesListAND.m in Sources */,
+				EF7BA0F41933204900FCF3C9 /* GatesListOR.m in Sources */,
+				EF7BA1041933637A00FCF3C9 /* RecordGate.m in Sources */,
 				EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */,
+				EF7BA108193379E600FCF3C9 /* World.m in Sources */,
 				EF73CCA719323E3200A171E5 /* Gate.m in Sources */,
 				EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */,
 				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
+				EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */,
+				EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */,
 				EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */,
 				EFFB7A4C1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
 			);
