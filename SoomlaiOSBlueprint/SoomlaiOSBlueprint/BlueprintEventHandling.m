@@ -20,6 +20,11 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_OPENED object:self userInfo:userInfo];
 }
 
++ (void)postRewardGiven:(Reward *)reward {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_GIVEN object:self userInfo:userInfo];
+}
+
 + (void)postGateCanBeOpened:(Gate *)gate {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:gate forKey:DICT_ELEMENT_GATE];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_CAN_BE_OPENED object:self userInfo:userInfo];
