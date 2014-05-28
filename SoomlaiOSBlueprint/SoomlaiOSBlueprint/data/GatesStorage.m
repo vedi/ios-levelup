@@ -42,6 +42,7 @@
 }
 
 
+// Private
 
 + (NSString*)keyGatesWithGateId:(NSString*)gateId andPostfix:(NSString*)postfix {
     return [NSString stringWithFormat: @"%@gates.%@.%@", BP_DB_KEY_PREFIX, gateId, postfix];

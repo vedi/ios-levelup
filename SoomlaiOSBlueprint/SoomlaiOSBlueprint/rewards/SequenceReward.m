@@ -63,7 +63,7 @@ static NSString* TAG = @"SOOMLA SequenceReward";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:rewards forKey:BP_REWARDS];
+    [toReturn setValue:rewardsArr forKey:BP_REWARDS];
     [toReturn setValue:@"sequence" forKey:BP_TYPE];
     
     return toReturn;

@@ -62,7 +62,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:rewards forKey:BP_REWARDS];
+    [toReturn setValue:rewardsArr forKey:BP_REWARDS];
     [toReturn setValue:@"random" forKey:BP_TYPE];
     
     return toReturn;

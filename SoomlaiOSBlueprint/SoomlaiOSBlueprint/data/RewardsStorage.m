@@ -7,8 +7,11 @@
 //
 
 #import "RewardsStorage.h"
+#import "Reward.h"
 #import "Blueprint.h"
 #import "BlueprintEventHandling.h"
+#import "StorageManager.h"
+#import "KeyValueStorage.h"
 
 @implementation RewardsStorage
 
@@ -17,7 +20,7 @@
     [self setStatus:status forReward:reward andNotify:YES];
 }
 
-+ (void)setStatus:(BOOL)status forReward:(Reward *)reward andNotify:(BOOL)notift {
++ (void)setStatus:(BOOL)status forReward:(Reward *)reward andNotify:(BOOL)notify {
     NSString* key = [self keyRewardGivenWithRewardId:reward.rewardId];
     
     if (status) {
@@ -63,11 +66,11 @@
 }
 
 + (NSString *)keyRewardGivenWithRewardId:(NSString *)rewardId {
-    return [self keyRewardGivenWithRewardId:rewardId AndPostfix:@"given"];
+    return [self keyRewardsWithRewardId:rewardId AndPostfix:@"given"];
 }
 
 + (NSString *)keyRewardIdxSeqGivenWithRewardId:(NSString *)rewardId {
-    return [self keyRewardGivenWithRewardId:rewardId AndPostfix:@"seq.idx"];
+    return [self keyRewardsWithRewardId:rewardId AndPostfix:@"seq.idx"];
 }
 
 

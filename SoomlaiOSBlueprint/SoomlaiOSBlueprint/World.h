@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface World : NSObject {
     
     @private

@@ -50,7 +50,6 @@ static NSString* TAG = @"SOOMLA GatesList";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.gates = [NSMutableArray array];
         
         NSMutableArray* tmpGates = [NSMutableArray array];
         NSArray* gateDicts = [dict objectForKey:BP_GATES];
@@ -92,7 +91,7 @@ static NSString* TAG = @"SOOMLA GatesList";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:gates forKey:BP_GATES];
+    [toReturn setValue:gatesArr forKey:BP_GATES];
     
     return toReturn;
 }

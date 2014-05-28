@@ -6,15 +6,13 @@
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @class Reward;
 
 @interface RewardsStorage : NSObject
 
 + (void)setStatus:(BOOL)status forReward:(Reward *)reward;
 
-+ (void)setStatus:(BOOL)status forReward:(Reward *)reward andNotify:(BOOL)notift;
++ (void)setStatus:(BOOL)status forReward:(Reward *)reward andNotify:(BOOL)notify;
 
 + (BOOL)isRewardGiven:(Reward *)reward;
 
