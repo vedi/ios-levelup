@@ -611,6 +611,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
 			name = Debug;
 		};
@@ -629,6 +630,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
 			name = Release;
 		};
