@@ -9,6 +9,7 @@
 @class Score;
 @class Gate;
 @class Reward;
+@class Mission;
 
 // Events
 #define EVENT_BP_SCORE_RECORD_CHANGED           @"bp_score_record_changed"
@@ -16,12 +17,14 @@
 #define EVENT_BP_GATE_CAN_BE_OPENED             @"bp_gate_can_be_opened"
 #define EVENT_BP_REWARD_GIVEN                   @"bp_reward_given"
 #define EVENT_BP_WORLD_COMPLETED                @"bp_world_completed"
+#define EVENT_BP_MISSION_COMPLETED              @"bp_mission_completed"
 
 // UserInfo Elements
 #define DICT_ELEMENT_SCORE                      @"score"
 #define DICT_ELEMENT_GATE                       @"gate"
 #define DICT_ELEMENT_REWARD                     @"reward"
 #define DICT_ELEMENT_WORLD                      @"world"
+#define DICT_ELEMENT_MISSION                    @"mission"
 
 
 @interface BlueprintEventHandling : NSObject
@@ -30,5 +33,6 @@
 + (void)postGateOpened:(Gate *)gate;
 + (void)postGateCanBeOpened:(Gate *)gate;
 + (void)postRewardGiven:(Reward *)reward;
++ (void)postMissionCompleted:(Mission *)mission;
 
 @end

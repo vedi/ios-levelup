@@ -30,5 +30,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_CAN_BE_OPENED object:self userInfo:userInfo];
 }
 
++ (void)postMissionCompleted:(Mission *)mission {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:mission forKey:DICT_ELEMENT_MISSION];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETED object:self userInfo:userInfo];
+}
 
 @end
