@@ -24,24 +24,24 @@
 
 static NSString* TAG = @"SOOMLA GatesList";
 
-- (id)initWithId:(NSString *)oGateId {
-    if (self = [super initWithId:oGateId]) {
-        self.gates = [[NSMutableArray alloc] init];
+- (id)initWithGateId:(NSString *)oGateId {
+    if (self = [super initWithGateId:oGateId]) {
+        self.gates = [NSMutableArray array];
     }
     return self;
 }
 
-- (id)initWithId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate {
-    if (self = [super initWithId:oGateId]) {
-        self.gates = [[NSMutableArray alloc] init];
+- (id)initWithGateId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate {
+    if (self = [super initWithGateId:oGateId]) {
+        self.gates = [NSMutableArray array];
         [self addGate:oSingleGate];
     }
     
     return self;
 }
 
-- (id)initWithId:(NSString *)oGateId andGates:(NSArray*)oGates {
-    if (self = [super initWithId:oGateId]) {
+- (id)initWithGateId:(NSString *)oGateId andGates:(NSArray*)oGates {
+    if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray arrayWithArray:oGates];
     }
     
@@ -50,7 +50,9 @@ static NSString* TAG = @"SOOMLA GatesList";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.gates = [[NSMutableArray alloc] init];
+        self.gates = [NSMutableArray array];
+        
+        NSMutableArray* tmpGates = [NSMutableArray array];
         NSArray* gateDicts = [dict objectForKey:BP_GATES];
 
         // Iterate over all gates in the JSON array and for each one create
@@ -59,21 +61,23 @@ static NSString* TAG = @"SOOMLA GatesList";
             
             NSString* type = [gateDict objectForKey:BP_TYPE];
             if ([type isEqualToString:@"balance"]) {
-                [self addGate:[[BalanceGate alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[BalanceGate alloc] initWithDictionary:gateDict]];
             } else if ([type isEqualToString:@"listAND"]) {
-                [self addGate:[[GatesListAND alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[GatesListAND alloc] initWithDictionary:gateDict]];
             } else if ([type isEqualToString:@"listOR"]) {
-                [self addGate:[[GatesListOR alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[GatesListOR alloc] initWithDictionary:gateDict]];
             } else if ([type isEqualToString:@"record"]) {
-                [self addGate:[[RecordGate alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[RecordGate alloc] initWithDictionary:gateDict]];
             } else if ([type isEqualToString:@"purchasable"]) {
-                [self addGate:[[PurchasableGate alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[PurchasableGate alloc] initWithDictionary:gateDict]];
             } else if ([type isEqualToString:@"worldCompletion"]) {
-                [self addGate:[[WorldCompletionGate alloc] initWithDictionary:gateDict]];
+                [tmpGates addObject:[[WorldCompletionGate alloc] initWithDictionary:gateDict]];
             } else {
                 LogError(TAG, ([NSString stringWithFormat:@"Unknown gate type: %@", type]));
             }
         }
+        
+        self.gates = tmpGates;
     }
     
     return self;

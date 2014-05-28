@@ -18,7 +18,7 @@
 
 @property (strong, nonatomic) NSString* gateId;
 
-- (id)initWithId:(NSString *)oGateId;
+- (id)initWithGateId:(NSString *)oGateId;
 
 - (id)initWithDictionary:(NSDictionary *)dict;
 

@@ -18,9 +18,9 @@
 @property (strong, nonatomic) NSMutableArray* gates;
 
 
-- (id)initWithId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate;
+- (id)initWithGateId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate;
 
-- (id)initWithId:(NSString *)oGateId andGates:(NSArray*)oGates;
+- (id)initWithGateId:(NSString *)oGateId andGates:(NSArray*)oGates;
 
 - (void)addGate:(Gate *)gate;
 

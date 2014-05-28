@@ -16,6 +16,6 @@
 @property (strong, nonatomic) NSString* associatedWorldId;
 
 
-- (id)initWithId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId;
+- (id)initWithGateId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId;
 
 @end

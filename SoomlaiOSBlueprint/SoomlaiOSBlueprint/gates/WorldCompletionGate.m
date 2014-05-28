@@ -17,8 +17,8 @@
 
 @synthesize associatedWorldId;
 
-- (id)initWithId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId {
-    if ([self initWithId:oGateId]) {
+- (id)initWithGateId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId {
+    if ([self initWithGateId:oGateId]) {
         self.associatedWorldId = oAssociatedWorldId;
     }
     

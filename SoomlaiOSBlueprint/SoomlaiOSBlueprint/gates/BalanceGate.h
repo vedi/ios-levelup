@@ -19,7 +19,7 @@
 @property int desiredBalance;
 
 
-- (id)initWithId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
+- (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
 - (BOOL)canPass;
 

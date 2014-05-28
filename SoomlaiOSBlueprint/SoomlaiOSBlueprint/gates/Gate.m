@@ -14,7 +14,7 @@
 
 @synthesize gateId;
 
-- (id)initWithId:(NSString *)oGateId {
+- (id)initWithGateId:(NSString *)oGateId {
     self = [super init];
     if ([self class] == [Gate class]) {
         @throw [NSException exceptionWithName:NSInternalInconsistencyException

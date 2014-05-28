@@ -23,8 +23,8 @@
     
 static NSString* TAG = @"SOOMLA BalanceGate";
 
-- (id)initWithId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance {
-    if (self = [super initWithId:oGateId]) {
+- (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance {
+    if (self = [super initWithGateId:oGateId]) {
         self.associatedItemId = oAssociatedItemId;
         self.desiredBalance = oDesiredBalance;
     }
