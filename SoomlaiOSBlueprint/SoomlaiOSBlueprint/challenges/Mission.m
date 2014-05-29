@@ -25,7 +25,6 @@
 // TODO: Replace StoreUtils imports with a private instance of LogDebug macro (???)
 #import "StoreUtils.h"
 
-// TODO: If this class is indeed abstract, change constructors to throw execptions
 @implementation Mission
 
 @synthesize missionId, name, rewards;
