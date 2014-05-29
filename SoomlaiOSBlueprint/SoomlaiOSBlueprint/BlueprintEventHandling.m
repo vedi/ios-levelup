@@ -35,4 +35,19 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETED object:self userInfo:userInfo];
 }
 
++ (void)postWorldCompleted:(Mission *)world {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:world forKey:DICT_ELEMENT_WORLD];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_WORLD_COMPLETED object:self userInfo:userInfo];
+}
+
++ (void)postLevelStarted:(Level *)level {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:level forKey:DICT_ELEMENT_LEVEL];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_LEVEL_STARTED object:self userInfo:userInfo];
+}
+
++ (void)postLevelEnded:(Level *)level {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:level forKey:DICT_ELEMENT_LEVEL];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_LEVEL_ENDED object:self userInfo:userInfo];
+}
+
 @end
