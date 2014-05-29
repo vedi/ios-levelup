@@ -22,7 +22,7 @@
 }
 
 + (void)setOpen:(BOOL)open forGate:(Gate*)gate andEvent:(BOOL)notify {
-    NSString* key = [self keyGatesWithGateId:gate.gateId];
+    NSString* key = [self keyGateOpen:gate.gateId];
     
     if (open) {
         [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
@@ -36,7 +36,7 @@
 }
 
 + (BOOL)isOpen:(Gate*)gate {
-    NSString* key = [self keyGatesWithGateId:gate.gateId];
+    NSString* key = [self keyGateOpen:gate.gateId];
     NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
     return (val && [val length] > 0);
 }
@@ -48,7 +48,7 @@
     return [NSString stringWithFormat: @"%@gates.%@.%@", BP_DB_KEY_PREFIX, gateId, postfix];
 }
 
-+ (NSString*)keyGatesWithGateId:(NSString*)gateId {
++ (NSString*)keyGateOpen:(NSString*)gateId {
     return [self keyGatesWithGateId:gateId andPostfix:@"open"];
 }
 

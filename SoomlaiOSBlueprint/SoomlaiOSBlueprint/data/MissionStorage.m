@@ -22,7 +22,7 @@
 
 + (void)setCompleted:(BOOL)completed forMission:(Mission *)mission andNotify:(BOOL)notify {
     
-    NSString* key = [self keyMissionsCompletedWithMissionId:mission.missionId];
+    NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
     
     if (completed) {
         [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
@@ -36,7 +36,7 @@
 }
 
 + (BOOL)isMissionCompleted:(Mission *)mission {
-    NSString* key = [self keyMissionsCompletedWithMissionId:mission.missionId];
+    NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
     NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
     return (val && [val length] > 0);
 }
@@ -47,7 +47,7 @@
     return [NSString stringWithFormat: @"%@missiona.%@.%@", BP_DB_KEY_PREFIX, missionId, postfix];
 }
 
-+ (NSString *)keyMissionsCompletedWithMissionId:(NSString *)missionId {
++ (NSString *)keyMissionCompletedWithMissionId:(NSString *)missionId {
     return [self keyMissionsWithMissionId:missionId andPostfix:@"completed"];
 }
 

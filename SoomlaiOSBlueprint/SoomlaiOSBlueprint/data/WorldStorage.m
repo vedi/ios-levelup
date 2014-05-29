@@ -20,7 +20,7 @@
 }
 
 + (void)setCompleted:(BOOL)completed forWorld:(World *)world andNotify:(BOOL)notify {
-    NSString* key = [self keyWorldsCompletedWithWorldId:world.worldId];
+    NSString* key = [self keyWorldCompletedWithWorldId:world.worldId];
     
     if (completed) {
         [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
@@ -34,7 +34,7 @@
 }
 
 + (BOOL)isWorldCompleted:(World *)world {
-    NSString* key = [self keyWorldsCompletedWithWorldId:world.worldId];
+    NSString* key = [self keyWorldCompletedWithWorldId:world.worldId];
     NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
     return (val && [val length] > 0);
 }
@@ -45,7 +45,7 @@
     return [NSString stringWithFormat: @"%@world.%@.%@", BP_DB_KEY_PREFIX, worldId, postfix];
 }
 
-+ (NSString *)keyWorldsCompletedWithWorldId:(NSString *)worldId {
++ (NSString *)keyWorldCompletedWithWorldId:(NSString *)worldId {
     return [self keyWorldsWithWorldId:worldId andPostfix:@"completed"];
 }
 
