@@ -15,6 +15,8 @@
  */
 
 #import "BlueprintEventHandling.h"
+#import "Challenge.h"
+#import "BadgeReward.h"
 
 @implementation BlueprintEventHandling
 
@@ -29,7 +31,10 @@
 }
 
 + (void)postRewardGiven:(Reward *)reward {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                              reward, DICT_ELEMENT_REWARD,
+                              [reward isKindOfClass:[BadgeReward class]], DICT_ELEMENT_IS_BADGE,
+                              nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_GIVEN object:self userInfo:userInfo];
 }
 
@@ -39,7 +44,10 @@
 }
 
 + (void)postMissionCompleted:(Mission *)mission {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:mission forKey:DICT_ELEMENT_MISSION];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                              mission, DICT_ELEMENT_MISSION,
+                              [mission isKindOfClass:[Challenge class]], DICT_ELEMENT_IS_CHALLENGE,
+                              nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETED object:self userInfo:userInfo];
 }
 

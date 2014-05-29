@@ -38,6 +38,8 @@
 #define DICT_ELEMENT_WORLD                      @"world"
 #define DICT_ELEMENT_MISSION                    @"mission"
 #define DICT_ELEMENT_LEVEL                      @"level"
+#define DICT_ELEMENT_IS_CHALLENGE               @"isChallenge"
+#define DICT_ELEMENT_IS_BADGE                   @"isBadge"
 
 
 @interface BlueprintEventHandling : NSObject
