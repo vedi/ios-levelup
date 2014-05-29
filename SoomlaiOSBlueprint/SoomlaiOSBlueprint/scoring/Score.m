@@ -15,7 +15,7 @@
  */
 
 #import "Score.h"
-#import "ScoresStorage.h"
+#import "ScoreStorage.h"
 #import "BPJSONConsts.h"
 #import "BlueprintEventHandling.h"
 
@@ -80,19 +80,19 @@
 }
 
 - (void)saveAndReset {
-    double record = [ScoresStorage getRecordScore:self];
+    double record = [ScoreStorage getRecordScore:self];
     if ([self hasTempScoreReached:record]) {
-        [ScoresStorage setRecord:self.tempScore toScore:self];
+        [ScoreStorage setRecord:self.tempScore toScore:self];
         [BlueprintEventHandling postScoreRecordChanged:self];
     }
-    [ScoresStorage setLatest:self.tempScore toScore:self];
+    [ScoreStorage setLatest:self.tempScore toScore:self];
     self.tempScore = self.startValue;
 }
 
 - (void)reset {
     self.tempScore = self.startValue;
-    [ScoresStorage setRecord:0 toScore:self];
-    [ScoresStorage setLatest:0 toScore:self];
+    [ScoreStorage setRecord:0 toScore:self];
+    [ScoreStorage setLatest:0 toScore:self];
 }
 
 - (BOOL)hasTempScoreReached:(double)scoreVal {
@@ -100,16 +100,16 @@
 }
 
 - (BOOL)hasRecordReachedScore:(double)scoreVal {
-    double record = [ScoresStorage getRecordScore:self];
+    double record = [ScoreStorage getRecordScore:self];
     return [self hasScore:record reached:scoreVal];
 }
 
 - (double)getRecord {
-    return [ScoresStorage getRecordScore:self];
+    return [ScoreStorage getRecordScore:self];
 }
 
 - (double)getLatest {
-    return [ScoresStorage getLatestScore:self];
+    return [ScoreStorage getLatestScore:self];
 }
 
 - (BOOL)hasScore:(double)scoreValue1 reached:(double)scoreValue2 {

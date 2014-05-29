@@ -10,7 +10,7 @@
 #import "BPJSONConsts.h"
 #import "EventHandling.h"
 #import "BlueprintEventHandling.h"
-#import "GatesStorage.h"
+#import "GateStorage.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
 #import "StoreUtils.h"
@@ -65,7 +65,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
 
 
 - (BOOL)canPass {
-    if ([GatesStorage isOpen:self]) {
+    if ([GateStorage isOpen:self]) {
         return YES;
     }
     

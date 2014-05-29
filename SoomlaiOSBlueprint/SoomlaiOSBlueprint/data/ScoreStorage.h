@@ -17,7 +17,7 @@
 @class Score;
 
 // TODO: Document
-@interface ScoresStorage : NSObject
+@interface ScoreStorage : NSObject
 
 /** Latest Score **/
 

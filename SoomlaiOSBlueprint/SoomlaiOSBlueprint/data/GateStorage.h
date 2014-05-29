@@ -17,7 +17,7 @@
 @class Gate;
 
 
-@interface GatesStorage : NSObject
+@interface GateStorage : NSObject
 
 + (void)setOpen:(Gate*)gate withFlag:(BOOL)open;
 

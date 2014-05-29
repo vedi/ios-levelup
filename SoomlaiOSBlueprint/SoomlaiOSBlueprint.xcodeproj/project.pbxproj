@@ -11,8 +11,8 @@
 		EF73CCA21932293000A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
 		EF73CCA619323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
 		EF73CCA719323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
-		EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
-		EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GatesStorage.m */; };
+		EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GateStorage.m */; };
+		EF73CCAB1932420300A171E5 /* GateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GateStorage.m */; };
 		EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
 		EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
 		EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */; };
@@ -31,8 +31,8 @@
 		EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
 		EF7BA1101933C41B00FCF3C9 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10F1933C41B00FCF3C9 /* Reward.m */; };
 		EF7BA1111933C41B00FCF3C9 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10F1933C41B00FCF3C9 /* Reward.m */; };
-		EF7BA1141933C68900FCF3C9 /* RewardsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardsStorage.m */; };
-		EF7BA1151933C68900FCF3C9 /* RewardsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardsStorage.m */; };
+		EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
+		EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
 		EF7BA1181933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
 		EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
 		EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
@@ -43,8 +43,8 @@
 		EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
 		EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
 		EF7BA12A1935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
-		EF7BA12D1935C7E300FCF3C9 /* MissionsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionsStorage.m */; };
-		EF7BA12E1935C7E300FCF3C9 /* MissionsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionsStorage.m */; };
+		EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */; };
+		EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */; };
 		EF7BA1311935D56B00FCF3C9 /* BalanceMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */; };
 		EF7BA1321935D56B00FCF3C9 /* BalanceMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */; };
 		EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1341935FF2B00FCF3C9 /* RecordMission.m */; };
@@ -63,8 +63,8 @@
 		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
 		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
 		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
-		EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */; };
-		EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */; };
+		EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
+		EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
 		EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
 		EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
 		EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
@@ -100,8 +100,8 @@
 		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
 		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gate.h; path = gates/Gate.h; sourceTree = "<group>"; };
 		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gate.m; path = gates/Gate.m; sourceTree = "<group>"; };
-		EF73CCA81932420300A171E5 /* GatesStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesStorage.h; path = data/GatesStorage.h; sourceTree = "<group>"; };
-		EF73CCA91932420300A171E5 /* GatesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesStorage.m; path = data/GatesStorage.m; sourceTree = "<group>"; };
+		EF73CCA81932420300A171E5 /* GateStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GateStorage.h; path = data/GateStorage.h; sourceTree = "<group>"; };
+		EF73CCA91932420300A171E5 /* GateStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GateStorage.m; path = data/GateStorage.m; sourceTree = "<group>"; };
 		EF7BA0E91932555700FCF3C9 /* GatesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesList.h; path = gates/GatesList.h; sourceTree = "<group>"; };
 		EF7BA0EA1932555700FCF3C9 /* GatesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesList.m; path = gates/GatesList.m; sourceTree = "<group>"; };
 		EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesListAND.h; path = gates/GatesListAND.h; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 		EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldCompletionGate.m; path = gates/WorldCompletionGate.m; sourceTree = "<group>"; };
 		EF7BA10E1933C41B00FCF3C9 /* Reward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reward.h; path = rewards/Reward.h; sourceTree = "<group>"; };
 		EF7BA10F1933C41B00FCF3C9 /* Reward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reward.m; path = rewards/Reward.m; sourceTree = "<group>"; };
-		EF7BA1121933C68900FCF3C9 /* RewardsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RewardsStorage.h; path = data/RewardsStorage.h; sourceTree = "<group>"; };
-		EF7BA1131933C68900FCF3C9 /* RewardsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RewardsStorage.m; path = data/RewardsStorage.m; sourceTree = "<group>"; };
+		EF7BA1121933C68900FCF3C9 /* RewardStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RewardStorage.h; path = data/RewardStorage.h; sourceTree = "<group>"; };
+		EF7BA1131933C68900FCF3C9 /* RewardStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RewardStorage.m; path = data/RewardStorage.m; sourceTree = "<group>"; };
 		EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgeReward.h; path = rewards/BadgeReward.h; sourceTree = "<group>"; };
 		EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeReward.m; path = rewards/BadgeReward.m; sourceTree = "<group>"; };
 		EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomReward.h; path = rewards/RandomReward.h; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SequenceReward.m; path = rewards/SequenceReward.m; sourceTree = "<group>"; };
 		EF7BA1271935BE9500FCF3C9 /* Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mission.h; path = challenges/Mission.h; sourceTree = "<group>"; };
 		EF7BA1281935BE9500FCF3C9 /* Mission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mission.m; path = challenges/Mission.m; sourceTree = "<group>"; };
-		EF7BA12B1935C7E300FCF3C9 /* MissionsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MissionsStorage.h; path = data/MissionsStorage.h; sourceTree = "<group>"; };
-		EF7BA12C1935C7E300FCF3C9 /* MissionsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MissionsStorage.m; path = data/MissionsStorage.m; sourceTree = "<group>"; };
+		EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MissionStorage.h; path = data/MissionStorage.h; sourceTree = "<group>"; };
+		EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MissionStorage.m; path = data/MissionStorage.m; sourceTree = "<group>"; };
 		EF7BA12F1935D56B00FCF3C9 /* BalanceMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceMission.h; path = challenges/BalanceMission.h; sourceTree = "<group>"; };
 		EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceMission.m; path = challenges/BalanceMission.m; sourceTree = "<group>"; };
 		EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordMission.h; path = challenges/RecordMission.h; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 		EFCDC754192E218F001D0824 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		EFCDC75E192E2248001D0824 /* BPJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPJSONConsts.h; path = data/BPJSONConsts.h; sourceTree = "<group>"; };
 		EFCDC75F192E2248001D0824 /* BPJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPJSONConsts.m; path = data/BPJSONConsts.m; sourceTree = "<group>"; };
-		EFFB7A3A192E3E8100BB8BB5 /* ScoresStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoresStorage.h; path = data/ScoresStorage.h; sourceTree = "<group>"; };
-		EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoresStorage.m; path = data/ScoresStorage.m; sourceTree = "<group>"; };
+		EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreStorage.h; path = data/ScoreStorage.h; sourceTree = "<group>"; };
+		EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreStorage.m; path = data/ScoreStorage.m; sourceTree = "<group>"; };
 		EFFB7A3E192E406900BB8BB5 /* Blueprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blueprint.h; sourceTree = "<group>"; };
 		EFFB7A3F192E406900BB8BB5 /* Blueprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blueprint.m; sourceTree = "<group>"; };
 		EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualItemScore.h; sourceTree = "<group>"; };
@@ -334,14 +334,14 @@
 			children = (
 				EFCDC75E192E2248001D0824 /* BPJSONConsts.h */,
 				EFCDC75F192E2248001D0824 /* BPJSONConsts.m */,
-				EFFB7A3A192E3E8100BB8BB5 /* ScoresStorage.h */,
-				EFFB7A3B192E3E8100BB8BB5 /* ScoresStorage.m */,
-				EF73CCA81932420300A171E5 /* GatesStorage.h */,
-				EF73CCA91932420300A171E5 /* GatesStorage.m */,
-				EF7BA1121933C68900FCF3C9 /* RewardsStorage.h */,
-				EF7BA1131933C68900FCF3C9 /* RewardsStorage.m */,
-				EF7BA12B1935C7E300FCF3C9 /* MissionsStorage.h */,
-				EF7BA12C1935C7E300FCF3C9 /* MissionsStorage.m */,
+				EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */,
+				EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */,
+				EF73CCA81932420300A171E5 /* GateStorage.h */,
+				EF73CCA91932420300A171E5 /* GateStorage.m */,
+				EF7BA1121933C68900FCF3C9 /* RewardStorage.h */,
+				EF7BA1131933C68900FCF3C9 /* RewardStorage.m */,
+				EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */,
+				EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 			files = (
 				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
 				EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */,
-				EF73CCAA1932420300A171E5 /* GatesStorage.m in Sources */,
+				EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */,
 				EFCDC759192E218F001D0824 /* Score.m in Sources */,
 				EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */,
 				EF7BA13D19365FF000FCF3C9 /* Challenge.m in Sources */,
@@ -437,9 +437,9 @@
 				EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */,
 				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
 				EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
-				EF7BA12D1935C7E300FCF3C9 /* MissionsStorage.m in Sources */,
+				EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */,
-				EFFB7A3C192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
 				EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */,
 				EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */,
 				EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */,
@@ -452,7 +452,7 @@
 				EF7BA1311935D56B00FCF3C9 /* BalanceMission.m in Sources */,
 				EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */,
 				EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */,
-				EF7BA1141933C68900FCF3C9 /* RewardsStorage.m in Sources */,
+				EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */,
 				EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
 				EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */,
 				EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */,
@@ -469,18 +469,18 @@
 				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
 				EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */,
 				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
-				EFFB7A3D192E3E8100BB8BB5 /* ScoresStorage.m in Sources */,
+				EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
 				EF7BA1361935FF2B00FCF3C9 /* RecordMission.m in Sources */,
 				EF7BA0F019331CDA00FCF3C9 /* GatesListAND.m in Sources */,
 				EF7BA0F41933204900FCF3C9 /* GatesListOR.m in Sources */,
 				EF7BA1041933637A00FCF3C9 /* RecordGate.m in Sources */,
 				EF7BA12A1935BE9500FCF3C9 /* Mission.m in Sources */,
-				EF73CCAB1932420300A171E5 /* GatesStorage.m in Sources */,
+				EF73CCAB1932420300A171E5 /* GateStorage.m in Sources */,
 				EF7BA108193379E600FCF3C9 /* World.m in Sources */,
 				EF73CCA719323E3200A171E5 /* Gate.m in Sources */,
 				EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */,
 				EF7BA1321935D56B00FCF3C9 /* BalanceMission.m in Sources */,
-				EF7BA1151933C68900FCF3C9 /* RewardsStorage.m in Sources */,
+				EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */,
 				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
 				EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
 				EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */,
@@ -488,7 +488,7 @@
 				EF7BA1111933C41B00FCF3C9 /* Reward.m in Sources */,
 				EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */,
 				EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */,
-				EF7BA12E1935C7E300FCF3C9 /* MissionsStorage.m in Sources */,
+				EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
 				EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */,
 				EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */,

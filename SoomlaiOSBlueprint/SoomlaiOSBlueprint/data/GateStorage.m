@@ -1,12 +1,12 @@
 //
-//  GatesStorage.m
+//  GateStorage.m
 //  SoomlaiOSBlueprint
 //
 //  Created by Gur Dotan on 5/25/14.
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import "GatesStorage.h"
+#import "GateStorage.h"
 #import "Blueprint.h"
 #import "Gate.h"
 #import "StorageManager.h"
@@ -14,7 +14,7 @@
 #import "BlueprintEventHandling.h"
 
 
-@implementation GatesStorage
+@implementation GateStorage
 
 
 + (void)setOpen:(Gate*)gate withFlag:(BOOL)open {

@@ -8,7 +8,7 @@
 
 #import "Reward.h"
 #import "BPJSONConsts.h"
-#import "RewardsStorage.h"
+#import "RewardStorage.h"
 
 @implementation Reward
 
@@ -52,16 +52,16 @@
 
 - (void)give {
     if ([self giveInner]) {
-        [RewardsStorage setStatus:YES forReward:self];
+        [RewardStorage setStatus:YES forReward:self];
     }
 }
 
 - (void)take {
-    [RewardsStorage setStatus:NO forReward:self];
+    [RewardStorage setStatus:NO forReward:self];
 }
 
 - (BOOL)isOwned {
-    return [RewardsStorage isRewardGiven:self];
+    return [RewardStorage isRewardGiven:self];
 }
 
 - (BOOL)giveInner {

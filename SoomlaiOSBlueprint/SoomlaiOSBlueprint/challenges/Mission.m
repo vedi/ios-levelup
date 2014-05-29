@@ -7,7 +7,7 @@
 //
 
 #import "Mission.h"
-#import "MissionsStorage.h"
+#import "MissionStorage.h"
 #import "Reward.h"
 #import "BadgeReward.h"
 #import "RandomReward.h"
@@ -104,11 +104,11 @@ static NSString* TAG = @"SOOMLA Mission";
 }
 
 - (BOOL)isCompleted {
-    return [MissionsStorage isMissionCompleted:self];
+    return [MissionStorage isMissionCompleted:self];
 }
 
 - (void)setCompleted:(BOOL)completed {
-    [MissionsStorage setCompleted:completed forMission:self];
+    [MissionStorage setCompleted:completed forMission:self];
     if (completed) {
         for (Reward* reward in self.rewards) {
             [reward give];

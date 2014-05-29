@@ -1,5 +1,5 @@
 //
-//  RewardsStorage.h
+//  RewardStorage.h
 //  SoomlaiOSBlueprint
 //
 //  Created by Gur Dotan on 5/26/14.
@@ -8,7 +8,7 @@
 
 @class Reward;
 
-@interface RewardsStorage : NSObject
+@interface RewardStorage : NSObject
 
 + (void)setStatus:(BOOL)status forReward:(Reward *)reward;
 

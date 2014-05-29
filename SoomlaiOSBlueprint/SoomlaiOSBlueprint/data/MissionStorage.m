@@ -1,19 +1,19 @@
 //
-//  MissionsStorage.m
+//  MissionStorage.m
 //  SoomlaiOSBlueprint
 //
 //  Created by Gur Dotan on 5/28/14.
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import "MissionsStorage.h"
+#import "MissionStorage.h"
 #import "Mission.h"
 #import "Blueprint.h"
 #import "BlueprintEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
-@implementation MissionsStorage
+@implementation MissionStorage
 
 
 + (void)setCompleted:(BOOL)completed forMission:(Mission *)mission {

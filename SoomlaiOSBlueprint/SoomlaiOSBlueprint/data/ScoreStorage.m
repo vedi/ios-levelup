@@ -14,13 +14,13 @@
  limitations under the License.
  */
 
-#import "ScoresStorage.h"
+#import "ScoreStorage.h"
 #import "Blueprint.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 #import "Score.h"
 
-@implementation ScoresStorage
+@implementation ScoreStorage
 
 /** Latest Score **/
 

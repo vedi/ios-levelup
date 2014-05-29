@@ -8,7 +8,7 @@
 
 #import "Gate.h"
 #import "BPJSONConsts.h"
-#import "GatesStorage.h"
+#import "GateStorage.h"
 
 @implementation Gate
 
@@ -48,7 +48,7 @@
 }
 
 - (void)tryOpen {
-    if ([GatesStorage isOpen:self]) {
+    if ([GateStorage isOpen:self]) {
         return;
     }
     
@@ -63,11 +63,11 @@
 }
 
 - (void)forceOpen:(BOOL)open {
-    [GatesStorage setOpen:self withFlag:open];
+    [GateStorage setOpen:self withFlag:open];
 }
 
 - (BOOL)isOpen {
-    return [GatesStorage isOpen:self];
+    return [GateStorage isOpen:self];
 }
 
 

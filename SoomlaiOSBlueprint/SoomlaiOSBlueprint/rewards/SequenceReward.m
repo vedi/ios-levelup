@@ -10,7 +10,7 @@
 #import "BPJSONConsts.h"
 #import "BadgeReward.h"
 #import "VirtualItemReward.h"
-#import "RewardsStorage.h"
+#import "RewardStorage.h"
 #import "StoreUtils.h"
 
 @implementation SequenceReward
@@ -73,7 +73,7 @@ static NSString* TAG = @"SOOMLA SequenceReward";
 
 
 - (Reward *)getLastGivenReward {
-    int idx = [RewardsStorage getLastSeqIdxGivenForReward:self];
+    int idx = [RewardStorage getLastSeqIdxGivenForReward:self];
     if (idx < 0) {
         return nil;
     }
@@ -81,13 +81,13 @@ static NSString* TAG = @"SOOMLA SequenceReward";
 }
 
 - (BOOL)hasMoreToGive {
-    return [RewardsStorage getLastSeqIdxGivenForReward:self] < [self.rewards count] ;
+    return [RewardStorage getLastSeqIdxGivenForReward:self] < [self.rewards count] ;
 }
 
 - (BOOL)forceGiveNextReward:(Reward *)reward {
     for (int i = 0; i < [self.rewards count]; i++) {
         if ([((Reward*)[self.rewards objectAtIndex:i]).rewardId isEqualToString:reward.rewardId]) {
-            [RewardsStorage setLastSeqIdxGiven:(i - 1) ForReward:self];
+            [RewardStorage setLastSeqIdxGiven:(i - 1) ForReward:self];
             return YES;
         }
     }
@@ -96,12 +96,12 @@ static NSString* TAG = @"SOOMLA SequenceReward";
 }
 
 - (BOOL)giveInner {
-    int idx = [RewardsStorage getLastSeqIdxGivenForReward:self];
+    int idx = [RewardStorage getLastSeqIdxGivenForReward:self];
     if (idx >= [rewards count]) {
         return NO; // all rewards in the sequence were given
     }
     
-    [RewardsStorage setLastSeqIdxGiven:(++idx) ForReward:self];
+    [RewardStorage setLastSeqIdxGiven:(++idx) ForReward:self];
     return YES;
 }
 

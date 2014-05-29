@@ -1,5 +1,5 @@
 //
-//  MissionsStorage.h
+//  MissionStorage.h
 //  SoomlaiOSBlueprint
 //
 //  Created by Gur Dotan on 5/28/14.
@@ -8,7 +8,7 @@
 
 @class Mission;
 
-@interface MissionsStorage : NSObject
+@interface MissionStorage : NSObject
 
 + (void)setCompleted:(BOOL)completed forMission:(Mission *)mission;
 

@@ -1,19 +1,19 @@
 //
-//  RewardsStorage.m
+//  RewardStorage.m
 //  SoomlaiOSBlueprint
 //
 //  Created by Gur Dotan on 5/26/14.
 //  Copyright (c) 2014 Soomla. All rights reserved.
 //
 
-#import "RewardsStorage.h"
+#import "RewardStorage.h"
 #import "Reward.h"
 #import "Blueprint.h"
 #import "BlueprintEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
-@implementation RewardsStorage
+@implementation RewardStorage
 
 
 + (void)setStatus:(BOOL)status forReward:(Reward *)reward {
