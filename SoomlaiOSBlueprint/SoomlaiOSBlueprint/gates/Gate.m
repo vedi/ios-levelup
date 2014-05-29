@@ -63,7 +63,7 @@
 }
 
 - (void)forceOpen:(BOOL)open {
-    [GateStorage setOpen:self withFlag:open];
+    [GateStorage setOpen:open forGate:self];
 }
 
 - (BOOL)isOpen {

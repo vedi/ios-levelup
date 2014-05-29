@@ -19,9 +19,9 @@
 
 @interface GateStorage : NSObject
 
-+ (void)setOpen:(Gate*)gate withFlag:(BOOL)open;
++ (void)setOpen:(BOOL)open forGate:(Gate*)gate;
 
-+ (void)setOpen:(Gate*)gate withFlag:(BOOL)open andEvent:(BOOL)notify;
++ (void)setOpen:(BOOL)open forGate:(Gate*)gate andEvent:(BOOL)notify;
 
 + (BOOL)isOpen:(Gate*)gate;
 

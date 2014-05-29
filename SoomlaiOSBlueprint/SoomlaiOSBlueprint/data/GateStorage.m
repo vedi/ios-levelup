@@ -17,11 +17,11 @@
 @implementation GateStorage
 
 
-+ (void)setOpen:(Gate*)gate withFlag:(BOOL)open {
-    [self setOpen:gate withFlag:open];
++ (void)setOpen:(BOOL)open forGate:(Gate*)gate {
+    [self setOpen:open forGate:gate];
 }
 
-+ (void)setOpen:(Gate*)gate withFlag:(BOOL)open andEvent:(BOOL)notify {
++ (void)setOpen:(BOOL)open forGate:(Gate*)gate andEvent:(BOOL)notify {
     NSString* key = [self keyGatesWithGateId:gate.gateId];
     
     if (open) {
