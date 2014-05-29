@@ -11,12 +11,20 @@
 @class Score;
 @class World;
 
-@interface Blueprint : NSObject
+@interface Blueprint : NSObject {
 
-- (Score*) getScoreForScoreId:(NSString*)scoreId;
+    @private
+    NSDictionary* initialWorlds;
+}
+
+
+- (void)initializeWithInitialWorlds:(NSArray *)oInitialWorlds;
+
+- (void)save;
+
+- (Score*) getScoreWithScoreId:(NSString*)scoreId;
 
 - (World*) getWorldWithWorldId:(NSString*)worldId;
-
 
 + (Blueprint*)getInstance;
 

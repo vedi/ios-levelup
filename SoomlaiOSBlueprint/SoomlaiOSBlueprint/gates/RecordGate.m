@@ -59,7 +59,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
 
 - (BOOL)canPass {
     
-    Score* score = [[Blueprint getInstance] getScoreForScoreId:self.associatedScoreId];
+    Score* score = [[Blueprint getInstance] getScoreWithScoreId:self.associatedScoreId];
     if (!score) {
         LogError(TAG, ([NSString stringWithFormat:@"(canPass) couldn't find score with scoreId: %@", self.associatedScoreId]));
         return NO;

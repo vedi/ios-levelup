@@ -18,7 +18,7 @@
     GatesList* gates;
     NSDictionary* innerWorlds;
     NSDictionary* scores;
-    NSArray* challenges;
+    NSMutableArray* challenges;
 }
 
 @property (strong, nonatomic, readonly) NSString* worldId;

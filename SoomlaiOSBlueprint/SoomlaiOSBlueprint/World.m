@@ -43,7 +43,7 @@ static NSString* TAG = @"SOOMLA World";
         gates = oGates;
         innerWorlds = oInnerWorlds;
         scores = oScores;
-        challenges = oChallenges;
+        challenges = [NSMutableArray arrayWithArray:oChallenges];
     }
     return self;
 }
