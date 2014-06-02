@@ -22,7 +22,7 @@
     long long startTime;
 }
 
-@property long long startTime;
+@property (nonatomic) long long startTime;
 
 
 - (int)getTimesStarted;

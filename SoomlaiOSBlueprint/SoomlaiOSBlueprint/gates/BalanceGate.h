@@ -24,7 +24,7 @@
 }
 
 @property (strong, nonatomic) NSString* associatedItemId;
-@property int desiredBalance;
+@property (nonatomic) int desiredBalance;
 
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;

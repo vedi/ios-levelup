@@ -24,8 +24,8 @@
     double high;
 }
 
-@property double low;
-@property double high;
+@property (nonatomic) double low;
+@property (nonatomic) double high;
 
 - (id)initWithLow:(double)oLow andHigh:(double)oHigh;
 

@@ -26,8 +26,8 @@
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* scoreId;
-@property double startValue;
-@property double tempScore;
+@property (nonatomic) double startValue;
+@property (nonatomic) double tempScore;
 @property (nonatomic) BOOL higherBetter;
 
 

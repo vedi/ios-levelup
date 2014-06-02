@@ -24,7 +24,7 @@
 }
 
 @property (strong, nonatomic) NSString* associatedScoreId;
-@property double desiredRecord;
+@property (nonatomic) double desiredRecord;
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
    andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord;

@@ -24,7 +24,7 @@
 }
 
 @property (strong, nonatomic) NSString* associatedItemId;
-@property int desiredBalance;
+@property (nonatomic) int desiredBalance;
 
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
