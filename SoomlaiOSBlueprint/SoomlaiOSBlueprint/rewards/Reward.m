@@ -17,10 +17,13 @@
 #import "Reward.h"
 #import "BPJSONConsts.h"
 #import "RewardStorage.h"
+#import "StoreUtils.h"
 
 @implementation Reward
 
-@synthesize rewardId, name;
+@synthesize rewardId, name, repeatable;
+
+static NSString* TAG = @"SOOMLA Reward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName {
     self = [super init];
@@ -59,6 +62,11 @@
 }
 
 - (void)give {
+    if ([RewardStorage isRewardGiven:self] && !self.repeatable) {
+        LogDebug(TAG, ([NSString stringWithFormat:@"Reward was already given and is not repeatable. id: %@", self.rewardId]));
+        return;
+    }
+
     if ([self giveInner]) {
         [RewardStorage setStatus:YES forReward:self];
     }

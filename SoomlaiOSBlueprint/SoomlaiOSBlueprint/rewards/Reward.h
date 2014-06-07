@@ -20,10 +20,12 @@
     @private
     NSString* rewardId;
     NSString* name;
+    BOOL repeatable;
 }
 
 @property (strong, nonatomic) NSString* rewardId;
 @property (strong, nonatomic) NSString* name;
+@property (nonatomic) BOOL repeatable;
 
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;

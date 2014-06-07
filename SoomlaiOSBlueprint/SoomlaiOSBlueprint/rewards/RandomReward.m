@@ -30,6 +30,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
         self.rewards = rewards;
+        self.repeatable = YES;
     }
     
     return self;
@@ -57,6 +58,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
         
         self.rewards = tmpRewards;
     }
+    self.repeatable = YES;
     
     return self;
 }
