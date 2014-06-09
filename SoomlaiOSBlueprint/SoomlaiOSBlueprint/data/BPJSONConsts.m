@@ -43,7 +43,7 @@ NSString *const BP_SCORE_RANGE_HIGH  = @"high";
 /** Reward **/
 
 NSString *const BP_REWARDS           = @"rewards";
-NSString *const BP_REWARD_REPEAT     = @"rewardRepeat";
+NSString *const BP_REWARD_REPEAT     = @"repeatable";
 NSString *const BP_REWARD_REWARDID   = @"rewardId";
 NSString *const BP_REWARD_AMOUNT     = @"amount";
 NSString *const BP_REWARD_ICONURL    = @"iconUrl";

@@ -49,7 +49,7 @@ static NSString* TAG = @"SOOMLA Reward";
     if (self) {
         self.rewardId = [dict objectForKey:BP_REWARD_REWARDID];
         self.name = [dict objectForKey:BP_NAME];
-        self.repeatable = [dict objectForKey:BP_REWARD_REPEAT];
+        self.repeatable = [[dict objectForKey:BP_REWARD_REPEAT] boolValue];
     }
     
     return self;
