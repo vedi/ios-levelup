@@ -49,6 +49,7 @@ static NSString* TAG = @"SOOMLA Reward";
     if (self) {
         self.rewardId = [dict objectForKey:BP_REWARD_REWARDID];
         self.name = [dict objectForKey:BP_NAME];
+        self.repeatable = [dict objectForKey:BP_REWARD_REPEAT];
     }
     
     return self;
@@ -58,6 +59,7 @@ static NSString* TAG = @"SOOMLA Reward";
     return [[NSDictionary alloc] initWithObjectsAndKeys:
             self.rewardId, BP_REWARD_REWARDID,
             self.name, BP_NAME,
+            self.repeatable, BP_REWARD_REPEAT,
             nil];
 }
 

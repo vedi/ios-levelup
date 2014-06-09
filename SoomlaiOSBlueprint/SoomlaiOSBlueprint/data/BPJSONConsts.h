@@ -37,6 +37,7 @@ extern NSString *const BP_SCORE_RANGE_HIGH;
 /** Reward **/
 
 extern NSString *const BP_REWARDS;
+extern NSString *const BP_REWARD_REPEAT;
 extern NSString *const BP_REWARD_REWARDID;
 extern NSString *const BP_REWARD_AMOUNT;
 extern NSString *const BP_REWARD_ICONURL;
