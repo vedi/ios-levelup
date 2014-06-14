@@ -99,14 +99,14 @@
 - (void)incBy:(double)amount {
     
     // Don't increment if we've hit the range's highest value
-    if ([self tempScore] == self.range.high) return;
+    if ([self tempScore] >= self.range.high) return;
     [super incBy:amount];
 }
 
 - (void)decBy:(double)amount {
 
     // Don't increment if we've hit the range's lowest value
-    if ([self tempScore] == self.range.low) return;
+    if ([self tempScore] >= self.range.low) return;
     [super decBy:amount];
 }
 
