@@ -16,9 +16,9 @@
 
 #import "WorldCompletionGate.h"
 #import "World.h"
-#import "Blueprint.h"
+#import "LevelUp.h"
 #import "BPJSONConsts.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 #import "StoreUtils.h"
 
 @implementation WorldCompletionGate
@@ -60,7 +60,7 @@
 }
 
 - (BOOL)canPass {
-    World* world = [[Blueprint getInstance] getWorldWithWorldId:self.associatedWorldId];
+    World* world = [[LevelUp getInstance] getWorldWithWorldId:self.associatedWorldId];
     return (world && [world isCompleted]);
 }
 
@@ -79,7 +79,7 @@
     
     if ([world.worldId isEqualToString:self.associatedWorldId]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [BlueprintEventHandling postGateCanBeOpened:self];
+        [LevelUpEventHandling postGateCanBeOpened:self];
     }
 };
 

@@ -59,24 +59,25 @@
 		EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13819365DF700FCF3C9 /* ActionMission.m */; };
 		EF7BA13D19365FF000FCF3C9 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13C19365FF000FCF3C9 /* Challenge.m */; };
 		EF7BA13E19365FF000FCF3C9 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13C19365FF000FCF3C9 /* Challenge.m */; };
+		EFC127C6194CD79300CDA66B /* SoomlaiOSLevelUpTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */; };
+		EFC127C9194CD79F00CDA66B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFC127C7194CD79F00CDA66B /* InfoPlist.strings */; };
 		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
 		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
 		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
-		EFCDC73D192E1EB6001D0824 /* libSoomlaiOSBlueprint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */; };
-		EFCDC743192E1EB6001D0824 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFCDC741192E1EB6001D0824 /* InfoPlist.strings */; };
-		EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */; };
+		EFCDC73D192E1EB6001D0824 /* libSoomlaiOSLevelUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */; };
+		EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */; };
 		EFCDC759192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
 		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
 		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
 		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
 		EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
 		EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
-		EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
-		EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* Blueprint.m */; };
+		EFFB7A40192E406900BB8BB5 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* LevelUp.m */; };
+		EFFB7A41192E406900BB8BB5 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* LevelUp.m */; };
 		EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
 		EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
-		EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */; };
-		EFFB7A4C1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */; };
+		EFFB7A4B1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */; };
+		EFFB7A4C1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +86,7 @@
 			containerPortal = EFCDC71D192E1EB5001D0824 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EFCDC724192E1EB5001D0824;
-			remoteInfo = SoomlaiOSBlueprint;
+			remoteInfo = SoomlaiOSLevelUp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -154,26 +155,26 @@
 		EF7BA13819365DF700FCF3C9 /* ActionMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionMission.m; path = challenges/ActionMission.m; sourceTree = "<group>"; };
 		EF7BA13B19365FF000FCF3C9 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Challenge.h; path = challenges/Challenge.h; sourceTree = "<group>"; };
 		EF7BA13C19365FF000FCF3C9 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Challenge.m; path = challenges/Challenge.m; sourceTree = "<group>"; };
-		EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSBlueprint.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC127C8194CD79F00CDA66B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSLevelUp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSBlueprint-Prefix.pch"; sourceTree = "<group>"; };
-		EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoomlaiOSBlueprintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDC72C192E1EB5001D0824 /* SoomlaiOSLevelUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSLevelUp-Prefix.pch"; sourceTree = "<group>"; };
+		EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoomlaiOSLevelUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCDC736192E1EB6001D0824 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EFCDC740192E1EB6001D0824 /* SoomlaiOSBlueprintTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoomlaiOSBlueprintTests-Info.plist"; sourceTree = "<group>"; };
-		EFCDC742192E1EB6001D0824 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoomlaiOSBlueprintTests.m; sourceTree = "<group>"; };
+		EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SoomlaiOSLevelUpTests-Info.plist"; sourceTree = "<group>"; };
+		EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoomlaiOSLevelUpTests.m; sourceTree = "<group>"; };
 		EFCDC753192E218F001D0824 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		EFCDC754192E218F001D0824 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		EFCDC75E192E2248001D0824 /* BPJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPJSONConsts.h; path = data/BPJSONConsts.h; sourceTree = "<group>"; };
 		EFCDC75F192E2248001D0824 /* BPJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPJSONConsts.m; path = data/BPJSONConsts.m; sourceTree = "<group>"; };
 		EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreStorage.h; path = data/ScoreStorage.h; sourceTree = "<group>"; };
 		EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreStorage.m; path = data/ScoreStorage.m; sourceTree = "<group>"; };
-		EFFB7A3E192E406900BB8BB5 /* Blueprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blueprint.h; sourceTree = "<group>"; };
-		EFFB7A3F192E406900BB8BB5 /* Blueprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blueprint.m; sourceTree = "<group>"; };
+		EFFB7A3E192E406900BB8BB5 /* LevelUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUp.h; sourceTree = "<group>"; };
+		EFFB7A3F192E406900BB8BB5 /* LevelUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUp.m; sourceTree = "<group>"; };
 		EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualItemScore.h; sourceTree = "<group>"; };
 		EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualItemScore.m; sourceTree = "<group>"; };
-		EFFB7A491931EC5200BB8BB5 /* BlueprintEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueprintEventHandling.h; sourceTree = "<group>"; };
-		EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueprintEventHandling.m; sourceTree = "<group>"; };
+		EFFB7A491931EC5200BB8BB5 /* LevelUpEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpEventHandling.h; sourceTree = "<group>"; };
+		EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpEventHandling.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCDC73D192E1EB6001D0824 /* libSoomlaiOSBlueprint.a in Frameworks */,
+				EFCDC73D192E1EB6001D0824 /* libSoomlaiOSLevelUp.a in Frameworks */,
 				EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */,
 				EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */,
 			);
@@ -258,8 +259,8 @@
 		EFCDC71C192E1EB5001D0824 = {
 			isa = PBXGroup;
 			children = (
-				EFCDC72A192E1EB5001D0824 /* SoomlaiOSBlueprint */,
-				EFCDC73E192E1EB6001D0824 /* SoomlaiOSBlueprintTests */,
+				EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */,
+				EFCDC73E192E1EB6001D0824 /* SoomlaiOSLevelUpTests */,
 				EFCDC727192E1EB5001D0824 /* Frameworks */,
 				EFCDC726192E1EB5001D0824 /* Products */,
 			);
@@ -268,8 +269,8 @@
 		EFCDC726192E1EB5001D0824 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */,
-				EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */,
+				EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */,
+				EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,7 +284,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EFCDC72A192E1EB5001D0824 /* SoomlaiOSBlueprint */ = {
+		EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
 			isa = PBXGroup;
 			children = (
 				EF7BA1261935BE7A00FCF3C9 /* challenges */,
@@ -292,40 +293,40 @@
 				EFCDC75D192E2210001D0824 /* data */,
 				EFCDC750192E218F001D0824 /* scoring */,
 				EFCDC72B192E1EB5001D0824 /* Supporting Files */,
-				EFFB7A3E192E406900BB8BB5 /* Blueprint.h */,
-				EFFB7A3F192E406900BB8BB5 /* Blueprint.m */,
-				EFFB7A491931EC5200BB8BB5 /* BlueprintEventHandling.h */,
-				EFFB7A4A1931EC5200BB8BB5 /* BlueprintEventHandling.m */,
+				EFFB7A3E192E406900BB8BB5 /* LevelUp.h */,
+				EFFB7A3F192E406900BB8BB5 /* LevelUp.m */,
+				EFFB7A491931EC5200BB8BB5 /* LevelUpEventHandling.h */,
+				EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */,
 				EF7BA105193379E600FCF3C9 /* World.h */,
 				EF7BA106193379E600FCF3C9 /* World.m */,
 				EF081C91193723AD00847E47 /* Level.h */,
 				EF081C92193723AD00847E47 /* Level.m */,
 			);
-			path = SoomlaiOSBlueprint;
+			path = SoomlaiOSLevelUp;
 			sourceTree = "<group>";
 		};
 		EFCDC72B192E1EB5001D0824 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDC72C192E1EB5001D0824 /* SoomlaiOSBlueprint-Prefix.pch */,
+				EFCDC72C192E1EB5001D0824 /* SoomlaiOSLevelUp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EFCDC73E192E1EB6001D0824 /* SoomlaiOSBlueprintTests */ = {
+		EFCDC73E192E1EB6001D0824 /* SoomlaiOSLevelUpTests */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDC744192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m */,
+				EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */,
 				EFCDC73F192E1EB6001D0824 /* Supporting Files */,
 			);
-			path = SoomlaiOSBlueprintTests;
+			path = SoomlaiOSLevelUpTests;
 			sourceTree = "<group>";
 		};
 		EFCDC73F192E1EB6001D0824 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDC740192E1EB6001D0824 /* SoomlaiOSBlueprintTests-Info.plist */,
-				EFCDC741192E1EB6001D0824 /* InfoPlist.strings */,
+				EFC127C7194CD79F00CDA66B /* InfoPlist.strings */,
+				EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -367,9 +368,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */ = {
+		EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprint" */;
+			buildConfigurationList = EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUp" */;
 			buildPhases = (
 				EFCDC721192E1EB5001D0824 /* Sources */,
 				EFCDC722192E1EB5001D0824 /* Frameworks */,
@@ -380,14 +381,14 @@
 			);
 			dependencies = (
 			);
-			name = SoomlaiOSBlueprint;
-			productName = SoomlaiOSBlueprint;
-			productReference = EFCDC725192E1EB5001D0824 /* libSoomlaiOSBlueprint.a */;
+			name = SoomlaiOSLevelUp;
+			productName = SoomlaiOSLevelUp;
+			productReference = EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EFCDC734192E1EB6001D0824 /* SoomlaiOSBlueprintTests */ = {
+		EFCDC734192E1EB6001D0824 /* SoomlaiOSLevelUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprintTests" */;
+			buildConfigurationList = EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUpTests" */;
 			buildPhases = (
 				EFCDC731192E1EB6001D0824 /* Sources */,
 				EFCDC732192E1EB6001D0824 /* Frameworks */,
@@ -398,9 +399,9 @@
 			dependencies = (
 				EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */,
 			);
-			name = SoomlaiOSBlueprintTests;
-			productName = SoomlaiOSBlueprintTests;
-			productReference = EFCDC735192E1EB6001D0824 /* SoomlaiOSBlueprintTests.xctest */;
+			name = SoomlaiOSLevelUpTests;
+			productName = SoomlaiOSLevelUpTests;
+			productReference = EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -412,7 +413,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Soomla;
 			};
-			buildConfigurationList = EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSBlueprint" */;
+			buildConfigurationList = EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSLevelUp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -424,8 +425,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */,
-				EFCDC734192E1EB6001D0824 /* SoomlaiOSBlueprintTests */,
+				EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */,
+				EFCDC734192E1EB6001D0824 /* SoomlaiOSLevelUpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,7 +436,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCDC743192E1EB6001D0824 /* InfoPlist.strings in Resources */,
+				EFC127C6194CD79300CDA66B /* SoomlaiOSLevelUpTests-Info.plist in Resources */,
+				EFC127C9194CD79F00CDA66B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +477,7 @@
 				EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */,
 				EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
-				EFFB7A40192E406900BB8BB5 /* Blueprint.m in Sources */,
+				EFFB7A40192E406900BB8BB5 /* LevelUp.m in Sources */,
 				EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */,
 				EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */,
 				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
@@ -490,7 +492,7 @@
 				EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */,
 				EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */,
 				EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */,
-				EFFB7A4B1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
+				EFFB7A4B1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */,
 				EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */,
 				EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */,
 				EF081C93193723AD00847E47 /* Level.m in Sources */,
@@ -516,7 +518,7 @@
 				EF73CCAB1932420300A171E5 /* GateStorage.m in Sources */,
 				EF7BA108193379E600FCF3C9 /* World.m in Sources */,
 				EF73CCA719323E3200A171E5 /* Gate.m in Sources */,
-				EFFB7A41192E406900BB8BB5 /* Blueprint.m in Sources */,
+				EFFB7A41192E406900BB8BB5 /* LevelUp.m in Sources */,
 				EF7BA1321935D56B00FCF3C9 /* BalanceMission.m in Sources */,
 				EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */,
 				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
@@ -531,9 +533,9 @@
 				EF081C94193723AD00847E47 /* Level.m in Sources */,
 				EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
-				EFCDC745192E1EB6001D0824 /* SoomlaiOSBlueprintTests.m in Sources */,
+				EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */,
 				EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */,
-				EFFB7A4C1931EC5200BB8BB5 /* BlueprintEventHandling.m in Sources */,
+				EFFB7A4C1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,16 +544,16 @@
 /* Begin PBXTargetDependency section */
 		EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EFCDC724192E1EB5001D0824 /* SoomlaiOSBlueprint */;
+			target = EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */;
 			targetProxy = EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EFCDC741192E1EB6001D0824 /* InfoPlist.strings */ = {
+		EFC127C7194CD79F00CDA66B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EFCDC742192E1EB6001D0824 /* en */,
+				EFC127C8194CD79F00CDA66B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -640,9 +642,9 @@
 		EFCDC749192E1EB6001D0824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/SoomlaiOSBlueprint.dst;
+				DSTROOT = /tmp/SoomlaiOSLevelUp.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -650,7 +652,7 @@
 					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SoomlaiOSLevelUp;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
@@ -659,9 +661,9 @@
 		EFCDC74A192E1EB6001D0824 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/SoomlaiOSBlueprint.dst;
+				DSTROOT = /tmp/SoomlaiOSLevelUp.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -669,7 +671,7 @@
 					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SoomlaiOSLevelUp;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
@@ -684,13 +686,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SoomlaiOSBlueprintTests/SoomlaiOSBlueprintTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SoomlaiOSLevelUpTests/SoomlaiOSLevelUpTests-Info.plist";
+				PRODUCT_NAME = SoomlaiOSLevelUpTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -704,9 +706,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoomlaiOSBlueprint/SoomlaiOSBlueprint-Prefix.pch";
-				INFOPLIST_FILE = "SoomlaiOSBlueprintTests/SoomlaiOSBlueprintTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
+				INFOPLIST_FILE = "SoomlaiOSLevelUpTests/SoomlaiOSLevelUpTests-Info.plist";
+				PRODUCT_NAME = SoomlaiOSLevelUpTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -714,7 +716,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSBlueprint" */ = {
+		EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSLevelUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFCDC746192E1EB6001D0824 /* Debug */,
@@ -723,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprint" */ = {
+		EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFCDC749192E1EB6001D0824 /* Debug */,
@@ -732,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSBlueprintTests" */ = {
+		EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFCDC74C192E1EB6001D0824 /* Debug */,

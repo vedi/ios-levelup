@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "Blueprint.h"
+#import "LevelUp.h"
 #import "BPJSONConsts.h"
 #import "Score.h"
 #import "World.h"
@@ -22,9 +22,9 @@
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
-@implementation Blueprint
+@implementation LevelUp
 
-static NSString* TAG = @"SOOMLA Blueprint";
+static NSString* TAG = @"SOOMLA LevelUp";
 
 
 - (void)initializeWithInitialWorlds:(NSArray *)oInitialWorlds {
@@ -34,13 +34,6 @@ static NSString* TAG = @"SOOMLA Blueprint";
     }
     initialWorlds = worlds;
     [self save];
-}
-
-- (void)save {
-    NSString* key = [NSString stringWithFormat:@"%@model", BP_DB_KEY_PREFIX];
-    NSString* value = [StoreUtils dictToJsonString:[self toDictionary]];
-    LogDebug(TAG, ([NSString stringWithFormat:@"saving Blueprint to DB. json is: %@", value]));
-    [[[StorageManager getInstance] keyValueStorage] setValue:value forKey:key];
 }
 
 - (Score*) getScoreWithScoreId:(NSString*)scoreId {
@@ -54,18 +47,24 @@ static NSString* TAG = @"SOOMLA Blueprint";
 
 // private
 
-+ (Blueprint*)getInstance {
-    static Blueprint* _instance = nil;
++ (LevelUp*)getInstance {
+    static LevelUp* _instance = nil;
     
     @synchronized( self ) {
         if( _instance == nil ) {
-            _instance = [[Blueprint alloc ] init];
+            _instance = [[LevelUp alloc ] init];
         }
     }
     
     return _instance;
 }
 
+- (void)save {
+    NSString* key = [NSString stringWithFormat:@"%@model", BP_DB_KEY_PREFIX];
+    NSString* value = [StoreUtils dictToJsonString:[self toDictionary]];
+    LogDebug(TAG, ([NSString stringWithFormat:@"saving LevelUp to DB. json is: %@", value]));
+    [[[StorageManager getInstance] keyValueStorage] setValue:value forKey:key];
+}
 
 - (NSDictionary*)toDictionary {
     NSMutableArray* initialWorldsArr = [NSMutableArray array];

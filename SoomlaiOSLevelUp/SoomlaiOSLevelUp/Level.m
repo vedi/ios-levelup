@@ -18,7 +18,7 @@
 #import "LevelStorage.h"
 #import "Score.h"
 #import "BPJSONConsts.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 #import "VirtualItemScore.h"
 #import "VirtualItemNotFoundException.h"
 #import "StoreInventory.h"
@@ -27,7 +27,7 @@
 
 @implementation Level
 
-@synthesize startTime;
+//@synthesize startTime;
 
 static NSString* TAG = @"SOOMLA Level";
 
@@ -76,22 +76,40 @@ static NSString* TAG = @"SOOMLA Level";
     }
     
     [LevelStorage incTimesStartedForLevel:self];
-    self.startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
+    startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
     
     // Notify level has started
-    [BlueprintEventHandling postLevelStarted:self];
+    [LevelUpEventHandling postLevelStarted:self];
     
     return YES;
 }
 
-- (void)end {
+- (void)pause {
+    long long now = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
+    currentTime = now - startTime;
+    paused = YES;
+}
+
+- (void)resume {
+    startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
+    paused = NO;
+}
+
+- (void)end:(BOOL)completed {
+    
+    // check end() called without matching start()
+    if (	startTime == 0) {
+        LogDebug(TAG, @"end() called without matching start()! ignoring.");
+        return;
+    }
     
     // Count number of times this level was played
     [LevelStorage incTimesPlayedForLevel:self];
     
     // Calulate the slowest \ fastest durations of level play
+    long long _startTime = paused ? currentTime : (long long)([[NSDate date] timeIntervalSince1970] * 1000) - startTime;
     long long endTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
-    double duration = (endTime - self.startTime) / 1000.0;
+    double duration = (endTime - _startTime) / 1000.0;
     
     if (duration > [self getSlowestDuration]) {
         [LevelStorage setSlowestDuration:duration forLevel:self];
@@ -118,7 +136,16 @@ static NSString* TAG = @"SOOMLA Level";
     }
     
     // Notify level has ended
-    [BlueprintEventHandling postLevelEnded:self];
+    [LevelUpEventHandling postLevelEnded:self];
+    
+    // reset timers
+    startTime = 0;
+    currentTime = 0;
+    paused = NO;
+    
+    if(completed) {
+        [self setCompleted:YES];
+    }
 }
 
 

@@ -18,7 +18,7 @@
 #import "BalanceMission.h"
 #import "BPJSONConsts.h"
 #import "RecordMission.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 #import "StoreUtils.h"
 
 @implementation Challenge

@@ -15,7 +15,7 @@
  */
 
 #import "ScoreStorage.h"
-#import "Blueprint.h"
+#import "LevelUp.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 #import "Score.h"

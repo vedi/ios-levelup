@@ -16,8 +16,8 @@
 
 #import "RewardStorage.h"
 #import "Reward.h"
-#import "Blueprint.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUp.h"
+#import "LevelUpEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
@@ -35,7 +35,7 @@
         [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
         
         if (notify) {
-            [BlueprintEventHandling postRewardGiven:reward];
+            [LevelUpEventHandling postRewardGiven:reward];
         }
     } else {
         [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];

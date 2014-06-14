@@ -14,31 +14,24 @@
  limitations under the License.
  */
 
-#import "World.h"
+#define BP_DB_KEY_PREFIX @"soomla.levelup"
 
-@interface Level : World {
+@class Score;
+@class World;
+
+@interface LevelUp : NSObject {
 
     @private
-    long long startTime;
+    NSDictionary* initialWorlds;
 }
 
-@property (nonatomic) long long startTime;
 
+- (void)initializeWithInitialWorlds:(NSArray *)oInitialWorlds;
 
-- (int)getTimesStarted;
+- (Score*) getScoreWithScoreId:(NSString*)scoreId;
 
-- (int)getTimesPlayed;
+- (World*) getWorldWithWorldId:(NSString*)worldId;
 
-- (double)getSlowestDuration;
-
-- (double)getFastestDuration;
-
-- (void)decAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId;
-
-- (void)incAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId;
-
-- (BOOL)start;
-
-- (void)end;
++ (LevelUp*)getInstance;
 
 @end

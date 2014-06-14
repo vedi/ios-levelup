@@ -14,11 +14,11 @@
  limitations under the License.
  */
 
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 #import "Challenge.h"
 #import "BadgeReward.h"
 
-@implementation BlueprintEventHandling
+@implementation LevelUpEventHandling
 
 + (void)postScoreRecordChanged:(Score *)score {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:score forKey:DICT_ELEMENT_SCORE];

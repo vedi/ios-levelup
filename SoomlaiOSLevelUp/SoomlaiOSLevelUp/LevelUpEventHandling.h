@@ -42,7 +42,7 @@
 #define DICT_ELEMENT_IS_BADGE                   @"isBadge"
 
 
-@interface BlueprintEventHandling : NSObject
+@interface LevelUpEventHandling : NSObject
 
 + (void)postScoreRecordChanged:(Score *)score;
 + (void)postGateOpened:(Gate *)gate;

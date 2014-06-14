@@ -17,7 +17,7 @@
 #import "Score.h"
 #import "ScoreStorage.h"
 #import "BPJSONConsts.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 
 
 @implementation Score
@@ -83,7 +83,7 @@
     double record = [ScoreStorage getRecordScore:self];
     if ([self hasTempScoreReached:record]) {
         [ScoreStorage setRecord:self.tempScore toScore:self];
-        [BlueprintEventHandling postScoreRecordChanged:self];
+        [LevelUpEventHandling postScoreRecordChanged:self];
     }
     [ScoreStorage setLatest:self.tempScore toScore:self];
     self.tempScore = self.startValue;

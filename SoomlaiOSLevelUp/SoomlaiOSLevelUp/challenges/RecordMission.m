@@ -14,32 +14,45 @@
  limitations under the License.
  */
 
-#import "RecordGate.h"
-#import "Score.h"
-#import "Blueprint.h"
+#import "RecordMission.h"
 #import "BPJSONConsts.h"
-#import "BlueprintEventHandling.h"
-#import "StoreUtils.h"
+#import "Score.h"
+#import "LevelUpEventHandling.h"
 
-@implementation RecordGate
+@implementation RecordMission
 
 @synthesize associatedScoreId, desiredRecord;
 
-static NSString* TAG = @"SOOMLA RecordGate";
 
-- (id)initWithGateId:(NSString *)oGateId andScoreId:(NSString *)oScoreId andDesiredRecord:(double)oDesiredRecord {
-    if ([self initWithGateId:oGateId]) {
-        self.associatedScoreId = oScoreId;
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+   andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord {
+    
+    if (self = [super initWithMissionId:oMissionId andName:oName]) {
+        self.associatedScoreId = oAssociatedScoreId;
         self.desiredRecord = oDesiredRecord;
     }
     
-    if (![self isOpen]) {
+    if (![self isCompleted]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
     }
     
     return self;
 }
 
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+             andRewards:(NSArray *)oRewards andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord {
+    
+    if (self = [super initWithMissionId:oMissionId andName:oName andRewards:oRewards]) {
+        self.associatedScoreId = oAssociatedScoreId;
+        self.desiredRecord = oDesiredRecord;
+    }
+    
+    if (![self isCompleted]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+    }
+    
+    return self;
+}
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
@@ -47,12 +60,13 @@ static NSString* TAG = @"SOOMLA RecordGate";
         self.desiredRecord = [[dict objectForKey:BP_DESIRED_RECORD] doubleValue];
     }
     
-    if (![self isOpen]) {
+    if (![self isCompleted]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
     }
     
     return self;
 }
+
 
 - (NSDictionary*)toDictionary {
     NSDictionary* parentDict = [super toDictionary];
@@ -65,22 +79,6 @@ static NSString* TAG = @"SOOMLA RecordGate";
     return toReturn;
 }
 
-- (BOOL)canPass {
-    
-    Score* score = [[Blueprint getInstance] getScoreWithScoreId:self.associatedScoreId];
-    if (!score) {
-        LogError(TAG, ([NSString stringWithFormat:@"(canPass) couldn't find score with scoreId: %@", self.associatedScoreId]));
-        return NO;
-    }
-    
-    return [score hasRecordReachedScore:self.desiredRecord];
-}
-
-- (void)tryOpenInner {
-    if ([self canPass]) {
-        [self forceOpen:YES];
-    }
-}
 
 // Private
 
@@ -91,8 +89,10 @@ static NSString* TAG = @"SOOMLA RecordGate";
     
     if ([score.scoreId isEqualToString:self.associatedScoreId] && [score hasRecordReachedScore:self.desiredRecord]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [BlueprintEventHandling postGateCanBeOpened:self];
+        [self setCompleted:YES];
     }
 };
+
+
 
 @end

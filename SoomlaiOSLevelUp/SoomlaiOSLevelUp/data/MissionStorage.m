@@ -14,50 +14,50 @@
  limitations under the License.
  */
 
-#import "GateStorage.h"
-#import "Blueprint.h"
-#import "Gate.h"
+#import "MissionStorage.h"
+#import "Mission.h"
+#import "LevelUp.h"
+#import "LevelUpEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
-#import "BlueprintEventHandling.h"
+
+@implementation MissionStorage
 
 
-@implementation GateStorage
-
-
-+ (void)setOpen:(BOOL)open forGate:(Gate*)gate {
-    [self setOpen:open forGate:gate];
++ (void)setCompleted:(BOOL)completed forMission:(Mission *)mission {
+    [self setCompleted:completed forMission:mission andNotify:YES];
 }
 
-+ (void)setOpen:(BOOL)open forGate:(Gate*)gate andEvent:(BOOL)notify {
-    NSString* key = [self keyGateOpen:gate.gateId];
++ (void)setCompleted:(BOOL)completed forMission:(Mission *)mission andNotify:(BOOL)notify {
     
-    if (open) {
+    NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
+    
+    if (completed) {
         [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
         
         if (notify) {
-            [BlueprintEventHandling postGateOpened:gate];
+            [LevelUpEventHandling postMissionCompleted:mission];
         }
     } else {
         [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];
     }
 }
 
-+ (BOOL)isOpen:(Gate*)gate {
-    NSString* key = [self keyGateOpen:gate.gateId];
++ (BOOL)isMissionCompleted:(Mission *)mission {
+    NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
     NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
     return (val && [val length] > 0);
 }
 
 
 // Private
-
-+ (NSString*)keyGatesWithGateId:(NSString*)gateId andPostfix:(NSString*)postfix {
-    return [NSString stringWithFormat: @"%@gates.%@.%@", BP_DB_KEY_PREFIX, gateId, postfix];
++ (NSString *)keyMissionsWithMissionId:(NSString *)missionId andPostfix:(NSString *)postfix {
+    return [NSString stringWithFormat: @"%@missiona.%@.%@", BP_DB_KEY_PREFIX, missionId, postfix];
 }
 
-+ (NSString*)keyGateOpen:(NSString*)gateId {
-    return [self keyGatesWithGateId:gateId andPostfix:@"open"];
++ (NSString *)keyMissionCompletedWithMissionId:(NSString *)missionId {
+    return [self keyMissionsWithMissionId:missionId andPostfix:@"completed"];
 }
+
 
 @end

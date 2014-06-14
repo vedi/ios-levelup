@@ -16,7 +16,7 @@
 
 #import "LevelStorage.h"
 #import "Level.h"
-#import "Blueprint.h"
+#import "LevelUp.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 

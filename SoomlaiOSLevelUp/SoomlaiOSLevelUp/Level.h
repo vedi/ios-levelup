@@ -14,26 +14,34 @@
  limitations under the License.
  */
 
-#define BP_DB_KEY_PREFIX @"soomla.blueprint"
+#import "World.h"
 
-@class Score;
-@class World;
-
-@interface Blueprint : NSObject {
+@interface Level : World {
 
     @private
-    NSDictionary* initialWorlds;
+    long long startTime;
+    long long currentTime;
+    BOOL paused;
 }
 
+- (int)getTimesStarted;
 
-- (void)initializeWithInitialWorlds:(NSArray *)oInitialWorlds;
+- (int)getTimesPlayed;
 
-- (void)save;
+- (double)getSlowestDuration;
 
-- (Score*) getScoreWithScoreId:(NSString*)scoreId;
+- (double)getFastestDuration;
 
-- (World*) getWorldWithWorldId:(NSString*)worldId;
+- (void)decAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId;
 
-+ (Blueprint*)getInstance;
+- (void)incAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId;
+
+- (BOOL)start;
+
+- (void)pause;
+
+- (void)resume;
+
+- (void)end:(BOOL)completed;
 
 @end

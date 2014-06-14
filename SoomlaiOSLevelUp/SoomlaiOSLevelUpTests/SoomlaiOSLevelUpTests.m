@@ -1,6 +1,6 @@
 //
-//  SoomlaiOSBlueprintTests.m
-//  SoomlaiOSBlueprintTests
+//  SoomlaiOSLevelUpTests.m
+//  SoomlaiOSLevelUpTests
 //
 //  Created by Gur Dotan on 5/22/14.
 //  Copyright (c) 2014 Soomla. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface SoomlaiOSBlueprintTests : XCTestCase
+@interface SoomlaiOSLevelUpTests : XCTestCase
 
 @end
 
-@implementation SoomlaiOSBlueprintTests
+@implementation SoomlaiOSLevelUpTests
 
 - (void)setUp
 {

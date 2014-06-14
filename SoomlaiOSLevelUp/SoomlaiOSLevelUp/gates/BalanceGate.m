@@ -17,7 +17,7 @@
 #import "BalanceGate.h"
 #import "BPJSONConsts.h"
 #import "EventHandling.h"
-#import "BlueprintEventHandling.h"
+#import "LevelUpEventHandling.h"
 #import "GateStorage.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
@@ -126,7 +126,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
 - (void)checkBalance:(int)balance forItemId:(NSString*)itemId {
     if ([itemId isEqualToString:self.associatedItemId] && balance >= self.desiredBalance) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [BlueprintEventHandling postGateCanBeOpened:self];
+        [LevelUpEventHandling postGateCanBeOpened:self];
     }
 }
 
