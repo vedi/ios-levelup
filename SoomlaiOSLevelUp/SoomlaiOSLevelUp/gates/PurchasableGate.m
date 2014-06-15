@@ -33,7 +33,7 @@
 static NSString* TAG = @"SOOMLA PurchasableGate";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId {
-    if ([self initWithGateId:oGateId]) {
+    if (self = [super initWithGateId:oGateId]) {
         self.associatedItemId = oAssociatedItemId;
     }
     

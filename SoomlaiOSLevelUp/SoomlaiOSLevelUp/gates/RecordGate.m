@@ -28,7 +28,7 @@
 static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithGateId:(NSString *)oGateId andScoreId:(NSString *)oScoreId andDesiredRecord:(double)oDesiredRecord {
-    if ([self initWithGateId:oGateId]) {
+    if (self = [super initWithGateId:oGateId]) {
         self.associatedScoreId = oScoreId;
         self.desiredRecord = oDesiredRecord;
     }
