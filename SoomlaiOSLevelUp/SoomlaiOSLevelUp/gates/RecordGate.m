@@ -44,8 +44,8 @@ static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedScoreId = [dict objectForKey:BP_ASSOCSCOREID];
-        self.desiredRecord = [[dict objectForKey:BP_DESIRED_RECORD] doubleValue];
+        self.associatedScoreId = dict[BP_ASSOCSCOREID];
+        self.desiredRecord = [dict[BP_DESIRED_RECORD] doubleValue];
     }
     
     if (![self isOpen]) {
@@ -90,7 +90,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
 - (void)scoreRecordChanged:(NSNotification *)notification {
     
     NSDictionary* userInfo = notification.userInfo;
-    Score* score = [userInfo objectForKey:DICT_ELEMENT_SCORE];
+    Score* score = userInfo[DICT_ELEMENT_SCORE];
     
     if ([score.scoreId isEqualToString:self.associatedScoreId] && [score hasRecordReachedScore:self.desiredRecord]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];

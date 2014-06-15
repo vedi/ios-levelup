@@ -64,10 +64,10 @@ static NSDictionary* typeMap;
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
         
-        worldId = [dict objectForKey:BP_WORLD_WORLDID];
+        worldId = dict[BP_WORLD_WORLDID];
         
         NSMutableDictionary* tmpInnerWorlds = [NSMutableDictionary dictionary];
-        NSArray* innerWorldDicts = [dict objectForKey:BP_WORLDS];
+        NSArray* innerWorldDicts = dict[BP_WORLDS];
         
         // Iterate over all inner worlds in the JSON array and for each one create
         // an instance according to the world type
@@ -83,7 +83,7 @@ static NSDictionary* typeMap;
         
         
         NSMutableDictionary* tmpScores = [NSMutableDictionary dictionary];
-        NSArray* scoreDicts = [dict objectForKey:BP_SCORES];
+        NSArray* scoreDicts = dict[BP_SCORES];
         
         // Iterate over all scores in the JSON array and for each one create
         // an instance according to the score type
@@ -99,7 +99,7 @@ static NSDictionary* typeMap;
         
         
         NSMutableArray* tmpChallenges = [NSMutableArray array];
-        NSArray* challengeDicts = [dict objectForKey:BP_CHALLENGES];
+        NSArray* challengeDicts = dict[BP_CHALLENGES];
         
         // Iterate over all challenges in the JSON array and create an instance for each one
         for (NSDictionary* challengeDict in challengeDicts) {
@@ -109,7 +109,7 @@ static NSDictionary* typeMap;
         challenges = tmpChallenges;
 
         
-        NSDictionary* gateListDict = [dict objectForKey:BP_GATES];
+        NSDictionary* gateListDict = dict[BP_GATES];
         gates = [GatesList fromDictionary:gateListDict];
     }
     

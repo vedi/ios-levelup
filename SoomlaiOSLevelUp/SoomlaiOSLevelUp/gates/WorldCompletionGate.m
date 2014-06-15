@@ -41,7 +41,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedWorldId = [dict objectForKey:BP_ASSOCWORLDID];
+        self.associatedWorldId = dict[BP_ASSOCWORLDID];
     }
     
     if (![self isOpen]) {
@@ -79,7 +79,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
 - (void)worldCompleted:(NSNotification *)notification {
     
     NSDictionary* userInfo = notification.userInfo;
-    World* world = [userInfo objectForKey:DICT_ELEMENT_WORLD];
+    World* world = userInfo[DICT_ELEMENT_WORLD];
     
     if ([world.worldId isEqualToString:self.associatedWorldId]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];

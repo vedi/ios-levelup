@@ -56,10 +56,10 @@ static NSDictionary* typeMap;
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.scoreId = [dict objectForKey:BP_SCORE_SCOREID];
-        self.name = [dict objectForKey:BP_NAME];
-        self.startValue = [[dict objectForKey:BP_SCORE_STARTVAL] doubleValue];
-        self.higherBetter = [[dict objectForKey:BP_SCORE_HIGHBETTER] boolValue];
+        self.scoreId = dict[BP_SCORE_SCOREID];
+        self.name = dict[BP_NAME];
+        self.startValue = [dict[BP_SCORE_STARTVAL] doubleValue];
+        self.higherBetter = [dict[BP_SCORE_HIGHBETTER] boolValue];
     }
     
     return self;

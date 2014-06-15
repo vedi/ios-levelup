@@ -56,8 +56,8 @@ static NSString* TYPE_NAME = @"balance";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = [dict objectForKey:BP_ASSOCITEMID];
-        self.desiredBalance = [[dict objectForKey:BP_DESIRED_BALANCE] intValue];
+        self.associatedItemId = dict[BP_ASSOCITEMID];
+        self.desiredBalance = [dict[BP_DESIRED_BALANCE] intValue];
     }
     
     [self observeNotifications];
@@ -88,16 +88,16 @@ static NSString* TYPE_NAME = @"balance";
 
 - (void)currencyBalanceChanged:(NSNotification*)notification {
     NSDictionary* userInfo = notification.userInfo;
-    VirtualCurrency* currency = [userInfo objectForKey:DICT_ELEMENT_CURRENCY];
-    int balance = [[userInfo objectForKey:DICT_ELEMENT_BALANCE] intValue];
+    VirtualCurrency* currency = userInfo[DICT_ELEMENT_CURRENCY];
+    int balance = [userInfo[DICT_ELEMENT_BALANCE] intValue];
     
     [self checkBalance:balance forItemId:currency.itemId];
 }
 
 - (void)goodBalanceChanged:(NSNotification*)notification {
     NSDictionary* userInfo = notification.userInfo;
-    VirtualGood* good = [userInfo objectForKey:DICT_ELEMENT_GOOD];
-    int balance = [[userInfo objectForKey:DICT_ELEMENT_BALANCE] intValue];
+    VirtualGood* good = userInfo[DICT_ELEMENT_GOOD];
+    int balance = [userInfo[DICT_ELEMENT_BALANCE] intValue];
     
     [self checkBalance:balance forItemId:good.itemId];
 }

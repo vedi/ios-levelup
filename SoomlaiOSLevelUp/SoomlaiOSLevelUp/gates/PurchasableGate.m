@@ -48,7 +48,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = [dict objectForKey:BP_ASSOCITEMID];
+        self.associatedItemId = dict[BP_ASSOCITEMID];
     }
     
     if (![self isOpen]) {
@@ -103,7 +103,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     
     // TODO: How to get the payload?
     // Java: if (marketPurchaseEvent.getPayload().equals(getGateId())) {
-    NSString* gateId = [userInfo objectForKey:DICT_ELEMENT_GATE];
+    NSString* gateId = userInfo[DICT_ELEMENT_GATE];
     
     if ([gateId isEqualToString:self.gateId]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];

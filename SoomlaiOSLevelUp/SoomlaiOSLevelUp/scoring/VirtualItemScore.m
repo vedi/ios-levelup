@@ -46,7 +46,7 @@ static NSString* TYPE_NAME = @"item";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = [dict objectForKey:BP_ASSOCITEMID];
+        self.associatedItemId = dict[BP_ASSOCITEMID];
     }
     
     return self;

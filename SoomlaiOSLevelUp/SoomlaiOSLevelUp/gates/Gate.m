@@ -56,7 +56,7 @@ static NSDictionary* typeMap;
     }
     
     if (self) {
-        self.gateId = [dict objectForKey:BP_GATE_GATEID];
+        self.gateId = dict[BP_GATE_GATEID];
     }
     
     return self;

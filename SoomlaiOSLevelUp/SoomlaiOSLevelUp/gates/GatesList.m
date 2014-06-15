@@ -61,7 +61,7 @@ static NSDictionary* typeMap;
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpGates = [NSMutableArray array];
-        NSArray* gateDicts = [dict objectForKey:BP_GATES];
+        NSArray* gateDicts = dict[BP_GATES];
 
         // Iterate over all gates in the JSON array and for each one create
         // an instance according to the gate type

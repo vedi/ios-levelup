@@ -98,7 +98,7 @@ static NSString* TAG = @"SOOMLA Challenge";
 - (void)missionCompleted:(NSNotification *)notification {
 
     NSDictionary* userInfo = notification.userInfo;
-    Mission* mission = [userInfo objectForKey:DICT_ELEMENT_MISSION];
+    Mission* mission = userInfo[DICT_ELEMENT_MISSION];
     
     if ([self.missions containsObject:mission]) {
         BOOL completed = YES;

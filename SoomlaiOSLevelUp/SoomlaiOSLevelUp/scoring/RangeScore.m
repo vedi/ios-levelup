@@ -32,8 +32,8 @@
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.low = [[dict objectForKey:BP_SCORE_RANGE_LOW] doubleValue];
-        self.high = [[dict objectForKey:BP_SCORE_RANGE_HIGH] doubleValue];
+        self.low = [dict[BP_SCORE_RANGE_LOW] doubleValue];
+        self.high = [dict[BP_SCORE_RANGE_HIGH] doubleValue];
     }
     
     return self;
@@ -81,10 +81,10 @@ static NSString* TYPE_NAME = @"range";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.scoreId = [dict objectForKey:BP_SCORE_SCOREID];
-        self.name = [dict objectForKey:BP_NAME];
-        self.higherBetter = [[dict objectForKey:BP_SCORE_HIGHBETTER] boolValue];
-        self.range = [[Range alloc] initWithDictionary:[dict objectForKey:BP_SCORE_RANGE]];
+        self.scoreId = dict[BP_SCORE_SCOREID];
+        self.name = dict[BP_NAME];
+        self.higherBetter = [dict[BP_SCORE_HIGHBETTER] boolValue];
+        self.range = [[Range alloc] initWithDictionary:dict[BP_SCORE_RANGE]];
     }
     return self;
 }

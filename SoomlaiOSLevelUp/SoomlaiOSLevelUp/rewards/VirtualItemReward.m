@@ -39,8 +39,8 @@ static NSString* TAG = @"SOOMLA VirtualItemReward";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.amount = [[dict objectForKey:BP_REWARD_AMOUNT] intValue];
-        self.associatedItemId = [dict objectForKey:BP_ASSOCITEMID];
+        self.amount = [dict[BP_REWARD_AMOUNT] intValue];
+        self.associatedItemId = dict[BP_ASSOCITEMID];
     }
     
     return self;

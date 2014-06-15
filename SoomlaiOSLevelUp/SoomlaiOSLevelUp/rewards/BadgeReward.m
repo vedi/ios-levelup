@@ -33,7 +33,7 @@ static NSString* TYPE_NAME = @"badge";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.iconUrl = [dict objectForKey:BP_REWARD_ICONURL];
+        self.iconUrl = dict[BP_REWARD_ICONURL];
     }
     
     return self;
