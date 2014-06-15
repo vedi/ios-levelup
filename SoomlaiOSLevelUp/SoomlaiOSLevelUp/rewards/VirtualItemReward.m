@@ -25,6 +25,7 @@
 
 @synthesize associatedItemId, amount;
 
+static NSString* TYPE_NAME = @"item";
 static NSString* TAG = @"SOOMLA VirtualItemReward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andAmount:(int)oAmount andAssociatedItemId:(NSString *)oAssociatedItemId {
@@ -51,7 +52,7 @@ static NSString* TAG = @"SOOMLA VirtualItemReward";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:[NSNumber numberWithInt:self.amount] forKey:BP_REWARD_AMOUNT];
     [toReturn setValue:self.associatedItemId forKey:BP_ASSOCITEMID];
-    [toReturn setValue:@"item" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

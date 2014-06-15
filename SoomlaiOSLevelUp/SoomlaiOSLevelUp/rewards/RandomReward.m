@@ -24,6 +24,8 @@
 
 @synthesize rewards;
 
+static NSString* TYPE_NAME = @"random";
+
 static NSString* TAG = @"SOOMLA RandomReward";
 
 
@@ -40,19 +42,20 @@ static NSString* TAG = @"SOOMLA RandomReward";
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpRewards = [NSMutableArray array];
-        NSArray* rewardsArr = [dict objectForKey:BP_REWARDS];
+        NSArray* rewardsArr = dict[BP_REWARDS];
+        
+        if (!rewardsArr) {
+            LogDebug(TAG, @"reward has no meaning without children");
+            rewardsArr = [NSMutableArray array];
+        }
         
         // Iterate over all rewards in the JSON array and for each one create
         // an instance according to the reward type
         for (NSDictionary* rewardDict in rewardsArr) {
             
-            NSString* type = [rewardDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"badge"]) {
-                [tmpRewards addObject:[[BadgeReward alloc] initWithDictionary:rewardDict]];
-            } else if ([type isEqualToString:@"item"]) {
-                [tmpRewards addObject:[[VirtualItemReward alloc] initWithDictionary:rewardDict]];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown reward type: %@", type]));
+            Reward* reward = [Reward fromDictionary:rewardDict];
+            if (reward) {
+                [tmpRewards addObject:reward];
             }
         }
         
@@ -73,7 +76,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:rewardsArr forKey:BP_REWARDS];
-    [toReturn setValue:@"random" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

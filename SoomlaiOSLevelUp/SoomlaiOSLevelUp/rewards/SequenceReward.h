@@ -24,6 +24,7 @@
 
 @property (strong, nonatomic) NSArray* rewards;
 
+
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards;
 
 - (Reward *)getLastGivenReward;

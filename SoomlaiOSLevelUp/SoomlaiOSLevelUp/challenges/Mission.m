@@ -71,21 +71,15 @@ static NSString* TAG = @"SOOMLA Mission";
     if (self) {
         
         NSMutableArray* tmpRewards = [NSMutableArray array];
-        NSArray* rewardDicts = [dict objectForKey:BP_REWARDS];
+        NSArray* rewardsArr = dict[BP_REWARDS];
         
         // Iterate over all rewards in the JSON array and for each one create
         // an instance according to the reward type
-        for (NSDictionary* rewardDict in rewardDicts) {
+        for (NSDictionary* rewardDict in rewardsArr) {
             
-            NSString* type = [rewardDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"badge"]) {
-                [tmpRewards addObject:[[BadgeReward alloc] initWithDictionary:rewardDict]];
-            } else if ([type isEqualToString:@"item"]) {
-                [tmpRewards addObject:[[VirtualItemReward alloc] initWithDictionary:rewardDict]];
-            } else if ([type isEqualToString:@"random"]) {
-                [tmpRewards addObject:[[RandomReward alloc] initWithDictionary:rewardDict]];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown reward type: %@", type]));
+            Reward* reward = [Reward fromDictionary:rewardDict];
+            if (reward) {
+                [tmpRewards addObject:reward];
             }
         }
         

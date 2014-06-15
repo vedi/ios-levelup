@@ -26,6 +26,7 @@
 @property (strong, nonatomic) NSString* associatedItemId;
 @property (nonatomic) int amount;
 
+
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andAmount:(int)oAmount andAssociatedItemId:(NSString *)oAssociatedItemId;
 
 @end

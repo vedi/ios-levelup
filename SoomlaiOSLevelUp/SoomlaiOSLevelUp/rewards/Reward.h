@@ -46,4 +46,10 @@
 
 - (BOOL)takeInner;
 
+// Static methods
+
++ (Reward *)fromDictionary:(NSDictionary *)dict;
+
++ (NSString *)getTypeName;
+
 @end

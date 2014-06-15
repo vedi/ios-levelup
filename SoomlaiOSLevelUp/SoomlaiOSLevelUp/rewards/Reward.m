@@ -18,12 +18,18 @@
 #import "BPJSONConsts.h"
 #import "RewardStorage.h"
 #import "StoreUtils.h"
+#import "BadgeReward.h"
+#import "VirtualItemReward.h"
+#import "RandomReward.h"
+#import "SequenceReward.h"
 
 @implementation Reward
 
 @synthesize rewardId, name, repeatable;
 
 static NSString* TAG = @"SOOMLA Reward";
+static NSString* TYPE_NAME = @"reward";
+
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName {
     self = [super init];
@@ -106,6 +112,33 @@ static NSString* TAG = @"SOOMLA Reward";
                                    reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
                                            NSStringFromSelector(_cmd)]
                                  userInfo:nil];
+}
+
+
++ (Reward *)fromDictionary:(NSDictionary *)dict {
+    if (!dict) {
+        LogDebug(TAG, @"fromDictionary: dict is null");
+        return nil;
+    }
+    
+    Reward* reward = nil;
+    NSString* type = dict[BP_TYPE];
+
+    if ([type isEqualToString:[BadgeReward getTypeName]]) {
+        reward = [[BadgeReward alloc] initWithDictionary:dict];
+    } else if ([type isEqualToString:([VirtualItemReward getTypeName])]) {
+        reward = [[VirtualItemReward alloc] initWithDictionary:dict];
+    } else if ([type isEqualToString:([RandomReward getTypeName])]) {
+        reward = [[RandomReward alloc] initWithDictionary:dict];
+    } else if ([type isEqualToString:([SequenceReward getTypeName])]) {
+        reward = [[SequenceReward alloc] initWithDictionary:dict];
+    }
+    
+    return reward;
+}
+
++ (NSString *)getTypeName {
+    return TYPE_NAME;
 }
 
 
