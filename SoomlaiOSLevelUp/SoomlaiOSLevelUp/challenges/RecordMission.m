@@ -57,7 +57,7 @@ static NSString* TYPE_NAME = @"record";
     }
     
     if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+        [self observeNotifications];
     }
     
     [self observeNotifications];

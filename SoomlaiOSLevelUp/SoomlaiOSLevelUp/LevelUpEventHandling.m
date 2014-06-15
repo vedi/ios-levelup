@@ -31,11 +31,13 @@
 }
 
 + (void)postRewardGiven:(Reward *)reward {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                              reward, DICT_ELEMENT_REWARD,
-                              [reward isKindOfClass:[BadgeReward class]], DICT_ELEMENT_IS_BADGE,
-                              nil];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_GIVEN object:self userInfo:userInfo];
+}
+
++ (void)postRewardTaken:(Reward *)reward {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_TAKEN object:self userInfo:userInfo];
 }
 
 + (void)postGateCanBeOpened:(Gate *)gate {
@@ -49,6 +51,14 @@
                               [mission isKindOfClass:[Challenge class]], DICT_ELEMENT_IS_CHALLENGE,
                               nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETED object:self userInfo:userInfo];
+}
+
++ (void)postMissionCompletionRevoked:(Mission *)mission {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                              mission, DICT_ELEMENT_MISSION,
+                              [mission isKindOfClass:[Challenge class]], DICT_ELEMENT_IS_CHALLENGE,
+                              nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETION_REVOKED object:self userInfo:userInfo];
 }
 
 + (void)postWorldCompleted:(Mission *)world {

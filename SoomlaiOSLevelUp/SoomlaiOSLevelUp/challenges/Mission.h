@@ -47,6 +47,12 @@
 
 - (NSUInteger)hash;
 
+- (void)observeNotifications;
+
+- (void)stopObservingNotifications;
+
+// Static methods
+
 + (Mission *)fromDictionary:(NSDictionary *)dict;
 
 + (NSString *)getTypeName;

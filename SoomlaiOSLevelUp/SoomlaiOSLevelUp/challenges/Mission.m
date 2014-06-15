@@ -26,6 +26,7 @@
 #import "BalanceMission.h"
 #import "Challenge.h"
 #import "RecordMission.h"
+#import "LevelUpEventHandling.h"
 
 
 // TODO: Replace StoreUtils imports with a private instance of LogDebug macro (???)
@@ -122,11 +123,19 @@ static NSDictionary* typeMap;
     if (completed) {
         
         // Stop observing notifications
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        [self stopObservingNotifications];
 
         for (Reward* reward in self.rewards) {
             [reward give];
         }
+    } else {
+        [LevelUpEventHandling postMissionCompletionRevoked:self];
+        for (Reward* reward in self.rewards) {
+            [reward take];
+        }
+
+        // listen again for chance to be completed
+        [self observeNotifications];
     }
 }
 
@@ -152,6 +161,16 @@ static NSDictionary* typeMap;
 
 - (NSUInteger)hash {
     return [self.missionId hash];
+}
+
+- (void)observeNotifications {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Error, attempting to invoke abstract method directly." userInfo:nil];
+}
+
+- (void)stopObservingNotifications {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Error, attempting to invoke abstract method directly." userInfo:nil];
 }
 
 

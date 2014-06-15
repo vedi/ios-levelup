@@ -20,4 +20,6 @@
 
 static NSString* TYPE_NAME = @"action";
 
+- (void)observeNotifications {}
+
 @end

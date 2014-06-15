@@ -23,6 +23,7 @@
 #import "RandomReward.h"
 #import "SequenceReward.h"
 #import "DictionaryFactory.h"
+#import "LevelUpEventHandling.h"
 
 @implementation Reward
 
@@ -94,6 +95,7 @@ static NSDictionary* typeMap;
     
     if ([self takeInner]) {
         [RewardStorage setStatus:NO forReward:self];
+        [LevelUpEventHandling postRewardTaken:self];
         return YES;
     }
     return NO;
