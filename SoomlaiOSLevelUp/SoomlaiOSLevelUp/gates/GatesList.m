@@ -89,7 +89,7 @@ static NSDictionary* typeMap;
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:gatesArr forKey:BP_GATES];
+    [toReturn setObject:gatesArr forKey:BP_GATES];
     
     return toReturn;
 }

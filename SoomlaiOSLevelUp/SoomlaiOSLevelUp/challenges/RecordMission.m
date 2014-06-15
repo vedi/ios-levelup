@@ -69,9 +69,9 @@ static NSString* TYPE_NAME = @"record";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:self.associatedScoreId forKey:BP_ASSOCSCOREID];
-    [toReturn setValue:[NSNumber numberWithDouble:self.desiredRecord] forKey:BP_DESIRED_RECORD];
-    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedScoreId forKey:BP_ASSOCSCOREID];
+    [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:BP_DESIRED_RECORD];
+    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

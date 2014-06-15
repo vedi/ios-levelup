@@ -28,9 +28,9 @@ static NSString* TAG = @"SOOMLA LevelUp";
 
 
 - (void)initializeWithInitialWorlds:(NSArray *)oInitialWorlds {
-    NSDictionary* worlds = [NSMutableDictionary dictionary];
+    NSMutableDictionary* worlds = [NSMutableDictionary dictionary];
     for (World* world in initialWorlds) {
-        [worlds setValue:world forKey:world.worldId];
+        [worlds setObject:world forKey:world.worldId];
     }
     initialWorlds = worlds;
     [self save];

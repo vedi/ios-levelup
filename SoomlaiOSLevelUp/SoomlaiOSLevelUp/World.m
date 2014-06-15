@@ -50,7 +50,7 @@ static NSDictionary* typeMap;
 }
 
 - (id)initWithWorldId:(NSString *)oWorldId andGates:(GatesList *)oGates
-       andInnerWorlds:(NSDictionary *)oInnerWorlds andScores:(NSDictionary *)oScores andChallenges:(NSArray *)oChallenges {
+       andInnerWorlds:(NSMutableDictionary *)oInnerWorlds andScores:(NSMutableDictionary *)oScores andChallenges:(NSArray *)oChallenges {
     if (self = [super init]) {
         worldId = oWorldId;
         gates = oGates;
@@ -117,29 +117,29 @@ static NSDictionary* typeMap;
 }
 
 - (NSDictionary*)toDictionary {
-    NSDictionary* dict = [NSMutableDictionary dictionary];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     
-    [dict setValue:self.worldId forKey:BP_WORLD_WORLDID];
+    [dict setObject:self.worldId forKey:BP_WORLD_WORLDID];
     
     NSMutableArray* innerWorldsArr = [NSMutableArray array];
     for (NSString* innerWorldId in self.innerWorlds) {
         [innerWorldsArr addObject:[self.innerWorlds[innerWorldId] toDictionary]];
     }
-    [dict setValue:innerWorldsArr forKey:BP_WORLDS];
+    [dict setObject:innerWorldsArr forKey:BP_WORLDS];
     
     NSMutableArray* scoresArr = [NSMutableArray array];
     for (NSString* scoreId in self.scores) {
         [innerWorldsArr addObject:[self.scores[scoreId] toDictionary]];
     }
-    [dict setValue:scoresArr forKey:BP_SCORES];
+    [dict setObject:scoresArr forKey:BP_SCORES];
     
     NSMutableArray* challengesArr = [NSMutableArray array];
     for (Challenge* challenge in self.challenges) {
         [challengesArr addObject:[challenge toDictionary]];
     }
-    [dict setValue:challengesArr forKey:BP_CHALLENGES];
+    [dict setObject:challengesArr forKey:BP_CHALLENGES];
     
-    [dict setValue:self.gates.toDictionary forKey:BP_GATES];
+    [dict setObject:self.gates.toDictionary forKey:BP_GATES];
     
     return dict;
 }
@@ -151,7 +151,7 @@ static NSDictionary* typeMap;
 - (NSDictionary *)getRecordScores {
     NSMutableDictionary* recordScores = [NSMutableDictionary dictionary];
     for (Score* score in self.scores) {
-        [recordScores setValue:[NSNumber numberWithDouble:[score getRecord]] forKey:score.scoreId];
+        [recordScores setObject:[NSNumber numberWithDouble:[score getRecord]] forKey:score.scoreId];
     }
     return recordScores;
 }
@@ -159,7 +159,7 @@ static NSDictionary* typeMap;
 - (NSDictionary *)getLatestScores {
     NSMutableDictionary* latestScores = [NSMutableDictionary dictionary];
     for (Score* score in self.scores) {
-        [latestScores setValue:[NSNumber numberWithDouble:[score getLatest]] forKey:score.scoreId];
+        [latestScores setObject:[NSNumber numberWithDouble:[score getLatest]] forKey:score.scoreId];
     }
     return latestScores;
 }
@@ -174,7 +174,7 @@ static NSDictionary* typeMap;
 }
 
 - (void)addScore:(Score *)score {
-    [self.scores setValue:score forKey:score.scoreId];
+    [self.scores setObject:score forKey:score.scoreId];
 }
 
 - (void)addGate:(Gate *)gate {
@@ -185,7 +185,7 @@ static NSDictionary* typeMap;
 }
 
 - (void)addInnerWorld:(World *)world {
-    [self.innerWorlds setValue:world forKey:world.worldId];
+    [self.innerWorlds setObject:world forKey:world.worldId];
 }
 
 - (BOOL)isCompleted {

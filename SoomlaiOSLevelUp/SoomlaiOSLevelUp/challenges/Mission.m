@@ -100,16 +100,16 @@ static NSDictionary* typeMap;
 }
 
 - (NSDictionary *)toDictionary {
-    NSDictionary* dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                          self.missionId, BP_MISSION_MISSIONID,
-                          self.name, BP_NAME,
-                          nil];
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 self.missionId, BP_MISSION_MISSIONID,
+                                 self.name, BP_NAME,
+                                 nil];
     
     NSMutableArray* rewardsArr = [NSMutableArray array];
     for (Reward* reward in self.rewards) {
         [rewardsArr addObject:[reward toDictionary]];
     }
-    [dict setValue:rewardsArr forKey:BP_REWARDS];
+    [dict setObject:rewardsArr forKey:BP_REWARDS];
     
     return dict;
 }

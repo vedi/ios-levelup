@@ -24,22 +24,22 @@
     @private
     NSString* worldId;
     GatesList* gates;
-    NSDictionary* innerWorlds;
-    NSDictionary* scores;
+    NSMutableDictionary* innerWorlds;
+    NSMutableDictionary* scores;
     NSMutableArray* challenges;
 }
 
 @property (strong, nonatomic, readonly) NSString* worldId;
 @property (strong, nonatomic, readonly) GatesList* gates;
-@property (strong, nonatomic, readonly) NSDictionary* innerWorlds;
-@property (strong, nonatomic, readonly) NSDictionary* scores;
+@property (strong, nonatomic, readonly) NSMutableDictionary* innerWorlds;
+@property (strong, nonatomic, readonly) NSMutableDictionary* scores;
 @property (strong, nonatomic, readonly) NSMutableArray* challenges;
 
 
 - (id)initWithWorldId:(NSString *)oWorldId;
 
 - (id)initWithWorldId:(NSString *)oWorldId andGates:(GatesList *)oGates
-     andInnerWorlds:(NSDictionary *)oInnerWorlds andScores:(NSDictionary *)oScores andChallenges:(NSArray *)oChallenges;
+     andInnerWorlds:(NSMutableDictionary *)oInnerWorlds andScores:(NSMutableDictionary *)oScores andChallenges:(NSArray *)oChallenges;
 
 - (id)initWithDictionary:(NSDictionary *)dict;
 

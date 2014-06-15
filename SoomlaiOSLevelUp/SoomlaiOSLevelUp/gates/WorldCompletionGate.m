@@ -55,8 +55,8 @@ static NSString* TYPE_NAME = @"worldCompletion";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:self.associatedWorldId forKey:BP_ASSOCWORLDID];
-    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedWorldId forKey:BP_ASSOCWORLDID];
+    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

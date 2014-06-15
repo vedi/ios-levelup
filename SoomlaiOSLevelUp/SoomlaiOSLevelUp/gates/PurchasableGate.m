@@ -62,8 +62,8 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:self.associatedItemId forKey:BP_ASSOCITEMID];
-    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedItemId forKey:BP_ASSOCITEMID];
+    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

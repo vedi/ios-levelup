@@ -78,8 +78,8 @@ static NSString* TAG = @"SOOMLA Challenge";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:missionsArr forKey:BP_MISSIONS];
-    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:missionsArr forKey:BP_MISSIONS];
+    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }
