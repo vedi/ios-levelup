@@ -29,6 +29,4 @@
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
-- (BOOL)canPass;
-
 @end

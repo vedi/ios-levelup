@@ -68,19 +68,12 @@ static NSDictionary* typeMap;
             nil];
 }
 
-- (void)tryOpen {
+- (BOOL)tryOpen {
     if ([GateStorage isOpen:self]) {
-        return;
+        return YES;
     }
     
-    [self tryOpenInner];
-}
-
-- (void)tryOpenInner {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
-                                           NSStringFromSelector(_cmd)]
-                                 userInfo:nil];
+    return [self tryOpenInner];
 }
 
 - (void)forceOpen:(BOOL)open {
@@ -90,6 +83,23 @@ static NSDictionary* typeMap;
 - (BOOL)isOpen {
     return [GateStorage isOpen:self];
 }
+
+// Abstract methods
+
+- (BOOL)tryOpenInner {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
+                                           NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
+}
+
+- (BOOL)canOpen {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
+                                           NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
+}
+
 
 // Static methods
 

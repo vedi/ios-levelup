@@ -40,4 +40,13 @@ static NSString* TYPE_NAME = @"listAND";
     return YES;
 }
 
+- (BOOL)canOpen {
+    for (Gate* gate in self.gates) {
+        if (![gate canOpen]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 @end

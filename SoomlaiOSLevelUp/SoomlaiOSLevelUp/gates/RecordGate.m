@@ -66,21 +66,23 @@ static NSString* TAG = @"SOOMLA RecordGate";
     return toReturn;
 }
 
-- (BOOL)canPass {
+- (BOOL)canOpen {
     
     Score* score = [[LevelUp getInstance] getScoreWithScoreId:self.associatedScoreId];
     if (!score) {
-        LogError(TAG, ([NSString stringWithFormat:@"(canPass) couldn't find score with scoreId: %@", self.associatedScoreId]));
+        LogError(TAG, ([NSString stringWithFormat:@"(canOpen) couldn't find score with scoreId: %@", self.associatedScoreId]));
         return NO;
     }
     
     return [score hasRecordReachedScore:self.desiredRecord];
 }
 
-- (void)tryOpenInner {
-    if ([self canPass]) {
+- (BOOL)tryOpenInner {
+    if ([self canOpen]) {
         [self forceOpen:YES];
+        return YES;
     }
+    return NO;
 }
 
 // Private

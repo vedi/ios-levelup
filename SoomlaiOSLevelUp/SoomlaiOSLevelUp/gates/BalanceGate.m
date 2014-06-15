@@ -73,7 +73,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
 }
 
 
-- (BOOL)canPass {
+- (BOOL)canOpen {
     if ([GateStorage isOpen:self]) {
         return YES;
     }
@@ -83,26 +83,29 @@ static NSString* TAG = @"SOOMLA BalanceGate";
             return NO;
         }
     } @catch (VirtualItemNotFoundException* ex) {
-        LogError(TAG, ([NSString stringWithFormat:@"(canPass) Couldn't find itemId. itemId: %@", self.associatedItemId]));
+        LogError(TAG, ([NSString stringWithFormat:@"(canOpen) Couldn't find itemId. itemId: %@", self.associatedItemId]));
         return NO;
     }
 
     return YES;
 }
 
-- (void)tryOpenInner {
+- (BOOL)tryOpenInner {
     
-    if ([self canPass]) {
+    if ([self canOpen]) {
         @try {
             [StoreInventory takeAmount:self.desiredBalance ofItem:self.associatedItemId];
         }
         @catch (NSException *exception) {
             LogError(TAG, ([NSString stringWithFormat:@"(open) Couldn't find itemId. itemId: %@", self.associatedItemId]));
-            return;
+            return NO;
         }
         
         [self forceOpen:YES];
+        return YES;
     }
+
+    return NO;
 }
 
 - (void)currencyBalanceChanged:(NSNotification*)notification {

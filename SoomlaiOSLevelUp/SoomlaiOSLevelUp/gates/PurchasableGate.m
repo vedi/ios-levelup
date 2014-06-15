@@ -68,7 +68,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     return toReturn;
 }
 
-- (void)tryOpenInner {
+- (BOOL)tryOpenInner {
     
     @try {
         
@@ -79,6 +79,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
         // For reference, in Android it is:
         //      StoreController.getInstance().buyWithMarket(ptype.getMarketItem(), getGateId());
         [[StoreController getInstance] buyInMarketWithMarketItem:ptype.marketItem];
+        return YES;
 
     } @catch (VirtualItemNotFoundException *ex) {
         LogError(TAG, ([NSString stringWithFormat:@"The item needed for purchase doesn't exist. itemId: %@", self.associatedItemId]));
@@ -86,6 +87,12 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
         LogError(TAG, ([NSString stringWithFormat:@"The associated item is not a purchasable item. itemId: %@", self.associatedItemId]));
         @throw ex;
     }
+    
+    return NO;
+}
+
+- (BOOL)canOpen {
+    return YES;
 }
 
 // Private

@@ -29,15 +29,17 @@
 
 - (NSDictionary*)toDictionary;
 
-- (void)tryOpen;
-
-// ABSTRACT
-- (void)tryOpenInner;
+- (BOOL)tryOpen;
 
 - (void)forceOpen:(BOOL)open;
 
 - (BOOL)isOpen;
 
+// ABSTRACT
+
+- (BOOL)tryOpenInner;
+
+- (BOOL)canOpen;
 
 // Static methods
 

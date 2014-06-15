@@ -61,15 +61,17 @@ static NSString* TYPE_NAME = @"worldCompletion";
     return toReturn;
 }
 
-- (BOOL)canPass {
+- (BOOL)canOpen {
     World* world = [[LevelUp getInstance] getWorldWithWorldId:self.associatedWorldId];
     return (world && [world isCompleted]);
 }
 
-- (void)tryOpenInner {
-    if ([self canPass]) {
+- (BOOL)tryOpenInner {
+    if ([self canOpen]) {
         [self forceOpen:YES];
+        return YES;
     }
+    return NO;
 }
 
 // Private

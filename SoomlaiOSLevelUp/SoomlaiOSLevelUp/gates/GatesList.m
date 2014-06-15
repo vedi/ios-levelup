@@ -20,6 +20,7 @@
 #import "GatesListOR.h"
 #import "DictionaryFactory.h"
 #import "StoreUtils.h"
+#import "LevelUpEventHandling.h"
 
 
 // TODO: Document ABSTRACT class
@@ -50,6 +51,7 @@ static NSDictionary* typeMap;
 - (id)initWithGateId:(NSString *)oGateId andGates:(NSArray*)oGates {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray arrayWithArray:oGates];
+        [self observeNotifications];
     }
     
     return self;
@@ -72,6 +74,7 @@ static NSDictionary* typeMap;
         }
         
         self.gates = tmpGates;
+        [self observeNotifications];
     }
     
     return self;
@@ -98,6 +101,30 @@ static NSDictionary* typeMap;
 - (int)size {
     return (int)[self.gates count];
 }
+
+- (BOOL)tryOpenInner {
+    for (Gate* gate in self.gates) {
+        [gate tryOpen];
+    }
+    return [self isOpen];
+}
+
+- (void)observeNotifications {
+    if (![self isOpen]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gateOpened:) name:EVENT_BP_GATE_OPENED object:nil];
+    }
+}
+
+- (void)stopObservingNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)gateOpened:(NSNotification *)notification {
+    if ([self tryOpen]) {
+        [self stopObservingNotifications];
+    }
+}
+
 
 
 // Static methods
