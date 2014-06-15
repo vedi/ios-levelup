@@ -20,6 +20,20 @@
 
 @implementation LevelUpEventHandling
 
+
++ (void)observeAllEventsWithObserver:(id)observer withSelector:(SEL)selector{
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_GATE_OPENED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_GATE_CAN_BE_OPENED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_REWARD_GIVEN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_REWARD_GIVEN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_MISSION_COMPLETED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_MISSION_COMPLETION_REVOKED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_WORLD_COMPLETED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_LEVEL_STARTED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_LEVEL_ENDED object:nil];
+}
+
 + (void)postScoreRecordChanged:(Score *)score {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:score forKey:DICT_ELEMENT_SCORE];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_SCORE_RECORD_CHANGED object:self userInfo:userInfo];
@@ -30,6 +44,11 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_OPENED object:self userInfo:userInfo];
 }
 
++ (void)postGateCanBeOpened:(Gate *)gate {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:gate forKey:DICT_ELEMENT_GATE];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_CAN_BE_OPENED object:self userInfo:userInfo];
+}
+
 + (void)postRewardGiven:(Reward *)reward {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_GIVEN object:self userInfo:userInfo];
@@ -38,11 +57,6 @@
 + (void)postRewardTaken:(Reward *)reward {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
     [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_TAKEN object:self userInfo:userInfo];
-}
-
-+ (void)postGateCanBeOpened:(Gate *)gate {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:gate forKey:DICT_ELEMENT_GATE];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_CAN_BE_OPENED object:self userInfo:userInfo];
 }
 
 + (void)postMissionCompleted:(Mission *)mission {

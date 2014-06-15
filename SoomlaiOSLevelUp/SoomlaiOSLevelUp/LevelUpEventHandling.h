@@ -27,9 +27,9 @@
 #define EVENT_BP_GATE_CAN_BE_OPENED             @"bp_gate_can_be_opened"
 #define EVENT_BP_REWARD_GIVEN                   @"bp_reward_given"
 #define EVENT_BP_REWARD_TAKEN                   @"bp_reward_taken"
-#define EVENT_BP_WORLD_COMPLETED                @"bp_world_completed"
 #define EVENT_BP_MISSION_COMPLETED              @"bp_mission_completed"
 #define EVENT_BP_MISSION_COMPLETION_REVOKED     @"bp_mission_completeion_revoked"
+#define EVENT_BP_WORLD_COMPLETED                @"bp_world_completed"
 #define EVENT_BP_LEVEL_STARTED                  @"bp_level_started"
 #define EVENT_BP_LEVEL_ENDED                    @"bp_level_ended"
 
@@ -46,15 +46,28 @@
 
 @interface LevelUpEventHandling : NSObject
 
+
++ (void)observeAllEventsWithObserver:(id)observer withSelector:(SEL)selector;
+
 + (void)postScoreRecordChanged:(Score *)score;
+
 + (void)postGateOpened:(Gate *)gate;
+
 + (void)postGateCanBeOpened:(Gate *)gate;
+
 + (void)postRewardGiven:(Reward *)reward;
+
 + (void)postRewardTaken:(Reward *)reward;
+
 + (void)postMissionCompleted:(Mission *)mission;
+
 + (void)postMissionCompletionRevoked:(Mission *)mission;
+
 + (void)postWorldCompleted:(World *)world;
+
 + (void)postLevelStarted:(Level *)level;
+
 + (void)postLevelEnded:(Level *)level;
+
 
 @end
