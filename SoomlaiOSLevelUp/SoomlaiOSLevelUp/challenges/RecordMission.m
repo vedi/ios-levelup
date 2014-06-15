@@ -32,10 +32,7 @@
         self.desiredRecord = oDesiredRecord;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -47,10 +44,7 @@
         self.desiredRecord = oDesiredRecord;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -64,6 +58,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
     }
     
+    [self observeNotifications];
     return self;
 }
 
@@ -88,11 +83,15 @@
     Score* score = [userInfo objectForKey:DICT_ELEMENT_SCORE];
     
     if ([score.scoreId isEqualToString:self.associatedScoreId] && [score hasRecordReachedScore:self.desiredRecord]) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
         [self setCompleted:YES];
     }
 };
 
+- (void)observeNotifications {
+    if (![self isCompleted]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+    }
+}
 
 
 @end

@@ -25,7 +25,6 @@
 
 @synthesize associatedItemId, desiredBalance;
 
-
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
     andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance {
     
@@ -34,11 +33,7 @@
         self.desiredBalance = oDesiredBalance;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currencyBalanceChanged:) name:EVENT_CURRENCY_BALANCE_CHANGED object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged:) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -50,11 +45,7 @@
         self.desiredBalance = oDesiredBalance;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currencyBalanceChanged:) name:EVENT_CURRENCY_BALANCE_CHANGED object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged:) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -66,11 +57,7 @@
         self.desiredBalance = [[dict objectForKey:BP_DESIRED_BALANCE] intValue];
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currencyBalanceChanged:) name:EVENT_CURRENCY_BALANCE_CHANGED object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged:) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -92,7 +79,6 @@
 
 - (void)checkBalance:(int)balance forItemId:(NSString*)itemId {
     if ([itemId isEqualToString:self.associatedItemId] && balance >= self.desiredBalance) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
         [self setCompleted:YES];
     }
 }
@@ -113,6 +99,12 @@
     [self checkBalance:balance forItemId:good.itemId];
 }
 
+- (void)observeNotifications {
+    if (![self isCompleted]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currencyBalanceChanged:) name:EVENT_CURRENCY_BALANCE_CHANGED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged:) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
+    }
+}
 
 
 @end

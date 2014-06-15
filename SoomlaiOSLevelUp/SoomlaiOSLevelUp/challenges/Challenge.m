@@ -32,10 +32,7 @@ static NSString* TAG = @"SOOMLA Challenge";
         self.missions = oMissions;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_BP_MISSION_COMPLETED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -44,10 +41,7 @@ static NSString* TAG = @"SOOMLA Challenge";
         self.missions = oMissions;
     }
     
-    if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_BP_MISSION_COMPLETED object:nil];
-    }
-    
+    [self observeNotifications];
     return self;
 }
 
@@ -76,6 +70,7 @@ static NSString* TAG = @"SOOMLA Challenge";
         self.missions = tmpMissions;
     }
     
+    [self observeNotifications];
     return self;
 }
 
@@ -120,10 +115,16 @@ static NSString* TAG = @"SOOMLA Challenge";
         }
         
         if (completed) {
-            [[NSNotificationCenter defaultCenter] removeObserver:self];
             [self setCompleted:YES];
         }
     }
 }
+
+- (void)observeNotifications {
+    if (![self isCompleted]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_BP_MISSION_COMPLETED object:nil];
+    }
+}
+
 
 @end

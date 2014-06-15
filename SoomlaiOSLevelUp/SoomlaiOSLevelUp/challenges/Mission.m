@@ -117,6 +117,10 @@ static NSString* TAG = @"SOOMLA Mission";
 - (void)setCompleted:(BOOL)completed {
     [MissionStorage setCompleted:completed forMission:self];
     if (completed) {
+        
+        // Stop observing notifications
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+
         for (Reward* reward in self.rewards) {
             [reward give];
         }
