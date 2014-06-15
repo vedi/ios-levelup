@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF081C8F193708CF00847E47 /* WorldStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C8E193708CF00847E47 /* WorldStorage.m */; };
+		EF081C90193708D400847E47 /* WorldStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C8E193708CF00847E47 /* WorldStorage.m */; };
+		EF081C93193723AD00847E47 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C92193723AD00847E47 /* Level.m */; };
+		EF081C94193723AD00847E47 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C92193723AD00847E47 /* Level.m */; };
+		EF081C971937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
+		EF081C981937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
+		EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
+		EF73CCA21932293000A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
+		EF73CCA619323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
+		EF73CCA719323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
+		EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GateStorage.m */; };
+		EF73CCAB1932420300A171E5 /* GateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA91932420300A171E5 /* GateStorage.m */; };
+		EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
+		EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EA1932555700FCF3C9 /* GatesList.m */; };
+		EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */; };
+		EF7BA0F019331CDA00FCF3C9 /* GatesListAND.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */; };
+		EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F21933204900FCF3C9 /* GatesListOR.m */; };
+		EF7BA0F41933204900FCF3C9 /* GatesListOR.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F21933204900FCF3C9 /* GatesListOR.m */; };
+		EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */; };
+		EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */; };
+		EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */; };
+		EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */; };
+		EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1021933637A00FCF3C9 /* RecordGate.m */; };
+		EF7BA1041933637A00FCF3C9 /* RecordGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1021933637A00FCF3C9 /* RecordGate.m */; };
+		EF7BA107193379E600FCF3C9 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA106193379E600FCF3C9 /* World.m */; };
+		EF7BA108193379E600FCF3C9 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA106193379E600FCF3C9 /* World.m */; };
+		EF7BA10B19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
+		EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
+		EF7BA1101933C41B00FCF3C9 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10F1933C41B00FCF3C9 /* Reward.m */; };
+		EF7BA1111933C41B00FCF3C9 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10F1933C41B00FCF3C9 /* Reward.m */; };
+		EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
+		EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
+		EF7BA1181933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
+		EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
+		EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
+		EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
+		EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */; };
+		EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */; };
+		EF7BA1241934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
+		EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
+		EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
+		EF7BA12A1935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
+		EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */; };
+		EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */; };
+		EF7BA1311935D56B00FCF3C9 /* BalanceMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */; };
+		EF7BA1321935D56B00FCF3C9 /* BalanceMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */; };
+		EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1341935FF2B00FCF3C9 /* RecordMission.m */; };
+		EF7BA1361935FF2B00FCF3C9 /* RecordMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1341935FF2B00FCF3C9 /* RecordMission.m */; };
+		EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13819365DF700FCF3C9 /* ActionMission.m */; };
+		EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13819365DF700FCF3C9 /* ActionMission.m */; };
+		EF7BA13D19365FF000FCF3C9 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13C19365FF000FCF3C9 /* Challenge.m */; };
+		EF7BA13E19365FF000FCF3C9 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13C19365FF000FCF3C9 /* Challenge.m */; };
+		EFC127C6194CD79300CDA66B /* SoomlaiOSLevelUpTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */; };
+		EFC127C9194CD79F00CDA66B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFC127C7194CD79F00CDA66B /* InfoPlist.strings */; };
+		EFC127CD194DC5E400CDA66B /* DictionaryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */; };
+		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
+		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
+		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
+		EFCDC73D192E1EB6001D0824 /* libSoomlaiOSLevelUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */; };
+		EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */; };
+		EFCDC759192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
+		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
+		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
+		EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
+		EFFB7A40192E406900BB8BB5 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* LevelUp.m */; };
+		EFFB7A41192E406900BB8BB5 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* LevelUp.m */; };
+		EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
+		EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */; };
+		EFFB7A4B1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */; };
+		EFFB7A4C1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCDC71D192E1EB5001D0824 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCDC724192E1EB5001D0824;
+			remoteInfo = SoomlaiOSLevelUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFCDC723192E1EB5001D0824 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF081C8D193708CF00847E47 /* WorldStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldStorage.h; path = data/WorldStorage.h; sourceTree = "<group>"; };
+		EF081C8E193708CF00847E47 /* WorldStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldStorage.m; path = data/WorldStorage.m; sourceTree = "<group>"; };
+		EF081C91193723AD00847E47 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		EF081C92193723AD00847E47 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		EF081C951937252B00847E47 /* LevelStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelStorage.h; path = data/LevelStorage.h; sourceTree = "<group>"; };
+		EF081C961937252B00847E47 /* LevelStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelStorage.m; path = data/LevelStorage.m; sourceTree = "<group>"; };
+		EF73CC9F1932292D00A171E5 /* RangeScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeScore.h; sourceTree = "<group>"; };
+		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
+		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gate.h; path = gates/Gate.h; sourceTree = "<group>"; };
+		EF73CCA519323E3200A171E5 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gate.m; path = gates/Gate.m; sourceTree = "<group>"; };
+		EF73CCA81932420300A171E5 /* GateStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GateStorage.h; path = data/GateStorage.h; sourceTree = "<group>"; };
+		EF73CCA91932420300A171E5 /* GateStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GateStorage.m; path = data/GateStorage.m; sourceTree = "<group>"; };
+		EF7BA0E91932555700FCF3C9 /* GatesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesList.h; path = gates/GatesList.h; sourceTree = "<group>"; };
+		EF7BA0EA1932555700FCF3C9 /* GatesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesList.m; path = gates/GatesList.m; sourceTree = "<group>"; };
+		EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesListAND.h; path = gates/GatesListAND.h; sourceTree = "<group>"; };
+		EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesListAND.m; path = gates/GatesListAND.m; sourceTree = "<group>"; };
+		EF7BA0F11933204900FCF3C9 /* GatesListOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatesListOR.h; path = gates/GatesListOR.h; sourceTree = "<group>"; };
+		EF7BA0F21933204900FCF3C9 /* GatesListOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatesListOR.m; path = gates/GatesListOR.m; sourceTree = "<group>"; };
+		EF7BA0F51933209F00FCF3C9 /* BalanceGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceGate.h; path = gates/BalanceGate.h; sourceTree = "<group>"; };
+		EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceGate.m; path = gates/BalanceGate.m; sourceTree = "<group>"; };
+		EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PurchasableGate.h; path = gates/PurchasableGate.h; sourceTree = "<group>"; };
+		EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PurchasableGate.m; path = gates/PurchasableGate.m; sourceTree = "<group>"; };
+		EF7BA1011933637A00FCF3C9 /* RecordGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordGate.h; path = gates/RecordGate.h; sourceTree = "<group>"; };
+		EF7BA1021933637A00FCF3C9 /* RecordGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordGate.m; path = gates/RecordGate.m; sourceTree = "<group>"; };
+		EF7BA105193379E600FCF3C9 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		EF7BA106193379E600FCF3C9 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldCompletionGate.h; path = gates/WorldCompletionGate.h; sourceTree = "<group>"; };
+		EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldCompletionGate.m; path = gates/WorldCompletionGate.m; sourceTree = "<group>"; };
+		EF7BA10E1933C41B00FCF3C9 /* Reward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reward.h; path = rewards/Reward.h; sourceTree = "<group>"; };
+		EF7BA10F1933C41B00FCF3C9 /* Reward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reward.m; path = rewards/Reward.m; sourceTree = "<group>"; };
+		EF7BA1121933C68900FCF3C9 /* RewardStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RewardStorage.h; path = data/RewardStorage.h; sourceTree = "<group>"; };
+		EF7BA1131933C68900FCF3C9 /* RewardStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RewardStorage.m; path = data/RewardStorage.m; sourceTree = "<group>"; };
+		EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgeReward.h; path = rewards/BadgeReward.h; sourceTree = "<group>"; };
+		EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeReward.m; path = rewards/BadgeReward.m; sourceTree = "<group>"; };
+		EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomReward.h; path = rewards/RandomReward.h; sourceTree = "<group>"; };
+		EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomReward.m; path = rewards/RandomReward.m; sourceTree = "<group>"; };
+		EF7BA11E1934CD9300FCF3C9 /* VirtualItemReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VirtualItemReward.h; path = rewards/VirtualItemReward.h; sourceTree = "<group>"; };
+		EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VirtualItemReward.m; path = rewards/VirtualItemReward.m; sourceTree = "<group>"; };
+		EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SequenceReward.h; path = rewards/SequenceReward.h; sourceTree = "<group>"; };
+		EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SequenceReward.m; path = rewards/SequenceReward.m; sourceTree = "<group>"; };
+		EF7BA1271935BE9500FCF3C9 /* Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mission.h; path = challenges/Mission.h; sourceTree = "<group>"; };
+		EF7BA1281935BE9500FCF3C9 /* Mission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mission.m; path = challenges/Mission.m; sourceTree = "<group>"; };
+		EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MissionStorage.h; path = data/MissionStorage.h; sourceTree = "<group>"; };
+		EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MissionStorage.m; path = data/MissionStorage.m; sourceTree = "<group>"; };
+		EF7BA12F1935D56B00FCF3C9 /* BalanceMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceMission.h; path = challenges/BalanceMission.h; sourceTree = "<group>"; };
+		EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceMission.m; path = challenges/BalanceMission.m; sourceTree = "<group>"; };
+		EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordMission.h; path = challenges/RecordMission.h; sourceTree = "<group>"; };
+		EF7BA1341935FF2B00FCF3C9 /* RecordMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordMission.m; path = challenges/RecordMission.m; sourceTree = "<group>"; };
+		EF7BA13719365DF700FCF3C9 /* ActionMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionMission.h; path = challenges/ActionMission.h; sourceTree = "<group>"; };
+		EF7BA13819365DF700FCF3C9 /* ActionMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionMission.m; path = challenges/ActionMission.m; sourceTree = "<group>"; };
+		EF7BA13B19365FF000FCF3C9 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Challenge.h; path = challenges/Challenge.h; sourceTree = "<group>"; };
+		EF7BA13C19365FF000FCF3C9 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Challenge.m; path = challenges/Challenge.m; sourceTree = "<group>"; };
+		EFC127C8194CD79F00CDA66B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFC127CB194DC5E400CDA66B /* DictionaryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictionaryFactory.h; path = util/DictionaryFactory.h; sourceTree = "<group>"; };
+		EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictionaryFactory.m; path = util/DictionaryFactory.m; sourceTree = "<group>"; };
+		EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSLevelUp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFCDC72C192E1EB5001D0824 /* SoomlaiOSLevelUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSLevelUp-Prefix.pch"; sourceTree = "<group>"; };
+		EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoomlaiOSLevelUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCDC736192E1EB6001D0824 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SoomlaiOSLevelUpTests-Info.plist"; sourceTree = "<group>"; };
+		EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoomlaiOSLevelUpTests.m; sourceTree = "<group>"; };
+		EFCDC753192E218F001D0824 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		EFCDC754192E218F001D0824 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		EFCDC75E192E2248001D0824 /* BPJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPJSONConsts.h; path = data/BPJSONConsts.h; sourceTree = "<group>"; };
+		EFCDC75F192E2248001D0824 /* BPJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPJSONConsts.m; path = data/BPJSONConsts.m; sourceTree = "<group>"; };
+		EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreStorage.h; path = data/ScoreStorage.h; sourceTree = "<group>"; };
+		EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreStorage.m; path = data/ScoreStorage.m; sourceTree = "<group>"; };
+		EFFB7A3E192E406900BB8BB5 /* LevelUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUp.h; sourceTree = "<group>"; };
+		EFFB7A3F192E406900BB8BB5 /* LevelUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUp.m; sourceTree = "<group>"; };
+		EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualItemScore.h; sourceTree = "<group>"; };
+		EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualItemScore.m; sourceTree = "<group>"; };
+		EFFB7A491931EC5200BB8BB5 /* LevelUpEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpEventHandling.h; sourceTree = "<group>"; };
+		EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpEventHandling.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFCDC722192E1EB5001D0824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDC732192E1EB6001D0824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC73D192E1EB6001D0824 /* libSoomlaiOSLevelUp.a in Frameworks */,
+				EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */,
+				EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF73CCA319323E1B00A171E5 /* gates */ = {
+			isa = PBXGroup;
+			children = (
+				EF73CCA419323E3200A171E5 /* Gate.h */,
+				EF73CCA519323E3200A171E5 /* Gate.m */,
+				EF7BA0E91932555700FCF3C9 /* GatesList.h */,
+				EF7BA0EA1932555700FCF3C9 /* GatesList.m */,
+				EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */,
+				EF7BA0EE19331CDA00FCF3C9 /* GatesListAND.m */,
+				EF7BA0F11933204900FCF3C9 /* GatesListOR.h */,
+				EF7BA0F21933204900FCF3C9 /* GatesListOR.m */,
+				EF7BA0F51933209F00FCF3C9 /* BalanceGate.h */,
+				EF7BA0F61933209F00FCF3C9 /* BalanceGate.m */,
+				EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */,
+				EF7BA0FE1933424700FCF3C9 /* PurchasableGate.m */,
+				EF7BA1011933637A00FCF3C9 /* RecordGate.h */,
+				EF7BA1021933637A00FCF3C9 /* RecordGate.m */,
+				EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */,
+				EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */,
+			);
+			name = gates;
+			sourceTree = "<group>";
+		};
+		EF7BA10D1933C3FE00FCF3C9 /* rewards */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BA10E1933C41B00FCF3C9 /* Reward.h */,
+				EF7BA10F1933C41B00FCF3C9 /* Reward.m */,
+				EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */,
+				EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */,
+				EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */,
+				EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */,
+				EF7BA11E1934CD9300FCF3C9 /* VirtualItemReward.h */,
+				EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */,
+				EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */,
+				EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */,
+			);
+			name = rewards;
+			sourceTree = "<group>";
+		};
+		EF7BA1261935BE7A00FCF3C9 /* challenges */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BA1271935BE9500FCF3C9 /* Mission.h */,
+				EF7BA1281935BE9500FCF3C9 /* Mission.m */,
+				EF7BA12F1935D56B00FCF3C9 /* BalanceMission.h */,
+				EF7BA1301935D56B00FCF3C9 /* BalanceMission.m */,
+				EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */,
+				EF7BA1341935FF2B00FCF3C9 /* RecordMission.m */,
+				EF7BA13719365DF700FCF3C9 /* ActionMission.h */,
+				EF7BA13819365DF700FCF3C9 /* ActionMission.m */,
+				EF7BA13B19365FF000FCF3C9 /* Challenge.h */,
+				EF7BA13C19365FF000FCF3C9 /* Challenge.m */,
+			);
+			name = challenges;
+			sourceTree = "<group>";
+		};
+		EFC127CA194DC5B200CDA66B /* util */ = {
+			isa = PBXGroup;
+			children = (
+				EFC127CB194DC5E400CDA66B /* DictionaryFactory.h */,
+				EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		EFCDC71C192E1EB5001D0824 = {
+			isa = PBXGroup;
+			children = (
+				EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */,
+				EFCDC73E192E1EB6001D0824 /* SoomlaiOSLevelUpTests */,
+				EFCDC727192E1EB5001D0824 /* Frameworks */,
+				EFCDC726192E1EB5001D0824 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFCDC726192E1EB5001D0824 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */,
+				EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCDC727192E1EB5001D0824 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC728192E1EB5001D0824 /* Foundation.framework */,
+				EFCDC736192E1EB6001D0824 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
+			isa = PBXGroup;
+			children = (
+				EFC127CA194DC5B200CDA66B /* util */,
+				EF7BA1261935BE7A00FCF3C9 /* challenges */,
+				EF7BA10D1933C3FE00FCF3C9 /* rewards */,
+				EF73CCA319323E1B00A171E5 /* gates */,
+				EFCDC75D192E2210001D0824 /* data */,
+				EFCDC750192E218F001D0824 /* scoring */,
+				EFCDC72B192E1EB5001D0824 /* Supporting Files */,
+				EFFB7A3E192E406900BB8BB5 /* LevelUp.h */,
+				EFFB7A3F192E406900BB8BB5 /* LevelUp.m */,
+				EFFB7A491931EC5200BB8BB5 /* LevelUpEventHandling.h */,
+				EFFB7A4A1931EC5200BB8BB5 /* LevelUpEventHandling.m */,
+				EF7BA105193379E600FCF3C9 /* World.h */,
+				EF7BA106193379E600FCF3C9 /* World.m */,
+				EF081C91193723AD00847E47 /* Level.h */,
+				EF081C92193723AD00847E47 /* Level.m */,
+			);
+			path = SoomlaiOSLevelUp;
+			sourceTree = "<group>";
+		};
+		EFCDC72B192E1EB5001D0824 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC72C192E1EB5001D0824 /* SoomlaiOSLevelUp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFCDC73E192E1EB6001D0824 /* SoomlaiOSLevelUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */,
+				EFCDC73F192E1EB6001D0824 /* Supporting Files */,
+			);
+			path = SoomlaiOSLevelUpTests;
+			sourceTree = "<group>";
+		};
+		EFCDC73F192E1EB6001D0824 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFC127C7194CD79F00CDA66B /* InfoPlist.strings */,
+				EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFCDC750192E218F001D0824 /* scoring */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC753192E218F001D0824 /* Score.h */,
+				EFCDC754192E218F001D0824 /* Score.m */,
+				EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */,
+				EFFB7A451931E25000BB8BB5 /* VirtualItemScore.m */,
+				EF73CC9F1932292D00A171E5 /* RangeScore.h */,
+				EF73CCA01932292D00A171E5 /* RangeScore.m */,
+			);
+			path = scoring;
+			sourceTree = "<group>";
+		};
+		EFCDC75D192E2210001D0824 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EFCDC75E192E2248001D0824 /* BPJSONConsts.h */,
+				EFCDC75F192E2248001D0824 /* BPJSONConsts.m */,
+				EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */,
+				EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */,
+				EF73CCA81932420300A171E5 /* GateStorage.h */,
+				EF73CCA91932420300A171E5 /* GateStorage.m */,
+				EF7BA1121933C68900FCF3C9 /* RewardStorage.h */,
+				EF7BA1131933C68900FCF3C9 /* RewardStorage.m */,
+				EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */,
+				EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */,
+				EF081C8D193708CF00847E47 /* WorldStorage.h */,
+				EF081C8E193708CF00847E47 /* WorldStorage.m */,
+				EF081C951937252B00847E47 /* LevelStorage.h */,
+				EF081C961937252B00847E47 /* LevelStorage.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUp" */;
+			buildPhases = (
+				EFCDC721192E1EB5001D0824 /* Sources */,
+				EFCDC722192E1EB5001D0824 /* Frameworks */,
+				EFCDC723192E1EB5001D0824 /* CopyFiles */,
+				EF081C9A1937687500847E47 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoomlaiOSLevelUp;
+			productName = SoomlaiOSLevelUp;
+			productReference = EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFCDC734192E1EB6001D0824 /* SoomlaiOSLevelUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUpTests" */;
+			buildPhases = (
+				EFCDC731192E1EB6001D0824 /* Sources */,
+				EFCDC732192E1EB6001D0824 /* Frameworks */,
+				EFCDC733192E1EB6001D0824 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */,
+			);
+			name = SoomlaiOSLevelUpTests;
+			productName = SoomlaiOSLevelUpTests;
+			productReference = EFCDC735192E1EB6001D0824 /* SoomlaiOSLevelUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFCDC71D192E1EB5001D0824 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Soomla;
+			};
+			buildConfigurationList = EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSLevelUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFCDC71C192E1EB5001D0824;
+			productRefGroup = EFCDC726192E1EB5001D0824 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */,
+				EFCDC734192E1EB6001D0824 /* SoomlaiOSLevelUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFCDC733192E1EB6001D0824 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC127C6194CD79300CDA66B /* SoomlaiOSLevelUpTests-Info.plist in Resources */,
+				EFC127C9194CD79F00CDA66B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF081C9A1937687500847E47 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nif [[ -z $CREATING_UNIVERSAL_DIR ]]\nthen\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\nfi\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}/\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFCDC721192E1EB5001D0824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */,
+				EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */,
+				EFCDC759192E218F001D0824 /* Score.m in Sources */,
+				EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */,
+				EF7BA13D19365FF000FCF3C9 /* Challenge.m in Sources */,
+				EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */,
+				EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */,
+				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
+				EFC127CD194DC5E400CDA66B /* DictionaryFactory.m in Sources */,
+				EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
+				EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
+				EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */,
+				EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
+				EFFB7A40192E406900BB8BB5 /* LevelUp.m in Sources */,
+				EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */,
+				EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */,
+				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EF7BA1241934D0C300FCF3C9 /* SequenceReward.m in Sources */,
+				EF081C8F193708CF00847E47 /* WorldStorage.m in Sources */,
+				EF7BA1101933C41B00FCF3C9 /* Reward.m in Sources */,
+				EF7BA107193379E600FCF3C9 /* World.m in Sources */,
+				EF7BA1181933CE0500FCF3C9 /* BadgeReward.m in Sources */,
+				EF081C971937252B00847E47 /* LevelStorage.m in Sources */,
+				EF7BA10B19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
+				EF7BA1311935D56B00FCF3C9 /* BalanceMission.m in Sources */,
+				EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */,
+				EF7BA0FF1933424700FCF3C9 /* PurchasableGate.m in Sources */,
+				EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */,
+				EFFB7A4B1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */,
+				EF7BA0EF19331CDA00FCF3C9 /* GatesListAND.m in Sources */,
+				EF7BA1031933637A00FCF3C9 /* RecordGate.m in Sources */,
+				EF081C93193723AD00847E47 /* Level.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCDC731192E1EB6001D0824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */,
+				EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */,
+				EF73CCA21932293000A171E5 /* RangeScore.m in Sources */,
+				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */,
+				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
+				EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
+				EF7BA1361935FF2B00FCF3C9 /* RecordMission.m in Sources */,
+				EF7BA0F019331CDA00FCF3C9 /* GatesListAND.m in Sources */,
+				EF7BA0F41933204900FCF3C9 /* GatesListOR.m in Sources */,
+				EF7BA1041933637A00FCF3C9 /* RecordGate.m in Sources */,
+				EF7BA12A1935BE9500FCF3C9 /* Mission.m in Sources */,
+				EF73CCAB1932420300A171E5 /* GateStorage.m in Sources */,
+				EF7BA108193379E600FCF3C9 /* World.m in Sources */,
+				EF73CCA719323E3200A171E5 /* Gate.m in Sources */,
+				EFFB7A41192E406900BB8BB5 /* LevelUp.m in Sources */,
+				EF7BA1321935D56B00FCF3C9 /* BalanceMission.m in Sources */,
+				EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */,
+				EFFB7A471931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
+				EF081C90193708D400847E47 /* WorldStorage.m in Sources */,
+				EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
+				EF081C981937252B00847E47 /* LevelStorage.m in Sources */,
+				EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */,
+				EF7BA13E19365FF000FCF3C9 /* Challenge.m in Sources */,
+				EF7BA1111933C41B00FCF3C9 /* Reward.m in Sources */,
+				EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */,
+				EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */,
+				EF081C94193723AD00847E47 /* Level.m in Sources */,
+				EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
+				EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
+				EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */,
+				EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */,
+				EFFB7A4C1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */;
+			targetProxy = EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFC127C7194CD79F00CDA66B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC127C8194CD79F00CDA66B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFCDC746192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SOOMLA_HOME = /Users/gurdotan/source;
+			};
+			name = Debug;
+		};
+		EFCDC747192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				SOOMLA_HOME = /Users/gurdotan/source;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFCDC749192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaiOSLevelUp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
+					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SoomlaiOSLevelUp;
+				SKIP_INSTALL = YES;
+				SOOMLA_HOME = "${SRCROOT}/../..";
+			};
+			name = Debug;
+		};
+		EFCDC74A192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaiOSLevelUp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
+					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SoomlaiOSLevelUp;
+				SKIP_INSTALL = YES;
+				SOOMLA_HOME = "${SRCROOT}/../..";
+			};
+			name = Release;
+		};
+		EFCDC74C192E1EB6001D0824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SoomlaiOSLevelUpTests/SoomlaiOSLevelUpTests-Info.plist";
+				PRODUCT_NAME = SoomlaiOSLevelUpTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EFCDC74D192E1EB6001D0824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoomlaiOSLevelUp/SoomlaiOSLevelUp-Prefix.pch";
+				INFOPLIST_FILE = "SoomlaiOSLevelUpTests/SoomlaiOSLevelUpTests-Info.plist";
+				PRODUCT_NAME = SoomlaiOSLevelUpTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFCDC720192E1EB5001D0824 /* Build configuration list for PBXProject "SoomlaiOSLevelUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC746192E1EB6001D0824 /* Debug */,
+				EFCDC747192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCDC748192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC749192E1EB6001D0824 /* Debug */,
+				EFCDC74A192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCDC74B192E1EB6001D0824 /* Build configuration list for PBXNativeTarget "SoomlaiOSLevelUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCDC74C192E1EB6001D0824 /* Debug */,
+				EFCDC74D192E1EB6001D0824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFCDC71D192E1EB5001D0824 /* Project object */;
+}
