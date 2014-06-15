@@ -20,11 +20,13 @@
 
 @implementation GatesListOR
 
+static NSString* TYPE_NAME = @"listOR";
+
 - (NSDictionary*)toDictionary {
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:@"listOR" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

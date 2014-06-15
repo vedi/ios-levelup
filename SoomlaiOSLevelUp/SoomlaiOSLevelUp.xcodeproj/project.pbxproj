@@ -61,6 +61,7 @@
 		EF7BA13E19365FF000FCF3C9 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA13C19365FF000FCF3C9 /* Challenge.m */; };
 		EFC127C6194CD79300CDA66B /* SoomlaiOSLevelUpTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFCDC740192E1EB6001D0824 /* SoomlaiOSLevelUpTests-Info.plist */; };
 		EFC127C9194CD79F00CDA66B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFC127C7194CD79F00CDA66B /* InfoPlist.strings */; };
+		EFC127CD194DC5E400CDA66B /* DictionaryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */; };
 		EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
 		EFCDC737192E1EB6001D0824 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC736192E1EB6001D0824 /* XCTest.framework */; };
 		EFCDC738192E1EB6001D0824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCDC728192E1EB5001D0824 /* Foundation.framework */; };
@@ -156,6 +157,8 @@
 		EF7BA13B19365FF000FCF3C9 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Challenge.h; path = challenges/Challenge.h; sourceTree = "<group>"; };
 		EF7BA13C19365FF000FCF3C9 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Challenge.m; path = challenges/Challenge.m; sourceTree = "<group>"; };
 		EFC127C8194CD79F00CDA66B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFC127CB194DC5E400CDA66B /* DictionaryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictionaryFactory.h; path = util/DictionaryFactory.h; sourceTree = "<group>"; };
+		EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictionaryFactory.m; path = util/DictionaryFactory.m; sourceTree = "<group>"; };
 		EFCDC725192E1EB5001D0824 /* libSoomlaiOSLevelUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoomlaiOSLevelUp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCDC728192E1EB5001D0824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFCDC72C192E1EB5001D0824 /* SoomlaiOSLevelUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoomlaiOSLevelUp-Prefix.pch"; sourceTree = "<group>"; };
@@ -256,6 +259,15 @@
 			name = challenges;
 			sourceTree = "<group>";
 		};
+		EFC127CA194DC5B200CDA66B /* util */ = {
+			isa = PBXGroup;
+			children = (
+				EFC127CB194DC5E400CDA66B /* DictionaryFactory.h */,
+				EFC127CC194DC5E400CDA66B /* DictionaryFactory.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		EFCDC71C192E1EB5001D0824 = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +299,7 @@
 		EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
 			isa = PBXGroup;
 			children = (
+				EFC127CA194DC5B200CDA66B /* util */,
 				EF7BA1261935BE7A00FCF3C9 /* challenges */,
 				EF7BA10D1933C3FE00FCF3C9 /* rewards */,
 				EF73CCA319323E1B00A171E5 /* gates */,
@@ -473,6 +486,7 @@
 				EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */,
 				EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */,
 				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
+				EFC127CD194DC5E400CDA66B /* DictionaryFactory.m in Sources */,
 				EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
 				EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */,

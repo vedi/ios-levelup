@@ -29,6 +29,7 @@
 
 @synthesize associatedItemId, desiredBalance;
     
+static NSString* TYPE_NAME = @"balance";
 static NSString* TAG = @"SOOMLA BalanceGate";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance {
@@ -66,7 +67,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedItemId forKey:BP_ASSOCITEMID];
     [toReturn setValue:[NSNumber numberWithInt:self.desiredBalance] forKey:BP_DESIRED_BALANCE];
-    [toReturn setValue:@"balance" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

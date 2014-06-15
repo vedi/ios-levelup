@@ -25,6 +25,8 @@
 
 @synthesize associatedWorldId;
 
+static NSString* TYPE_NAME = @"worldCompletion";
+
 - (id)initWithGateId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId {
     if (self = [super initWithGateId:oGateId]) {
         self.associatedWorldId = oAssociatedWorldId;
@@ -54,7 +56,7 @@
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedWorldId forKey:BP_ASSOCWORLDID];
-    [toReturn setValue:@"worldCompletion" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

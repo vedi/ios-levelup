@@ -25,13 +25,17 @@
 @synthesize rewards;
 
 static NSString* TYPE_NAME = @"random";
-
 static NSString* TAG = @"SOOMLA RandomReward";
 
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
-        self.rewards = rewards;
+        
+        if (![oRewards count]) {
+            LogError(TAG, @"this reward doesn't make sense without items");
+        }
+        
+        self.rewards = oRewards;
         self.repeatable = YES;
     }
     

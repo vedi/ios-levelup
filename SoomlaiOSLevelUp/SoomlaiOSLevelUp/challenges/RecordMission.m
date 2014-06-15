@@ -23,6 +23,8 @@
 
 @synthesize associatedScoreId, desiredRecord;
 
+static NSString* TYPE_NAME = @"record";
+
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
    andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord {
@@ -69,7 +71,7 @@
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedScoreId forKey:BP_ASSOCSCOREID];
     [toReturn setValue:[NSNumber numberWithDouble:self.desiredRecord] forKey:BP_DESIRED_RECORD];
-    [toReturn setValue:@"record" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

@@ -25,6 +25,7 @@
 
 @synthesize associatedScoreId, desiredRecord;
 
+static NSString* TYPE_NAME = @"record";
 static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithGateId:(NSString *)oGateId andScoreId:(NSString *)oScoreId andDesiredRecord:(double)oDesiredRecord {
@@ -60,7 +61,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedScoreId forKey:BP_ASSOCSCOREID];
     [toReturn setValue:[NSNumber numberWithDouble:self.desiredRecord] forKey:BP_DESIRED_RECORD];
-    [toReturn setValue:@"record" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

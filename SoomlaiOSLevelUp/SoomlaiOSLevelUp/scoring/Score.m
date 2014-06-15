@@ -15,14 +15,21 @@
  */
 
 #import "Score.h"
+#import "RangeScore.h"
+#import "VirtualItemScore.h"
 #import "ScoreStorage.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
+#import "DictionaryFactory.h"
 
 
 @implementation Score
 
 @synthesize name, scoreId, startValue, tempScore, higherBetter;
+
+static NSString* TYPE_NAME = @"score";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
 
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName {
@@ -64,6 +71,7 @@
             self.name, BP_NAME,
             self.startValue, BP_SCORE_STARTVAL,
             self.higherBetter, BP_SCORE_HIGHBETTER,
+            TYPE_NAME, BP_TYPE,
             nil];
 }
 
@@ -85,6 +93,9 @@
         [ScoreStorage setRecord:self.tempScore toScore:self];
         [LevelUpEventHandling postScoreRecordChanged:self];
     }
+    
+    [self performSaveActions];
+    
     [ScoreStorage setLatest:self.tempScore toScore:self];
     self.tempScore = self.startValue;
 }
@@ -117,6 +128,32 @@
     (scoreValue1 >= scoreValue2) :
     (scoreValue1 <= scoreValue2);
 }
+
+- (void)performSaveActions {}
+
+
+// Static methods
+
++ (Score *)fromDictionary:(NSDictionary *)dict {
+    return (Score *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+}
+
++ (NSString *)getTypeName {
+    return TYPE_NAME;
+}
+
+
++ (void)initialize {
+    if (self == [Score self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [Score getTypeName]             : [Score class],
+                    [RangeScore getTypeName]        : [RangeScore class],
+                    [VirtualItemScore getTypeName]  : [VirtualItemScore class]
+                    };
+    }
+}
+
 
 @end
 

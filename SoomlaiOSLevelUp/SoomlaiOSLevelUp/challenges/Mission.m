@@ -21,6 +21,12 @@
 #import "RandomReward.h"
 #import "VirtualItemReward.h"
 #import "BPJSONConsts.h"
+#import "DictionaryFactory.h"
+#import "ActionMission.h"
+#import "BalanceMission.h"
+#import "Challenge.h"
+#import "RecordMission.h"
+
 
 // TODO: Replace StoreUtils imports with a private instance of LogDebug macro (???)
 #import "StoreUtils.h"
@@ -29,7 +35,10 @@
 
 @synthesize missionId, name, rewards;
 
+static NSString* TYPE_NAME = @"mission";
 static NSString* TAG = @"SOOMLA Mission";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
 
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName {
@@ -145,5 +154,28 @@ static NSString* TAG = @"SOOMLA Mission";
     return [self.missionId hash];
 }
 
+
+// Static methods
+
++ (Mission *)fromDictionary:(NSDictionary *)dict {
+    return (Mission *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+}
+
++ (NSString *)getTypeName {
+    return TYPE_NAME;
+}
+
+
++ (void)initialize {
+    if (self == [Mission self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [ActionMission getTypeName] : [ActionMission class],
+                    [BalanceMission getTypeName]: [BalanceMission class],
+                    [Challenge getTypeName]     : [Challenge class],
+                    [RecordMission getTypeName] : [RecordMission class]
+                    };
+    }
+}
 
 @end

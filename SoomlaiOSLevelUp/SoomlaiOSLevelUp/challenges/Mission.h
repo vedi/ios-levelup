@@ -47,4 +47,8 @@
 
 - (NSUInteger)hash;
 
++ (Mission *)fromDictionary:(NSDictionary *)dict;
+
++ (NSString *)getTypeName;
+
 @end

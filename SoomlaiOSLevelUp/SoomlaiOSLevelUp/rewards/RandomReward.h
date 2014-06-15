@@ -23,7 +23,7 @@
     Reward* lastGivenReward;
 }
 
-@property (strong, nonatomic) NSMutableArray* rewards;
+@property (strong, nonatomic) NSArray* rewards;
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards;
 

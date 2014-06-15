@@ -25,6 +25,7 @@
 
 @synthesize missions;
 
+static NSString* TYPE_NAME = @"challenge";
 static NSString* TAG = @"SOOMLA Challenge";
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions {
@@ -49,21 +50,15 @@ static NSString* TAG = @"SOOMLA Challenge";
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpMissions = [NSMutableArray array];
-        NSArray* missionDicts = [dict objectForKey:BP_MISSIONS];
+        NSArray* missionDicts = dict[BP_MISSIONS];
         
         // Iterate over all missions in the JSON array and for each one create
         // an instance according to the mission type
         for (NSDictionary* missionDict in missionDicts) {
             
-            NSString* type = [missionDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"balance"]) {
-                [tmpMissions addObject:[[BalanceMission alloc] initWithDictionary:missionDict]];
-            } else if ([type isEqualToString:@"record"]) {
-                [tmpMissions addObject:[[RecordMission alloc] initWithDictionary:missionDict]];
-            } else if ([type isEqualToString:@"challenge"]) {
-                [tmpMissions addObject:[[Challenge alloc] initWithDictionary:missionDict]];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown mission type: %@", type]));
+            Mission* mission = [Mission fromDictionary:missionDict];
+            if (mission) {
+                [tmpMissions addObject:mission];
             }
         }
         
@@ -84,7 +79,7 @@ static NSString* TAG = @"SOOMLA Challenge";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:missionsArr forKey:BP_MISSIONS];
-    [toReturn setValue:@"challenge" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

@@ -30,6 +30,11 @@ static NSString* TAG = @"SOOMLA SequenceReward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
+        
+        if (![oRewards count]) {
+            LogError(TAG, @"this reward doesn't make sense without items");
+        }
+
         self.rewards = oRewards;
     }
     

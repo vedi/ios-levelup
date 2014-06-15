@@ -30,6 +30,7 @@
 
 @synthesize associatedItemId;
 
+static NSString* TYPE_NAME = @"purchasable";
 static NSString* TAG = @"SOOMLA PurchasableGate";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId {
@@ -62,7 +63,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedItemId forKey:BP_ASSOCITEMID];
-    [toReturn setValue:@"purchasable" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

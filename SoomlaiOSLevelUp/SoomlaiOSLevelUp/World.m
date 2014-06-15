@@ -26,12 +26,17 @@
 #import "WorldStorage.h"
 #import "BPJSONConsts.h"
 #import "StoreUtils.h"
+#import "DictionaryFactory.h"
 
 @implementation World
 
 @synthesize worldId, gates, innerWorlds, scores, challenges;
 
+static NSString* TYPE_NAME = @"world";
 static NSString* TAG = @"SOOMLA World";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
+
 
 - (id)initWithWorldId:(NSString *)oWorldId {
     if (self = [super init]) {
@@ -68,16 +73,9 @@ static NSString* TAG = @"SOOMLA World";
         // an instance according to the world type
         for (NSDictionary* innerWorldDict in innerWorldDicts) {
             
-            World* world;
-            NSString* type = [innerWorldDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"world"]) {
-                world = [[World alloc] initWithDictionary:innerWorldDict];
-                [tmpInnerWorlds setValue:world forKey:world.worldId];
-            } else if ([type isEqualToString:@"level"]) {
-                world = [[Level alloc] initWithDictionary:innerWorldDict];
-                [tmpInnerWorlds setValue:world forKey:world.worldId];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown world type: %@", type]));
+            World* world = [World fromDictionary:innerWorldDict];
+            if (world) {
+                [tmpInnerWorlds setObject:world forKey:world.worldId];
             }
         }
         
@@ -91,16 +89,9 @@ static NSString* TAG = @"SOOMLA World";
         // an instance according to the score type
         for (NSDictionary* scoreDict in scoreDicts) {
             
-            Score* score;
-            NSString* type = [scoreDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"range"]) {
-                score = [[RangeScore alloc] initWithDictionary:scoreDict];
-                [tmpScores setValue:score forKey:score.scoreId];
-            } else if ([type isEqualToString:@"item"]) {
-                score = [[VirtualItemScore alloc] initWithDictionary:scoreDict];
-                [tmpScores setValue:score forKey:score.scoreId];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown score type: %@", type]));
+            Score* score = [Score fromDictionary:scoreDict];
+            if (score) {
+                [tmpScores setObject:score forKey:score.scoreId];
             }
         }
 
@@ -119,19 +110,7 @@ static NSString* TAG = @"SOOMLA World";
 
         
         NSDictionary* gateListDict = [dict objectForKey:BP_GATES];
-        if (gateListDict) {
-            NSString* type = [gateListDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"listOR"]) {
-                gates = [[GatesListOR alloc] initWithDictionary:gateListDict];
-            } else if ([type isEqualToString:@"listAND"]) {
-                gates = [[GatesListAND alloc] initWithDictionary:dict];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown gate-list type: %@", type]));
-                gates = nil;
-            }
-        } else {
-            gates = nil;
-        }
+        gates = [GatesList fromDictionary:gateListDict];
     }
     
     return self;
@@ -230,6 +209,29 @@ static NSString* TAG = @"SOOMLA World";
 - (BOOL)canStart {
     return !self.gates || [self.gates isOpen];
 }
+
+
+// Static methods
+
++ (World *)fromDictionary:(NSDictionary *)dict {
+    return (World *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+}
+
++ (NSString *)getTypeName {
+    return TYPE_NAME;
+}
+
+
++ (void)initialize {
+    if (self == [World self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [World getTypeName]: [World class],
+                    [Level getTypeName]: [Level class]
+                    };
+    }
+}
+
 
 
 @end

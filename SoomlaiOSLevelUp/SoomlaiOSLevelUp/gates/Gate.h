@@ -39,4 +39,10 @@
 - (BOOL)isOpen;
 
 
+// Static methods
+
++ (Gate *)fromDictionary:(NSDictionary *)dict;
+
++ (NSString *)getTypeName;
+
 @end

@@ -53,9 +53,17 @@
 
 - (BOOL)hasRecordReachedScore:(double)scoreVal;
 
+- (void)performSaveActions;
+
 - (double)getRecord;
 
 - (double)getLatest;
+
+// Static methods
+
++ (Score *)fromDictionary:(NSDictionary *)dict;
+
++ (NSString *)getTypeName;
 
 @end
 

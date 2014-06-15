@@ -57,6 +57,8 @@
 
 @synthesize range;
 
+static NSString* TYPE_NAME = @"range";
+
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andRange:(Range *)oRange {
     if (self = [super init]) {
@@ -88,12 +90,11 @@
 }
     
 - (NSDictionary*)toDictionary {
-    return [[NSDictionary alloc] initWithObjectsAndKeys:
-            self.scoreId, BP_SCORE_SCOREID,
-            self.name, BP_NAME,
-            self.higherBetter, BP_SCORE_HIGHBETTER,
-            [self.range toDictionary], BP_SCORE_RANGE,
-            nil];
+    NSDictionary* parent = [super toDictionary];
+    NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parent];
+    [toReturn setObject:[self.range toDictionary] forKey:BP_SCORE_RANGE];
+    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    return toReturn;
 }
     
 - (void)incBy:(double)amount {

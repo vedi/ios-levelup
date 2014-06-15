@@ -17,10 +17,23 @@
 #import "Gate.h"
 #import "BPJSONConsts.h"
 #import "GateStorage.h"
+#import "DictionaryFactory.h"
+#import "BalanceGate.h"
+#import "GatesListAND.h"
+#import "GatesListOR.h"
+#import "PurchasableGate.h"
+#import "RecordGate.h"
+#import "WorldCompletionGate.h"
+
 
 @implementation Gate
 
 @synthesize gateId;
+
+static NSString* TYPE_NAME = @"gate";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
+
 
 - (id)initWithGateId:(NSString *)oGateId {
     self = [super init];
@@ -76,6 +89,31 @@
 
 - (BOOL)isOpen {
     return [GateStorage isOpen:self];
+}
+
+// Static methods
+
++ (Gate *)fromDictionary:(NSDictionary *)dict {
+    return (Gate *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+}
+
++ (NSString *)getTypeName {
+    return TYPE_NAME;
+}
+
+
++ (void)initialize {
+    if (self == [Gate self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [BalanceGate getTypeName]           : [BalanceGate class],
+                    [GatesListAND getTypeName]          : [GatesListAND class],
+                    [GatesListOR getTypeName]           : [GatesListOR class],
+                    [PurchasableGate getTypeName]       : [PurchasableGate class],
+                    [RecordGate getTypeName]            : [RecordGate class],
+                    [WorldCompletionGate getTypeName]   : [WorldCompletionGate class]
+                    };
+    }
 }
 
 

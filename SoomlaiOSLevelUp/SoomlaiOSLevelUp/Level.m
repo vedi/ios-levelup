@@ -29,6 +29,7 @@
 
 //@synthesize startTime;
 
+static NSString* TYPE_NAME = @"level";
 static NSString* TAG = @"SOOMLA Level";
 
 
@@ -36,7 +37,7 @@ static NSString* TAG = @"SOOMLA Level";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:@"level" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }
@@ -120,19 +121,7 @@ static NSString* TAG = @"SOOMLA Level";
     }
     
     for (NSString* key in self.scores) {
-        if ([self.scores[key] isKindOfClass:[VirtualItemScore class]]) {
-            VirtualItemScore* score = self.scores[key];
-            @try {
-                [StoreInventory giveAmount:score.tempScore ofItem:score.associatedItemId];
-            }
-            @catch (VirtualItemNotFoundException *ex) {
-                LogError(TAG, ([NSString stringWithFormat:@"Couldn't find item associated with a given \
-                                VirtualItemScore. itemId: %@", score.associatedItemId]));
-            }
-        }
-        
-        // resetting scores
-        [(Score*)self.scores[key] saveAndReset];
+        [(Score*)self.scores[key] saveAndReset]; // resetting scores
     }
     
     // Notify level has ended

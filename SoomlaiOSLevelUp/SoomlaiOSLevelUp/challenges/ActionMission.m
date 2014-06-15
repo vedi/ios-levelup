@@ -18,4 +18,6 @@
 
 @implementation ActionMission
 
+static NSString* TYPE_NAME = @"action";
+
 @end

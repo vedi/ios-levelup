@@ -16,12 +16,9 @@
 
 #import "GatesList.h"
 #import "BPJSONConsts.h"
-#import "BalanceGate.h"
 #import "GatesListAND.h"
 #import "GatesListOR.h"
-#import "RecordGate.h"
-#import "PurchasableGate.h"
-#import "WorldCompletionGate.h"
+#import "DictionaryFactory.h"
 #import "StoreUtils.h"
 
 
@@ -31,6 +28,8 @@
 @synthesize gates;
 
 static NSString* TAG = @"SOOMLA GatesList";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
 
 - (id)initWithGateId:(NSString *)oGateId {
     if (self = [super initWithGateId:oGateId]) {
@@ -66,21 +65,9 @@ static NSString* TAG = @"SOOMLA GatesList";
         // an instance according to the gate type
         for (NSDictionary* gateDict in gateDicts) {
             
-            NSString* type = [gateDict objectForKey:BP_TYPE];
-            if ([type isEqualToString:@"balance"]) {
-                [tmpGates addObject:[[BalanceGate alloc] initWithDictionary:gateDict]];
-            } else if ([type isEqualToString:@"listAND"]) {
-                [tmpGates addObject:[[GatesListAND alloc] initWithDictionary:gateDict]];
-            } else if ([type isEqualToString:@"listOR"]) {
-                [tmpGates addObject:[[GatesListOR alloc] initWithDictionary:gateDict]];
-            } else if ([type isEqualToString:@"record"]) {
-                [tmpGates addObject:[[RecordGate alloc] initWithDictionary:gateDict]];
-            } else if ([type isEqualToString:@"purchasable"]) {
-                [tmpGates addObject:[[PurchasableGate alloc] initWithDictionary:gateDict]];
-            } else if ([type isEqualToString:@"worldCompletion"]) {
-                [tmpGates addObject:[[WorldCompletionGate alloc] initWithDictionary:gateDict]];
-            } else {
-                LogError(TAG, ([NSString stringWithFormat:@"Unknown gate type: %@", type]));
+            Gate* gate = [Gate fromDictionary:gateDict];
+            if (gate) {
+                [tmpGates addObject:gate];
             }
         }
         
@@ -110,6 +97,23 @@ static NSString* TAG = @"SOOMLA GatesList";
 
 - (int)size {
     return (int)[self.gates count];
+}
+
+
+// Static methods
+
++ (GatesList *)fromDictionary:(NSDictionary *)dict {
+    return (GatesList *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+}
+
++ (void)initialize {
+    if (self == [GatesList self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [GatesListAND getTypeName]: [GatesListAND class],
+                    [GatesListOR getTypeName] : [GatesListOR class]
+                    };
+    }
 }
 
 

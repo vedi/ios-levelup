@@ -20,11 +20,13 @@
 
 @implementation GatesListAND
 
+static NSString* TYPE_NAME = @"listAND";
+
 - (NSDictionary*)toDictionary {
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setValue:@"listAND" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }

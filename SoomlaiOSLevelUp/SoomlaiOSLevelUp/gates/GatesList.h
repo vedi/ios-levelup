@@ -34,5 +34,8 @@
 
 - (int)size;
 
+// Static methods
+
++ (GatesList *)fromDictionary:(NSDictionary *)dict;
 
 @end

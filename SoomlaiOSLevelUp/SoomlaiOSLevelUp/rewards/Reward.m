@@ -22,6 +22,7 @@
 #import "VirtualItemReward.h"
 #import "RandomReward.h"
 #import "SequenceReward.h"
+#import "DictionaryFactory.h"
 
 @implementation Reward
 
@@ -29,6 +30,8 @@
 
 static NSString* TAG = @"SOOMLA Reward";
 static NSString* TYPE_NAME = @"reward";
+static DictionaryFactory* dictionaryFactory;
+static NSDictionary* typeMap;
 
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName {
@@ -115,32 +118,28 @@ static NSString* TYPE_NAME = @"reward";
 }
 
 
-+ (Reward *)fromDictionary:(NSDictionary *)dict {
-    if (!dict) {
-        LogDebug(TAG, @"fromDictionary: dict is null");
-        return nil;
-    }
-    
-    Reward* reward = nil;
-    NSString* type = dict[BP_TYPE];
+// Static methods
 
-    if ([type isEqualToString:[BadgeReward getTypeName]]) {
-        reward = [[BadgeReward alloc] initWithDictionary:dict];
-    } else if ([type isEqualToString:([VirtualItemReward getTypeName])]) {
-        reward = [[VirtualItemReward alloc] initWithDictionary:dict];
-    } else if ([type isEqualToString:([RandomReward getTypeName])]) {
-        reward = [[RandomReward alloc] initWithDictionary:dict];
-    } else if ([type isEqualToString:([SequenceReward getTypeName])]) {
-        reward = [[SequenceReward alloc] initWithDictionary:dict];
-    }
-    
-    return reward;
++ (Reward *)fromDictionary:(NSDictionary *)dict {
+    return (Reward *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
 }
 
 + (NSString *)getTypeName {
     return TYPE_NAME;
 }
 
+
++ (void)initialize {
+    if (self == [Reward self]) {
+        dictionaryFactory = [[DictionaryFactory alloc] init];
+        typeMap = @{
+                    [BadgeReward getTypeName]       : [BadgeReward class],
+                    [RandomReward getTypeName]      : [RandomReward class],
+                    [SequenceReward getTypeName]    : [SequenceReward class],
+                    [VirtualItemReward getTypeName] : [VirtualItemReward class]
+                    };
+    }
+}
 
 
 @end

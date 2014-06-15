@@ -16,10 +16,17 @@
 
 #import "VirtualItemScore.h"
 #import "BPJSONConsts.h"
+#import "StoreInventory.h"
+#import "VirtualItemNotFoundException.h"
+#import "StoreUtils.h"
+
 
 @implementation VirtualItemScore
 
 @synthesize associatedItemId;
+
+static NSString* TAG = @"SOOMLA VirtualItemScore";
+static NSString* TYPE_NAME = @"item";
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andAssociatedItemId:(NSString *)oAssociatedItemId {
     if (self = [super initWithScoreId:oScoreId andName:oName]) {
@@ -50,9 +57,24 @@
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setValue:self.associatedItemId forKey:BP_ASSOCITEMID];
-    [toReturn setValue:@"item" forKey:BP_TYPE];
+    [toReturn setValue:TYPE_NAME forKey:BP_TYPE];
     
     return toReturn;
 }
+
+- (void)performSaveActions {
+    
+    [super performSaveActions];
+    
+    @try {
+        int amount = self.tempScore;
+        [StoreInventory giveAmount:amount ofItem:self.associatedItemId];
+    }
+    @catch (VirtualItemNotFoundException *ex) {
+        LogError(TAG, ([NSString stringWithFormat:@"Couldn't find item associated with a given \
+                        VirtualItemScore. itemId: %@", self.associatedItemId]));
+    }
+}
+
 
 @end
