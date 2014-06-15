@@ -99,14 +99,14 @@ static NSString* TAG = @"SOOMLA Level";
     
     // check end() called without matching start()
     if (	startTime == 0) {
-        LogDebug(TAG, @"end() called without matching start()! ignoring.");
+        LogDebug(TAG, @"end() called without prior start()! ignoring.");
         return;
     }
     
     // Count number of times this level was played
     [LevelStorage incTimesPlayedForLevel:self];
     
-    // Calulate the slowest \ fastest durations of level play
+    // Calculate the slowest \ fastest durations of level play
     long long _startTime = paused ? currentTime : (long long)([[NSDate date] timeIntervalSince1970] * 1000) - startTime;
     long long endTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
     double duration = (endTime - _startTime) / 1000.0;
