@@ -68,4 +68,17 @@ static NSString* TAG = @"SOOMLA VirtualItemReward";
     return YES;
 }
 
+- (BOOL)takeInner {
+    @try {
+        [StoreInventory takeAmount:self.amount ofItem:self.associatedItemId];
+    }
+    @catch (VirtualItemNotFoundException *ex) {
+        LogError(TAG, ([NSString stringWithFormat:@"(take) Couldn't find associated itemId: %@", self.associatedItemId]));
+        return NO;
+    }
+    
+    return YES;
+}
+
+
 @end

@@ -54,5 +54,11 @@
     return YES;
 }
 
+- (BOOL)takeInner {
+    
+    // nothing to do here... the parent Reward takes in storage
+    return YES;
+}
+
 
 @end

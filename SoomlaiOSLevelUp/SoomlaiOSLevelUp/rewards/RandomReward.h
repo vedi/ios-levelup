@@ -20,6 +20,7 @@
     
     @private
     NSMutableArray* rewards;
+    Reward* lastGivenReward;
 }
 
 @property (strong, nonatomic) NSMutableArray* rewards;

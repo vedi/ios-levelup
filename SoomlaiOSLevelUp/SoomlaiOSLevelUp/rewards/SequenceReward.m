@@ -113,4 +113,15 @@ static NSString* TAG = @"SOOMLA SequenceReward";
     return YES;
 }
 
+- (BOOL)takeInner {
+    int idx = [RewardStorage getLastSeqIdxGivenForReward:self];
+    if (idx <= 0) {
+        return NO; // all rewards in the sequence were taken
+    }
+    
+    [RewardStorage setLastSeqIdxGiven:(--idx) ForReward:self];
+    return YES;
+}
+
+
 @end

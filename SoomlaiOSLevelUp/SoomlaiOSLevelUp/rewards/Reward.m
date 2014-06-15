@@ -63,19 +63,31 @@ static NSString* TAG = @"SOOMLA Reward";
             nil];
 }
 
-- (void)give {
+- (BOOL)give {
     if ([RewardStorage isRewardGiven:self] && !self.repeatable) {
         LogDebug(TAG, ([NSString stringWithFormat:@"Reward was already given and is not repeatable. id: %@", self.rewardId]));
-        return;
+        return NO;
     }
 
     if ([self giveInner]) {
         [RewardStorage setStatus:YES forReward:self];
+        return YES;
     }
+    
+    return NO;
 }
 
-- (void)take {
-    [RewardStorage setStatus:NO forReward:self];
+- (BOOL)take {
+    if ([RewardStorage isRewardGiven:self]) {
+        LogDebug(TAG, ([NSString stringWithFormat:@"Reward not give. id: %@", self.rewardId]));
+        return NO;
+    }
+    
+    if ([self takeInner]) {
+        [RewardStorage setStatus:NO forReward:self];
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL)isOwned {
@@ -83,6 +95,13 @@ static NSString* TAG = @"SOOMLA Reward";
 }
 
 - (BOOL)giveInner {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
+                                           NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
+}
+
+- (BOOL)takeInner {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
                                            NSStringFromSelector(_cmd)]

@@ -34,13 +34,16 @@
 
 - (NSDictionary *)toDictionary;
 
-- (void)give;
+- (BOOL)give;
 
-- (void)take;
+- (BOOL)take;
 
 - (BOOL)isOwned;
 
-// Abstract method
+// Abstract methods
+
 - (BOOL)giveInner;
+
+- (BOOL)takeInner;
 
 @end

@@ -80,9 +80,29 @@ static NSString* TAG = @"SOOMLA RandomReward";
 
 - (BOOL)giveInner {
     int i = arc4random() % [self.rewards count];
-    [[self.rewards objectAtIndex:i] give];
+    
+    Reward* randomReward = self.rewards[i];
+    [randomReward give];
+    lastGivenReward = randomReward;
+
     return true;
 }
+
+
+- (BOOL)takeInner {
+    
+    // for now is able to take only last given
+    if(!lastGivenReward) {
+        return NO;
+    }
+    
+    BOOL taken = [lastGivenReward take];
+    lastGivenReward = nil;
+    
+    return taken;
+}
+
+
 
 
 
