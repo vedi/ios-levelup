@@ -16,13 +16,24 @@
 
 #import "World.h"
 
+typedef NS_ENUM(NSInteger, LevelState) {
+    IDLE,
+    RUNNING,
+    PAUSED,
+    ENDED,
+    COMPLETED
+};
+
 @interface Level : World {
 
     @private
     long long startTime;
     long long currentTime;
-    BOOL paused;
+    long long elapsed;
+    LevelState state;
 }
+
+@property LevelState state;
 
 - (int)getTimesStarted;
 
@@ -31,6 +42,8 @@
 - (double)getSlowestDuration;
 
 - (double)getFastestDuration;
+
+- (double)getPlayDuration;
 
 - (void)decAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId;
 

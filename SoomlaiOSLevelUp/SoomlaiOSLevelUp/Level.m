@@ -27,7 +27,7 @@
 
 @implementation Level
 
-//@synthesize startTime;
+@synthesize state;
 
 static NSString* TYPE_NAME = @"level";
 static NSString* TAG = @"SOOMLA Level";
@@ -59,6 +59,15 @@ static NSString* TAG = @"SOOMLA Level";
     return [LevelStorage getFastestDurationforLevel:self];
 }
 
+- (double)getPlayDuration {
+    long long now = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
+    long long duration = elapsed;
+    if (startTime != 0) {
+        duration += now - startTime;
+    }
+    return duration / 1000.0;
+}
+
 - (void)decAmount:(double)amount forScoreWithScoreId:(NSString *)scoreId {
     [self.scores[scoreId] decBy:amount];
 }
@@ -78,6 +87,8 @@ static NSString* TAG = @"SOOMLA Level";
     
     [LevelStorage incTimesStartedForLevel:self];
     startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
+    elapsed = 0;
+    state = RUNNING;
     
     // Notify level has started
     [LevelUpEventHandling postLevelStarted:self];
@@ -86,31 +97,40 @@ static NSString* TAG = @"SOOMLA Level";
 }
 
 - (void)pause {
+    if (state != RUNNING) {
+        return;
+    }
+    
     long long now = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
-    currentTime = now - startTime;
-    paused = YES;
+    elapsed = now - startTime;
+    startTime = 0;
+    state = PAUSED;
 }
 
 - (void)resume {
+    if (state != PAUSED) {
+        return;
+    }
+
     startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
-    paused = NO;
+    state = RUNNING;
 }
 
 - (void)end:(BOOL)completed {
     
     // check end() called without matching start()
-    if (	startTime == 0) {
+    if (startTime == 0) {
         LogDebug(TAG, @"end() called without prior start()! ignoring.");
         return;
     }
+    
+    double duration = [self getPlayDuration];
+    state = ENDED;
     
     // Count number of times this level was played
     [LevelStorage incTimesPlayedForLevel:self];
     
     // Calculate the slowest \ fastest durations of level play
-    long long _startTime = paused ? currentTime : (long long)([[NSDate date] timeIntervalSince1970] * 1000) - startTime;
-    long long endTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
-    double duration = (endTime - _startTime) / 1000.0;
     
     if (duration > [self getSlowestDuration]) {
         [LevelStorage setSlowestDuration:duration forLevel:self];
@@ -129,12 +149,17 @@ static NSString* TAG = @"SOOMLA Level";
     
     // reset timers
     startTime = 0;
+    elapsed = 0;
     currentTime = 0;
-    paused = NO;
     
     if(completed) {
         [self setCompleted:YES];
     }
+}
+
+- (void)setCompleted:(BOOL)completed {
+    state = COMPLETED;
+    [super setCompleted:completed];
 }
 
 
