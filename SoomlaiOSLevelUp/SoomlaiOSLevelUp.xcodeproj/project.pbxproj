@@ -712,7 +712,7 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SoomlaiOSLevelUp;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
@@ -736,7 +736,7 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SoomlaiOSLevelUp;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
