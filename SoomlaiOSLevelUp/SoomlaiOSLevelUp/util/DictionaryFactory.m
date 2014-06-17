@@ -7,7 +7,7 @@
 //
 
 #import "DictionaryFactory.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "BPJSONConsts.h"
 
 @implementation DictionaryFactory

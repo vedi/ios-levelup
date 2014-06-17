@@ -31,19 +31,19 @@
     NSString* key = [self keyWorldCompletedWithWorldId:world.worldId];
     
     if (completed) {
-        [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
+        [KeyValueStorage setValue:@"yes" forKey:key];
         
         if (notify) {
             [LevelUpEventHandling postWorldCompleted:world];
         }
     } else {
-        [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];
+        [KeyValueStorage deleteValueForKey:key];
     }
 }
 
 + (BOOL)isWorldCompleted:(World *)world {
     NSString* key = [self keyWorldCompletedWithWorldId:world.worldId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     return (val && [val length] > 0);
 }
 

@@ -22,7 +22,7 @@
 #import "VirtualItemScore.h"
 #import "VirtualItemNotFoundException.h"
 #import "StoreInventory.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 
 @implementation Level

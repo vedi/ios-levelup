@@ -18,7 +18,7 @@
 #import "BPJSONConsts.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 
 @implementation VirtualItemScore

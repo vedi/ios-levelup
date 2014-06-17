@@ -25,7 +25,7 @@
 #import "GatesListOR.h"
 #import "WorldStorage.h"
 #import "BPJSONConsts.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "DictionaryFactory.h"
 
 @implementation World

@@ -33,19 +33,19 @@
     NSString* key = [self keyGateOpen:gate.gateId];
     
     if (open) {
-        [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
+        [KeyValueStorage setValue:@"yes" forKey:key];
         
         if (notify) {
             [LevelUpEventHandling postGateOpened:gate];
         }
     } else {
-        [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];
+        [KeyValueStorage deleteValueForKey:key];
     }
 }
 
 + (BOOL)isOpen:(Gate*)gate {
     NSString* key = [self keyGateOpen:gate.gateId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     return (val && [val length] > 0);
 }
 

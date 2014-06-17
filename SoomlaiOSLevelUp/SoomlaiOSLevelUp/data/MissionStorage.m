@@ -33,19 +33,19 @@
     NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
     
     if (completed) {
-        [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
+        [KeyValueStorage setValue:@"yes" forKey:key];
         
         if (notify) {
             [LevelUpEventHandling postMissionCompleted:mission];
         }
     } else {
-        [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];
+        [KeyValueStorage deleteValueForKey:key];
     }
 }
 
 + (BOOL)isMissionCompleted:(Mission *)mission {
     NSString* key = [self keyMissionCompletedWithMissionId:mission.missionId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     return (val && [val length] > 0);
 }
 

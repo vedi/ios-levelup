@@ -17,12 +17,12 @@
 #import "PurchasableGate.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
-#import "EventHandling.h"
+#import "StoreEventHandling.h"
 #import "PurchasableVirtualItem.h"
 #import "PurchaseWithMarket.h"
 #import "StoreController.h"
 #import "StoreInfo.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "VirtualItemNotFoundException.h"
 
 

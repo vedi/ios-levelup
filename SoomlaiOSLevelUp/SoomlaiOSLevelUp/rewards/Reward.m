@@ -17,7 +17,7 @@
 #import "Reward.h"
 #import "BPJSONConsts.h"
 #import "RewardStorage.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "BadgeReward.h"
 #import "VirtualItemReward.h"
 #import "RandomReward.h"

@@ -16,12 +16,12 @@
 
 #import "BalanceGate.h"
 #import "BPJSONConsts.h"
-#import "EventHandling.h"
+#import "StoreEventHandling.h"
 #import "LevelUpEventHandling.h"
 #import "GateStorage.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "VirtualCurrency.h"
 #import "VirtualGood.h"
 

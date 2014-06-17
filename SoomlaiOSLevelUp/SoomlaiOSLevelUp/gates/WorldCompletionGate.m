@@ -19,7 +19,7 @@
 #import "LevelUp.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 @implementation WorldCompletionGate
 

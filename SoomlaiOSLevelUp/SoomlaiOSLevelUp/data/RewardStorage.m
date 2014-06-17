@@ -32,25 +32,25 @@
     NSString* key = [self keyRewardGivenWithRewardId:reward.rewardId];
     
     if (status) {
-        [[[StorageManager getInstance] keyValueStorage] setValue:@"yes" forKey:key];
+        [KeyValueStorage setValue:@"yes" forKey:key];
         
         if (notify) {
             [LevelUpEventHandling postRewardGiven:reward];
         }
     } else {
-        [[[StorageManager getInstance] keyValueStorage] deleteValueForKey:key];
+        [KeyValueStorage deleteValueForKey:key];
     }
 }
 
 + (BOOL)isRewardGiven:(Reward *)reward {
     NSString* key = [self keyRewardGivenWithRewardId:reward.rewardId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     return (val && [val length] > 0);
 }
 
 + (int)getLastSeqIdxGivenForReward:(Reward *)reward {
     NSString* key = [self keyRewardIdxSeqGivenWithRewardId:reward.rewardId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     
     if (!val || [val length] == 0){
         return -1;
@@ -63,7 +63,7 @@
     NSString* key = [self keyRewardIdxSeqGivenWithRewardId:reward.rewardId];
     NSString* val = [[NSNumber numberWithInt:idx] stringValue];
     
-    [[[StorageManager getInstance] keyValueStorage] setValue:val forKey:key];
+    [KeyValueStorage setValue:val forKey:key];
 }
 
 

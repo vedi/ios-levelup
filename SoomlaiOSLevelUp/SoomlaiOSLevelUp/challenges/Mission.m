@@ -27,10 +27,7 @@
 #import "Challenge.h"
 #import "RecordMission.h"
 #import "LevelUpEventHandling.h"
-
-
-// TODO: Replace StoreUtils imports with a private instance of LogDebug macro (???)
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 @implementation Mission
 

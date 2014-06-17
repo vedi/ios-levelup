@@ -13,6 +13,8 @@
 		EF081C94193723AD00847E47 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C92193723AD00847E47 /* Level.m */; };
 		EF081C971937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
 		EF081C981937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
+		EF4CDD58194F31AC008B1CF2 /* libSoomlaiOSStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */; };
+		EF4CDD5A194F31AC008B1CF2 /* libSoomlaiOSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4CDD59194F31AC008B1CF2 /* libSoomlaiOSCore.a */; };
 		EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
 		EF73CCA21932293000A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
 		EF73CCA619323E3200A171E5 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA519323E3200A171E5 /* Gate.m */; };
@@ -43,8 +45,6 @@
 		EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
 		EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
 		EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
-		EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */; };
-		EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */; };
 		EF7BA1241934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
 		EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
 		EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
@@ -82,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EF4CDD54194F319F008B1CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C02CEC42160DC870000AA0D2;
+			remoteInfo = SoomlaiOSStore;
+		};
+		EF4CDD56194F31A9008B1CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C02CEC41160DC870000AA0D2;
+			remoteInfo = SoomlaiOSStore;
+		};
 		EFCDC73B192E1EB6001D0824 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EFCDC71D192E1EB5001D0824 /* Project object */;
@@ -110,6 +124,8 @@
 		EF081C92193723AD00847E47 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		EF081C951937252B00847E47 /* LevelStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelStorage.h; path = data/LevelStorage.h; sourceTree = "<group>"; };
 		EF081C961937252B00847E47 /* LevelStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelStorage.m; path = data/LevelStorage.m; sourceTree = "<group>"; };
+		EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoomlaiOSStore.xcodeproj; path = "../submodules/ios-store/SoomlaiOSStore.xcodeproj"; sourceTree = "<group>"; };
+		EF4CDD59194F31AC008B1CF2 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoomlaiOSCore.a; path = "../../../Library/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos/libSoomlaiOSCore.a"; sourceTree = "<group>"; };
 		EF73CC9F1932292D00A171E5 /* RangeScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeScore.h; sourceTree = "<group>"; };
 		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
 		EF73CCA419323E3200A171E5 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gate.h; path = gates/Gate.h; sourceTree = "<group>"; };
@@ -140,8 +156,6 @@
 		EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeReward.m; path = rewards/BadgeReward.m; sourceTree = "<group>"; };
 		EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomReward.h; path = rewards/RandomReward.h; sourceTree = "<group>"; };
 		EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomReward.m; path = rewards/RandomReward.m; sourceTree = "<group>"; };
-		EF7BA11E1934CD9300FCF3C9 /* VirtualItemReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VirtualItemReward.h; path = rewards/VirtualItemReward.h; sourceTree = "<group>"; };
-		EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VirtualItemReward.m; path = rewards/VirtualItemReward.m; sourceTree = "<group>"; };
 		EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SequenceReward.h; path = rewards/SequenceReward.h; sourceTree = "<group>"; };
 		EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SequenceReward.m; path = rewards/SequenceReward.m; sourceTree = "<group>"; };
 		EF7BA1271935BE9500FCF3C9 /* Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mission.h; path = challenges/Mission.h; sourceTree = "<group>"; };
@@ -185,6 +199,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4CDD5A194F31AC008B1CF2 /* libSoomlaiOSCore.a in Frameworks */,
+				EF4CDD58194F31AC008B1CF2 /* libSoomlaiOSStore.a in Frameworks */,
 				EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +218,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF4CDD50194F319F008B1CF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EF73CCA319323E1B00A171E5 /* gates */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,8 +258,6 @@
 				EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */,
 				EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */,
 				EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */,
-				EF7BA11E1934CD9300FCF3C9 /* VirtualItemReward.h */,
-				EF7BA11F1934CD9300FCF3C9 /* VirtualItemReward.m */,
 				EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */,
 				EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */,
 			);
@@ -271,6 +293,7 @@
 		EFCDC71C192E1EB5001D0824 = {
 			isa = PBXGroup;
 			children = (
+				EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */,
 				EFCDC72A192E1EB5001D0824 /* SoomlaiOSLevelUp */,
 				EFCDC73E192E1EB6001D0824 /* SoomlaiOSLevelUpTests */,
 				EFCDC727192E1EB5001D0824 /* Frameworks */,
@@ -290,6 +313,7 @@
 		EFCDC727192E1EB5001D0824 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF4CDD59194F31AC008B1CF2 /* libSoomlaiOSCore.a */,
 				EFCDC728192E1EB5001D0824 /* Foundation.framework */,
 				EFCDC736192E1EB6001D0824 /* XCTest.framework */,
 			);
@@ -393,6 +417,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EF4CDD57194F31A9008B1CF2 /* PBXTargetDependency */,
 			);
 			name = SoomlaiOSLevelUp;
 			productName = SoomlaiOSLevelUp;
@@ -436,6 +461,12 @@
 			mainGroup = EFCDC71C192E1EB5001D0824;
 			productRefGroup = EFCDC726192E1EB5001D0824 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EF4CDD50194F319F008B1CF2 /* Products */;
+					ProjectRef = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */,
@@ -443,6 +474,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSoomlaiOSStore.a;
+			remoteRef = EF4CDD54194F319F008B1CF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EFCDC733192E1EB6001D0824 /* Resources */ = {
@@ -487,7 +528,6 @@
 				EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */,
 				EF73CCA619323E3200A171E5 /* Gate.m in Sources */,
 				EFC127CD194DC5E400CDA66B /* DictionaryFactory.m in Sources */,
-				EF7BA1201934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
 				EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
 				EF7BA13919365DF700FCF3C9 /* ActionMission.m in Sources */,
 				EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,
@@ -546,7 +586,6 @@
 				EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */,
 				EF081C94193723AD00847E47 /* Level.m in Sources */,
 				EF7BA12E1935C7E300FCF3C9 /* MissionStorage.m in Sources */,
-				EF7BA1211934CD9300FCF3C9 /* VirtualItemReward.m in Sources */,
 				EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */,
 				EF7BA13A19365DF700FCF3C9 /* ActionMission.m in Sources */,
 				EFFB7A4C1931EC5200BB8BB5 /* LevelUpEventHandling.m in Sources */,
@@ -556,6 +595,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EF4CDD57194F31A9008B1CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SoomlaiOSStore;
+			targetProxy = EF4CDD56194F31A9008B1CF2 /* PBXContainerItemProxy */;
+		};
 		EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */;
@@ -613,7 +657,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SOOMLA_HOME = /Users/gurdotan/source;
 			};
 			name = Debug;
 		};
@@ -648,7 +691,6 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
-				SOOMLA_HOME = /Users/gurdotan/source;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -663,7 +705,12 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
-					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/../submodules/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/../submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoomlaiOSLevelUp;
@@ -682,7 +729,12 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
-					"$(SOOMLA_HOME)/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/../submodules/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/../submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoomlaiOSLevelUp;

@@ -19,7 +19,7 @@
 #import "GatesListAND.h"
 #import "GatesListOR.h"
 #import "DictionaryFactory.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "LevelUpEventHandling.h"
 
 

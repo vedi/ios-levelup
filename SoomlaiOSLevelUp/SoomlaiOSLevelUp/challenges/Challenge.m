@@ -19,7 +19,7 @@
 #import "BPJSONConsts.h"
 #import "RecordMission.h"
 #import "LevelUpEventHandling.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 @implementation Challenge
 
