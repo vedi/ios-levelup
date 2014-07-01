@@ -39,12 +39,6 @@
 		EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */; };
 		EF7BA1141933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
 		EF7BA1151933C68900FCF3C9 /* RewardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1131933C68900FCF3C9 /* RewardStorage.m */; };
-		EF7BA1181933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
-		EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */; };
-		EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
-		EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */; };
-		EF7BA1241934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
-		EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */; };
 		EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
 		EF7BA12A1935BE9500FCF3C9 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA1281935BE9500FCF3C9 /* Mission.m */; };
 		EF7BA12D1935C7E300FCF3C9 /* MissionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7BA12C1935C7E300FCF3C9 /* MissionStorage.m */; };
@@ -73,9 +67,6 @@
 		EFE7A0E71963026C0054B3E9 /* RecordMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0E81963026C0054B3E9 /* ActionMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA13719365DF700FCF3C9 /* ActionMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0E91963026C0054B3E9 /* Challenge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA13B19365FF000FCF3C9 /* Challenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE7A0EA1963026C0054B3E9 /* BadgeReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE7A0EB1963026C0054B3E9 /* RandomReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE7A0EC1963026C0054B3E9 /* SequenceReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0ED1963026C0054B3E9 /* Gate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73CCA419323E3200A171E5 /* Gate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0EE1963026C0054B3E9 /* GatesList.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0E91932555700FCF3C9 /* GatesList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0EF1963026C0054B3E9 /* GatesListAND.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -165,12 +156,6 @@
 		EF7BA10A19337A1D00FCF3C9 /* WorldCompletionGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldCompletionGate.m; path = gates/WorldCompletionGate.m; sourceTree = "<group>"; };
 		EF7BA1121933C68900FCF3C9 /* RewardStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RewardStorage.h; path = data/RewardStorage.h; sourceTree = "<group>"; };
 		EF7BA1131933C68900FCF3C9 /* RewardStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RewardStorage.m; path = data/RewardStorage.m; sourceTree = "<group>"; };
-		EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgeReward.h; path = rewards/BadgeReward.h; sourceTree = "<group>"; };
-		EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeReward.m; path = rewards/BadgeReward.m; sourceTree = "<group>"; };
-		EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomReward.h; path = rewards/RandomReward.h; sourceTree = "<group>"; };
-		EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomReward.m; path = rewards/RandomReward.m; sourceTree = "<group>"; };
-		EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SequenceReward.h; path = rewards/SequenceReward.h; sourceTree = "<group>"; };
-		EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SequenceReward.m; path = rewards/SequenceReward.m; sourceTree = "<group>"; };
 		EF7BA1271935BE9500FCF3C9 /* Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mission.h; path = challenges/Mission.h; sourceTree = "<group>"; };
 		EF7BA1281935BE9500FCF3C9 /* Mission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mission.m; path = challenges/Mission.m; sourceTree = "<group>"; };
 		EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MissionStorage.h; path = data/MissionStorage.h; sourceTree = "<group>"; };
@@ -260,19 +245,6 @@
 			name = gates;
 			sourceTree = "<group>";
 		};
-		EF7BA10D1933C3FE00FCF3C9 /* rewards */ = {
-			isa = PBXGroup;
-			children = (
-				EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */,
-				EF7BA1171933CE0500FCF3C9 /* BadgeReward.m */,
-				EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */,
-				EF7BA11B1933CFF400FCF3C9 /* RandomReward.m */,
-				EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */,
-				EF7BA1231934D0C300FCF3C9 /* SequenceReward.m */,
-			);
-			name = rewards;
-			sourceTree = "<group>";
-		};
 		EF7BA1261935BE7A00FCF3C9 /* challenges */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				EF7BA1261935BE7A00FCF3C9 /* challenges */,
-				EF7BA10D1933C3FE00FCF3C9 /* rewards */,
 				EF73CCA319323E1B00A171E5 /* gates */,
 				EFCDC75D192E2210001D0824 /* data */,
 				EFCDC750192E218F001D0824 /* scoring */,
@@ -413,9 +384,6 @@
 				EFE7A0E71963026C0054B3E9 /* RecordMission.h in Headers */,
 				EFE7A0E81963026C0054B3E9 /* ActionMission.h in Headers */,
 				EFE7A0E91963026C0054B3E9 /* Challenge.h in Headers */,
-				EFE7A0EA1963026C0054B3E9 /* BadgeReward.h in Headers */,
-				EFE7A0EB1963026C0054B3E9 /* RandomReward.h in Headers */,
-				EFE7A0EC1963026C0054B3E9 /* SequenceReward.h in Headers */,
 				EFE7A0ED1963026C0054B3E9 /* Gate.h in Headers */,
 				EFE7A0EE1963026C0054B3E9 /* GatesList.h in Headers */,
 				EFE7A0EF1963026C0054B3E9 /* GatesListAND.h in Headers */,
@@ -561,7 +529,6 @@
 				EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */,
 				EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */,
 				EFCDC759192E218F001D0824 /* Score.m in Sources */,
-				EF7BA11C1933CFF400FCF3C9 /* RandomReward.m in Sources */,
 				EF7BA13D19365FF000FCF3C9 /* Challenge.m in Sources */,
 				EF7BA0F71933209F00FCF3C9 /* BalanceGate.m in Sources */,
 				EF7BA1291935BE9500FCF3C9 /* Mission.m in Sources */,
@@ -573,10 +540,8 @@
 				EF7BA0EB1932555700FCF3C9 /* GatesList.m in Sources */,
 				EF7BA1351935FF2B00FCF3C9 /* RecordMission.m in Sources */,
 				EFFB7A461931E25000BB8BB5 /* VirtualItemScore.m in Sources */,
-				EF7BA1241934D0C300FCF3C9 /* SequenceReward.m in Sources */,
 				EF081C8F193708CF00847E47 /* WorldStorage.m in Sources */,
 				EF7BA107193379E600FCF3C9 /* World.m in Sources */,
-				EF7BA1181933CE0500FCF3C9 /* BadgeReward.m in Sources */,
 				EF081C971937252B00847E47 /* LevelStorage.m in Sources */,
 				EF7BA10B19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
 				EF7BA1311935D56B00FCF3C9 /* BalanceMission.m in Sources */,
@@ -594,8 +559,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */,
-				EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */,
 				EF73CCA21932293000A171E5 /* RangeScore.m in Sources */,
 				EFCDC761192E2248001D0824 /* LUJSONConsts.m in Sources */,
 				EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */,
@@ -616,7 +579,6 @@
 				EF081C90193708D400847E47 /* WorldStorage.m in Sources */,
 				EF7BA10C19337A1D00FCF3C9 /* WorldCompletionGate.m in Sources */,
 				EF081C981937252B00847E47 /* LevelStorage.m in Sources */,
-				EF7BA1251934D0C300FCF3C9 /* SequenceReward.m in Sources */,
 				EF7BA13E19365FF000FCF3C9 /* Challenge.m in Sources */,
 				EF7BA0EC1932555700FCF3C9 /* GatesList.m in Sources */,
 				EF7BA0F81933209F00FCF3C9 /* BalanceGate.m in Sources */,
