@@ -35,6 +35,7 @@ static NSDictionary* typeMap;
 - (id)initWithGateId:(NSString *)oGateId {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
+        [self observeNotifications];
     }
     return self;
 }
@@ -43,6 +44,7 @@ static NSDictionary* typeMap;
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
         [self addGate:oSingleGate];
+        [self observeNotifications];
     }
     
     return self;
