@@ -61,7 +61,6 @@ static NSString* TAG = @"SOOMLA RecordGate";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedScoreId forKey:LU_ASSOCSCOREID];
     [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LU_DESIRED_RECORD];
-    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

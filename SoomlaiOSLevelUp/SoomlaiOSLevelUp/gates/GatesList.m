@@ -100,7 +100,6 @@ static DictionaryFactory* dictionaryFactory;
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     [toReturn setObject:gatesArr forKey:LU_GATES];
     
     return toReturn;

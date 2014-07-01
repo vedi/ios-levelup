@@ -70,7 +70,6 @@ static DictionaryFactory* dictionaryFactory;
             self.name, LU_NAME,
             self.startValue, LU_SCORE_STARTVAL,
             self.higherBetter, LU_SCORE_HIGHBETTER,
-            NSStringFromClass([self class]), SOOM_CLASSNAME,
             nil];
 }
 

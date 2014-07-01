@@ -56,7 +56,6 @@
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedWorldId forKey:LU_ASSOCWORLDID];
-    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

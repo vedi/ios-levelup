@@ -92,7 +92,6 @@
     NSDictionary* parent = [super toDictionary];
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parent];
     [toReturn setObject:[self.range toDictionary] forKey:LU_SCORE_RANGE];
-    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     return toReturn;
 }
     

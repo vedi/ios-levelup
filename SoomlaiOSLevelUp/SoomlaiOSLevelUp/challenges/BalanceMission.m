@@ -71,7 +71,6 @@
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
     [toReturn setObject:[NSNumber numberWithInt:self.desiredBalance] forKey:LU_DESIRED_BALANCE];
-    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }
