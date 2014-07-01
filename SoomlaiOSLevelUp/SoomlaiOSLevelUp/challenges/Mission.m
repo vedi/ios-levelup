@@ -26,7 +26,6 @@
 
 @synthesize missionId, name, rewards;
 
-static NSString* TYPE_NAME = @"mission";
 static NSString* TAG = @"SOOMLA Mission";
 static DictionaryFactory* dictionaryFactory;
 
@@ -160,11 +159,6 @@ static DictionaryFactory* dictionaryFactory;
 + (Mission *)fromDictionary:(NSDictionary *)dict {
     return (Mission *)[dictionaryFactory createObjectWithDictionary:dict];
 }
-
-+ (NSString *)getTypeName {
-    return TYPE_NAME;
-}
-
 
 + (void)initialize {
     if (self == [Mission self]) {

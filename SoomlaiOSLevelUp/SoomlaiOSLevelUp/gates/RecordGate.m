@@ -17,6 +17,7 @@
 #import "RecordGate.h"
 #import "Score.h"
 #import "LevelUp.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
@@ -25,7 +26,6 @@
 
 @synthesize associatedScoreId, desiredRecord;
 
-static NSString* TYPE_NAME = @"record";
 static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithGateId:(NSString *)oGateId andScoreId:(NSString *)oScoreId andDesiredRecord:(double)oDesiredRecord {
@@ -61,7 +61,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedScoreId forKey:LU_ASSOCSCOREID];
     [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LU_DESIRED_RECORD];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

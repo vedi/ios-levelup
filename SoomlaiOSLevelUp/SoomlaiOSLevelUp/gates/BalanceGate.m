@@ -15,6 +15,7 @@
  */
 
 #import "BalanceGate.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "StoreEventHandling.h"
 #import "GateStorage.h"
@@ -28,7 +29,6 @@
 
 @synthesize associatedItemId, desiredBalance;
     
-static NSString* TYPE_NAME = @"balance";
 static NSString* TAG = @"SOOMLA BalanceGate";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance {
@@ -66,7 +66,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
     [toReturn setObject:[NSNumber numberWithInt:self.desiredBalance] forKey:LU_DESIRED_BALANCE];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

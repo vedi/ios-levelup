@@ -33,7 +33,6 @@
 
 @synthesize worldId, gates, innerWorlds, scores, challenges;
 
-static NSString* TYPE_NAME = @"world";
 static NSString* TAG = @"SOOMLA World";
 static DictionaryFactory* dictionaryFactory;
 
@@ -217,11 +216,6 @@ static DictionaryFactory* dictionaryFactory;
 + (World *)fromDictionary:(NSDictionary *)dict {
     return (World *)[dictionaryFactory createObjectWithDictionary:dict];
 }
-
-+ (NSString *)getTypeName {
-    return TYPE_NAME;
-}
-
 
 + (void)initialize {
     if (self == [World self]) {

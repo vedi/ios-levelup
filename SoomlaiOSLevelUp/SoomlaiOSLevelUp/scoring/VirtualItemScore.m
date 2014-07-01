@@ -15,6 +15,7 @@
  */
 
 #import "VirtualItemScore.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
@@ -26,7 +27,6 @@
 @synthesize associatedItemId;
 
 static NSString* TAG = @"SOOMLA VirtualItemScore";
-static NSString* TYPE_NAME = @"item";
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andAssociatedItemId:(NSString *)oAssociatedItemId {
     if (self = [super initWithScoreId:oScoreId andName:oName]) {
@@ -57,7 +57,7 @@ static NSString* TYPE_NAME = @"item";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

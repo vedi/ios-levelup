@@ -22,7 +22,6 @@ extern NSString *const LU_ASSOCWORLDID;
 extern NSString *const LU_DESIRED_RECORD;
 extern NSString *const LU_DESIRED_BALANCE;
 extern NSString *const LU_NAME;
-extern NSString *const LU_TYPE;
 
 /** Score **/
 

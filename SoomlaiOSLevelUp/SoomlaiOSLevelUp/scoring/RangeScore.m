@@ -15,6 +15,7 @@
  */
 
 #import "RangeScore.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 
 
@@ -57,8 +58,6 @@
 
 @synthesize range;
 
-static NSString* TYPE_NAME = @"range";
-
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andRange:(Range *)oRange {
     if (self = [super init]) {
@@ -93,7 +92,7 @@ static NSString* TYPE_NAME = @"range";
     NSDictionary* parent = [super toDictionary];
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parent];
     [toReturn setObject:[self.range toDictionary] forKey:LU_SCORE_RANGE];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     return toReturn;
 }
     

@@ -17,6 +17,7 @@
 #import "WorldCompletionGate.h"
 #import "World.h"
 #import "LevelUp.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
@@ -25,7 +26,6 @@
 
 @synthesize associatedWorldId;
 
-static NSString* TYPE_NAME = @"worldCompletion";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedWorldId:(NSString *)oAssociatedWorldId {
     if (self = [super initWithGateId:oGateId]) {
@@ -56,7 +56,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedWorldId forKey:LU_ASSOCWORLDID];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

@@ -15,18 +15,18 @@
  */
 
 #import "GatesListOR.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 
 
 @implementation GatesListOR
 
-static NSString* TYPE_NAME = @"listOR";
 
 - (NSDictionary*)toDictionary {
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

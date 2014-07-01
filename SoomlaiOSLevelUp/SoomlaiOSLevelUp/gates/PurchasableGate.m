@@ -15,6 +15,7 @@
  */
 
 #import "PurchasableGate.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "LevelUpEventHandling.h"
 #import "StoreEventHandling.h"
@@ -30,7 +31,6 @@
 
 @synthesize associatedItemId;
 
-static NSString* TYPE_NAME = @"purchasable";
 static NSString* TAG = @"SOOMLA PurchasableGate";
 
 - (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId {
@@ -63,7 +63,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

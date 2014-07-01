@@ -17,6 +17,7 @@
 #import "Level.h"
 #import "LevelStorage.h"
 #import "Score.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "VirtualItemScore.h"
 #import "VirtualItemNotFoundException.h"
@@ -28,7 +29,6 @@
 
 @synthesize state;
 
-static NSString* TYPE_NAME = @"level";
 static NSString* TAG = @"SOOMLA Level";
 
 
@@ -36,7 +36,7 @@ static NSString* TAG = @"SOOMLA Level";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

@@ -27,7 +27,6 @@
 
 @synthesize name, scoreId, startValue, tempScore, higherBetter;
 
-static NSString* TYPE_NAME = @"score";
 static DictionaryFactory* dictionaryFactory;
 
 
@@ -71,7 +70,7 @@ static DictionaryFactory* dictionaryFactory;
             self.name, LU_NAME,
             self.startValue, LU_SCORE_STARTVAL,
             self.higherBetter, LU_SCORE_HIGHBETTER,
-            TYPE_NAME, LU_TYPE,
+            NSStringFromClass([self class]), SOOM_CLASSNAME,
             nil];
 }
 
@@ -141,11 +140,6 @@ static DictionaryFactory* dictionaryFactory;
 + (Score *)fromDictionary:(NSDictionary *)dict {
     return (Score *)[dictionaryFactory createObjectWithDictionary:dict];
 }
-
-+ (NSString *)getTypeName {
-    return TYPE_NAME;
-}
-
 
 + (void)initialize {
     if (self == [Score self]) {

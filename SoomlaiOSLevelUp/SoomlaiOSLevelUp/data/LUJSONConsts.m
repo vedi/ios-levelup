@@ -25,7 +25,6 @@ NSString *const LU_ASSOCWORLDID      = @"associatedWorldId";
 NSString *const LU_DESIRED_RECORD    = @"desiredRecord";
 NSString *const LU_DESIRED_BALANCE   = @"desiredBalance";
 NSString *const LU_NAME              = @"name";
-NSString *const LU_TYPE              = @"jsonType";
 
 
 /** Score **/

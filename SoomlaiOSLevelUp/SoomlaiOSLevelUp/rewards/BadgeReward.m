@@ -15,13 +15,13 @@
  */
 
 #import "BadgeReward.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 
 @implementation BadgeReward
 
 @synthesize iconUrl;
 
-static NSString* TYPE_NAME = @"badge";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andIconUrl:(NSString *)oIconUrl {
     if (self = [super initWithRewardId:oRewardId andName:oName]) {
@@ -44,7 +44,7 @@ static NSString* TYPE_NAME = @"badge";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.iconUrl forKey:LU_REWARD_ICONURL];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

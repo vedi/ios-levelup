@@ -31,7 +31,6 @@
 
 @synthesize gateId;
 
-static NSString* TYPE_NAME = @"gate";
 static DictionaryFactory* dictionaryFactory;
 
 
@@ -107,11 +106,6 @@ static DictionaryFactory* dictionaryFactory;
 + (Gate *)fromDictionary:(NSDictionary *)dict {
     return (Gate *)[dictionaryFactory createObjectWithDictionary:dict];
 }
-
-+ (NSString *)getTypeName {
-    return TYPE_NAME;
-}
-
 
 + (void)initialize {
     if (self == [Gate self]) {

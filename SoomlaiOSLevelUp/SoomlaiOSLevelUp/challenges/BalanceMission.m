@@ -15,6 +15,7 @@
  */
 
 #import "BalanceMission.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "StoreEventHandling.h"
 #import "VirtualCurrency.h"
@@ -25,7 +26,6 @@
 
 @synthesize associatedItemId, desiredBalance;
 
-static NSString* TYPE_NAME = @"balance";
 
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
@@ -71,7 +71,7 @@ static NSString* TYPE_NAME = @"balance";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
     [toReturn setObject:[NSNumber numberWithInt:self.desiredBalance] forKey:LU_DESIRED_BALANCE];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

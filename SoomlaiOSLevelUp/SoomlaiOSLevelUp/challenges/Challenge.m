@@ -17,6 +17,7 @@
 #import "Challenge.h"
 #import "BalanceMission.h"
 #import "MissionStorage.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "RecordMission.h"
 #import "LevelUpEventHandling.h"
@@ -26,7 +27,6 @@
 
 @synthesize missions;
 
-static NSString* TYPE_NAME = @"challenge";
 static NSString* TAG = @"SOOMLA Challenge";
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions {
@@ -80,7 +80,7 @@ static NSString* TAG = @"SOOMLA Challenge";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:missionsArr forKey:LU_MISSIONS];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

@@ -15,6 +15,7 @@
  */
 
 #import "SequenceReward.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "BadgeReward.h"
 #import "VirtualItemReward.h"
@@ -25,7 +26,6 @@
 
 @synthesize rewards;
 
-static NSString* TYPE_NAME = @"sequence";
 static NSString* TAG = @"SOOMLA SequenceReward";
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andRewards:(NSArray *)oRewards {
@@ -79,7 +79,7 @@ static NSString* TAG = @"SOOMLA SequenceReward";
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:rewardsArr forKey:LU_REWARDS];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }

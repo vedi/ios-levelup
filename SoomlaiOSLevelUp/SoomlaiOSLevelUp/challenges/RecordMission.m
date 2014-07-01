@@ -15,6 +15,7 @@
  */
 
 #import "RecordMission.h"
+#import "JSONConsts.h"
 #import "LUJSONConsts.h"
 #import "Score.h"
 #import "LevelUpEventHandling.h"
@@ -22,8 +23,6 @@
 @implementation RecordMission
 
 @synthesize associatedScoreId, desiredRecord;
-
-static NSString* TYPE_NAME = @"record";
 
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
@@ -71,7 +70,7 @@ static NSString* TYPE_NAME = @"record";
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:self.associatedScoreId forKey:LU_ASSOCSCOREID];
     [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LU_DESIRED_RECORD];
-    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     
     return toReturn;
 }
