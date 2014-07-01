@@ -24,15 +24,10 @@
 
     // does opening child gates cause us to auto-open (or just canOpen)?
     BOOL autoOpenBehavior;
-
-    // children require to say true to canOpen or isOpen for our canOpen?
-    BOOL childrenCanOpenIsEnough;
-
 }
 
 @property (strong, nonatomic) NSMutableArray* gates;
 @property (nonatomic) BOOL autoOpenBehavior;
-@property (nonatomic) BOOL childrenCanOpenIsEnough;
 
 
 - (id)initWithGateId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate;

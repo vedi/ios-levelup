@@ -19,7 +19,6 @@
 #import "VirtualItemScore.h"
 #import "ScoreStorage.h"
 #import "BPJSONConsts.h"
-#import "LevelUpEventHandling.h"
 #import "DictionaryFactory.h"
 
 
@@ -91,7 +90,6 @@ static NSDictionary* typeMap;
     double record = [ScoreStorage getRecordScore:self];
     if ([self hasTempScoreReached:record]) {
         [ScoreStorage setRecord:self.tempScore toScore:self];
-        [LevelUpEventHandling postScoreRecordChanged:self];
     }
     
     [self performSaveActions];

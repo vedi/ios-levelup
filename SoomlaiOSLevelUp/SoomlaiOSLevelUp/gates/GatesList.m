@@ -20,13 +20,12 @@
 #import "GatesListOR.h"
 #import "DictionaryFactory.h"
 #import "SoomlaUtils.h"
-#import "LevelUpEventHandling.h"
 
 
 // TODO: Document ABSTRACT class
 @implementation GatesList
 
-@synthesize gates, autoOpenBehavior, childrenCanOpenIsEnough;
+@synthesize gates, autoOpenBehavior;
 
 static NSString* TAG = @"SOOMLA GatesList";
 static DictionaryFactory* dictionaryFactory;
@@ -136,23 +135,6 @@ static NSDictionary* typeMap;
         return NO;
     }
 }
-
-- (void)observeNotifications {
-    if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gateOpened:) name:EVENT_BP_GATE_OPENED object:nil];
-    }
-}
-
-- (void)stopObservingNotifications {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)gateOpened:(NSNotification *)notification {
-    if ([self tryOpen]) {
-        [self stopObservingNotifications];
-    }
-}
-
 
 
 // Static methods

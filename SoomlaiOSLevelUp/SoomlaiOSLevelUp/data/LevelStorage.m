@@ -17,6 +17,7 @@
 #import "LevelStorage.h"
 #import "Level.h"
 #import "LevelUp.h"
+#import "LevelUpEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
@@ -59,6 +60,10 @@
     NSString* key = [self keyTimesStartedWithLevelId:level.worldId];
     NSString* val = [[NSNumber numberWithInt:started] stringValue];
     [KeyValueStorage setValue:val forKey:key];
+    
+    // Notify level has started
+    [LevelUpEventHandling postLevelStarted:level];
+
     return started;
 }
 
@@ -91,6 +96,10 @@
     NSString* key = [self keyTimesPlayedWithLevelId:level.worldId];
     NSString* val = [[NSNumber numberWithInt:played] stringValue];
     [KeyValueStorage setValue:val forKey:key];
+    
+    // Notify level has ended
+    [LevelUpEventHandling postLevelEnded:level];
+    
     return played;
 }
 

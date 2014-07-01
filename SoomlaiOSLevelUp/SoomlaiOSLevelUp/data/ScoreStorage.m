@@ -16,6 +16,7 @@
 
 #import "ScoreStorage.h"
 #import "LevelUp.h"
+#import "LevelUpEventHandling.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 #import "Score.h"
@@ -53,6 +54,8 @@
     NSString* val = [[NSNumber numberWithDouble:record] stringValue];
     
     [KeyValueStorage setValue:val forKey:key];
+    
+    [LevelUpEventHandling postScoreRecordChanged:score];
 }
 
 + (double)getRecordScore:(Score *)score {

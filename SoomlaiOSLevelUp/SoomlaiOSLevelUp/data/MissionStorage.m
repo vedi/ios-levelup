@@ -40,6 +40,9 @@
         }
     } else {
         [KeyValueStorage deleteValueForKey:key];
+        if (notify) {
+            [LevelUpEventHandling postMissionCompletionRevoked:mission];
+        }
     }
 }
 

@@ -26,7 +26,6 @@
 #import "BalanceMission.h"
 #import "Challenge.h"
 #import "RecordMission.h"
-#import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
 
 @implementation Mission
@@ -124,7 +123,6 @@ static NSDictionary* typeMap;
         
         [self giveRewards];
     } else {
-        [LevelUpEventHandling postMissionCompletionRevoked:self];
         [self takeRewards];
 
         // listen again for chance to be completed
