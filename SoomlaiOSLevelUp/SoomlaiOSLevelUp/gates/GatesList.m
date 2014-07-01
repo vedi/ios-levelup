@@ -38,7 +38,6 @@ static NSDictionary* typeMap;
         // "fake" gates with 1 sub-gate are auto open
         self.autoOpenBehavior = YES;
         self.childrenCanOpenIsEnough = NO;
-        [self observeNotifications];
     }
     return self;
 }
@@ -51,7 +50,6 @@ static NSDictionary* typeMap;
         // "fake" gates with 1 sub-gate are auto open
         self.autoOpenBehavior = YES;
         self.childrenCanOpenIsEnough = NO;
-        [self observeNotifications];
     }
     
     return self;
@@ -62,7 +60,6 @@ static NSDictionary* typeMap;
         self.gates = [NSMutableArray arrayWithArray:oGates];
         self.autoOpenBehavior = NO;
         self.childrenCanOpenIsEnough = NO;
-        [self observeNotifications];
     }
     
     return self;
@@ -93,7 +90,6 @@ static NSDictionary* typeMap;
             self.autoOpenBehavior = NO;
         }
         self.childrenCanOpenIsEnough = NO;
-        [self observeNotifications];
     }
     
     return self;
