@@ -17,7 +17,6 @@
 #import "GateStorage.h"
 #import "LevelUp.h"
 #import "Gate.h"
-#import "StorageManager.h"
 #import "KeyValueStorage.h"
 #import "LevelUpEventHandling.h"
 

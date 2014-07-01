@@ -15,6 +15,7 @@
  */
 
 #import "GatesList.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
 #import "GatesListAND.h"
 #import "GatesListOR.h"
@@ -29,7 +30,6 @@
 
 static NSString* TAG = @"SOOMLA GatesList";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 - (id)initWithGateId:(NSString *)oGateId {
     if (self = [super initWithGateId:oGateId]) {
@@ -37,7 +37,6 @@ static NSDictionary* typeMap;
         
         // "fake" gates with 1 sub-gate are auto open
         self.autoOpenBehavior = YES;
-        self.childrenCanOpenIsEnough = NO;
     }
     return self;
 }
@@ -49,7 +48,6 @@ static NSDictionary* typeMap;
         
         // "fake" gates with 1 sub-gate are auto open
         self.autoOpenBehavior = YES;
-        self.childrenCanOpenIsEnough = NO;
     }
     
     return self;
@@ -59,7 +57,6 @@ static NSDictionary* typeMap;
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray arrayWithArray:oGates];
         self.autoOpenBehavior = NO;
-        self.childrenCanOpenIsEnough = NO;
     }
     
     return self;
@@ -89,7 +86,6 @@ static NSDictionary* typeMap;
         } else {
             self.autoOpenBehavior = NO;
         }
-        self.childrenCanOpenIsEnough = NO;
     }
     
     return self;
@@ -104,6 +100,7 @@ static NSDictionary* typeMap;
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     [toReturn setObject:gatesArr forKey:BP_GATES];
     
     return toReturn;
@@ -136,16 +133,12 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (GatesList *)fromDictionary:(NSDictionary *)dict {
-    return (GatesList *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (GatesList *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (void)initialize {
     if (self == [GatesList self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [GatesListAND getTypeName]: [GatesListAND class],
-                    [GatesListOR getTypeName] : [GatesListOR class]
-                    };
     }
 }
 

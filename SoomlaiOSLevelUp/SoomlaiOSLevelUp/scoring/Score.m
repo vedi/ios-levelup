@@ -18,6 +18,7 @@
 #import "RangeScore.h"
 #import "VirtualItemScore.h"
 #import "ScoreStorage.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
 #import "DictionaryFactory.h"
 
@@ -28,7 +29,6 @@
 
 static NSString* TYPE_NAME = @"score";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName {
@@ -66,6 +66,7 @@ static NSDictionary* typeMap;
 
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
+            NSStringFromClass([self class]), SOOM_CLASSNAME,
             self.scoreId, BP_SCORE_SCOREID,
             self.name, BP_NAME,
             self.startValue, BP_SCORE_STARTVAL,
@@ -138,7 +139,7 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (Score *)fromDictionary:(NSDictionary *)dict {
-    return (Score *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (Score *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (NSString *)getTypeName {
@@ -149,11 +150,6 @@ static NSDictionary* typeMap;
 + (void)initialize {
     if (self == [Score self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [Score getTypeName]             : [Score class],
-                    [RangeScore getTypeName]        : [RangeScore class],
-                    [VirtualItemScore getTypeName]  : [VirtualItemScore class]
-                    };
     }
 }
 

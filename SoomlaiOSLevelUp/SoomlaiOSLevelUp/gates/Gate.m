@@ -15,6 +15,7 @@
  */
 
 #import "Gate.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
 #import "GateStorage.h"
 #import "DictionaryFactory.h"
@@ -32,7 +33,6 @@
 
 static NSString* TYPE_NAME = @"gate";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 
 - (id)initWithGateId:(NSString *)oGateId {
@@ -64,6 +64,7 @@ static NSDictionary* typeMap;
 
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
+            NSStringFromClass([self class]), SOOM_CLASSNAME,
             self.gateId, BP_GATE_GATEID,
             nil];
 }
@@ -104,7 +105,7 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (Gate *)fromDictionary:(NSDictionary *)dict {
-    return (Gate *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (Gate *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (NSString *)getTypeName {
@@ -115,14 +116,6 @@ static NSDictionary* typeMap;
 + (void)initialize {
     if (self == [Gate self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [BalanceGate getTypeName]           : [BalanceGate class],
-                    [GatesListAND getTypeName]          : [GatesListAND class],
-                    [GatesListOR getTypeName]           : [GatesListOR class],
-                    [PurchasableGate getTypeName]       : [PurchasableGate class],
-                    [RecordGate getTypeName]            : [RecordGate class],
-                    [WorldCompletionGate getTypeName]   : [WorldCompletionGate class]
-                    };
     }
 }
 

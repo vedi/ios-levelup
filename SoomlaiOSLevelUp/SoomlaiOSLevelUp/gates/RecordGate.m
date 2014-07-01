@@ -18,6 +18,7 @@
 #import "Score.h"
 #import "LevelUp.h"
 #import "BPJSONConsts.h"
+#import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
 
 @implementation RecordGate

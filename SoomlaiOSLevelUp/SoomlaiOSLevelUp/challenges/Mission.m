@@ -17,15 +17,9 @@
 #import "Mission.h"
 #import "MissionStorage.h"
 #import "Reward.h"
-#import "BadgeReward.h"
-#import "RandomReward.h"
-#import "VirtualItemReward.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
 #import "DictionaryFactory.h"
-#import "ActionMission.h"
-#import "BalanceMission.h"
-#import "Challenge.h"
-#import "RecordMission.h"
 #import "SoomlaUtils.h"
 
 @implementation Mission
@@ -35,7 +29,6 @@
 static NSString* TYPE_NAME = @"mission";
 static NSString* TAG = @"SOOMLA Mission";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 
 - (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName {
@@ -97,6 +90,7 @@ static NSDictionary* typeMap;
 
 - (NSDictionary *)toDictionary {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 NSStringFromClass([self class]), SOOM_CLASSNAME,
                                  self.missionId, BP_MISSION_MISSIONID,
                                  self.name, BP_NAME,
                                  nil];
@@ -164,7 +158,7 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (Mission *)fromDictionary:(NSDictionary *)dict {
-    return (Mission *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (Mission *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (NSString *)getTypeName {
@@ -175,12 +169,6 @@ static NSDictionary* typeMap;
 + (void)initialize {
     if (self == [Mission self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [ActionMission getTypeName] : [ActionMission class],
-                    [BalanceMission getTypeName]: [BalanceMission class],
-                    [Challenge getTypeName]     : [Challenge class],
-                    [RecordMission getTypeName] : [RecordMission class]
-                    };
     }
 }
 
