@@ -119,17 +119,13 @@ static NSDictionary* typeMap;
     [MissionStorage setCompleted:completed forMission:self];
     if (completed) {
         
-        // Stop observing notifications
+        // Stop observing notifications.  Not interesting until revoked.
         [self stopObservingNotifications];
-
-        for (Reward* reward in self.rewards) {
-            [reward give];
-        }
+        
+        [self giveRewards];
     } else {
         [LevelUpEventHandling postMissionCompletionRevoked:self];
-        for (Reward* reward in self.rewards) {
-            [reward take];
-        }
+        [self takeRewards];
 
         // listen again for chance to be completed
         [self observeNotifications];
@@ -154,10 +150,6 @@ static NSDictionary* typeMap;
     }
     
     return [self isEqualToMission:(Mission *)object];
-}
-
-- (NSUInteger)hash {
-    return [self.missionId hash];
 }
 
 - (void)observeNotifications {
@@ -193,5 +185,26 @@ static NSDictionary* typeMap;
                     };
     }
 }
+
+//
+// Private methods
+//
+
+- (NSUInteger)hash {
+    return [self.missionId hash];
+}
+
+- (void)giveRewards {
+    for (Reward* reward in self.rewards) {
+        [reward give];
+    }
+}
+
+- (void)takeRewards {
+    for (Reward* reward in self.rewards) {
+        [reward take];
+    }
+}
+
 
 @end

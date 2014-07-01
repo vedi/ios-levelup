@@ -26,7 +26,7 @@
 // TODO: Document ABSTRACT class
 @implementation GatesList
 
-@synthesize gates;
+@synthesize gates, autoOpenBehavior, childrenCanOpenIsEnough;
 
 static NSString* TAG = @"SOOMLA GatesList";
 static DictionaryFactory* dictionaryFactory;
@@ -35,6 +35,10 @@ static NSDictionary* typeMap;
 - (id)initWithGateId:(NSString *)oGateId {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
+        
+        // "fake" gates with 1 sub-gate are auto open
+        self.autoOpenBehavior = YES;
+        self.childrenCanOpenIsEnough = NO;
         [self observeNotifications];
     }
     return self;
@@ -44,6 +48,10 @@ static NSDictionary* typeMap;
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
         [self addGate:oSingleGate];
+        
+        // "fake" gates with 1 sub-gate are auto open
+        self.autoOpenBehavior = YES;
+        self.childrenCanOpenIsEnough = NO;
         [self observeNotifications];
     }
     
@@ -53,6 +61,8 @@ static NSDictionary* typeMap;
 - (id)initWithGateId:(NSString *)oGateId andGates:(NSArray*)oGates {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray arrayWithArray:oGates];
+        self.autoOpenBehavior = NO;
+        self.childrenCanOpenIsEnough = NO;
         [self observeNotifications];
     }
     
@@ -76,6 +86,14 @@ static NSDictionary* typeMap;
         }
         
         self.gates = tmpGates;
+        if ([self.gates count] < 2) {
+            
+            // "fake" gates with 1 sub-gate are auto open
+            self.autoOpenBehavior = YES;
+        } else {
+            self.autoOpenBehavior = NO;
+        }
+        self.childrenCanOpenIsEnough = NO;
         [self observeNotifications];
     }
     
@@ -105,10 +123,18 @@ static NSDictionary* typeMap;
 }
 
 - (BOOL)tryOpenInner {
-    for (Gate* gate in self.gates) {
-        [gate tryOpen];
+    if (self.autoOpenBehavior) {
+        for (Gate* gate in self.gates) {
+            [gate tryOpen];
+        }
+        return [self isOpen];
+    } else {
+        if ([self canOpen]) {
+            [self forceOpen:YES];
+            return YES;
+        }
+        return NO;
     }
-    return [self isOpen];
 }
 
 - (void)observeNotifications {

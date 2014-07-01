@@ -102,8 +102,13 @@ static NSDictionary* typeMap;
 
 - (void)reset {
     self.tempScore = self.startValue;
-    [ScoreStorage setRecord:0 toScore:self];
-    [ScoreStorage setLatest:0 toScore:self];
+
+    // 0 doesn't work well (confusing) for descending score
+    // if someone set higherBetter(false) and a start value of 100
+    // I think they expect reset to go back to 100, otherwise
+    // 0 is the best and current record and can't be beat
+    [ScoreStorage setRecord:self.startValue toScore:self]; // startValue is 0
+    [ScoreStorage setLatest:self.startValue toScore:self]; // startValue is 0
 }
 
 - (BOOL)hasTempScoreReached:(double)scoreVal {
