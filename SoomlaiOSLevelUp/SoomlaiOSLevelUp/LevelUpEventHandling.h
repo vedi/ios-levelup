@@ -24,7 +24,6 @@
 // Events
 #define EVENT_BP_SCORE_RECORD_CHANGED           @"bp_score_record_changed"
 #define EVENT_BP_GATE_OPENED                    @"bp_gate_opened"
-#define EVENT_BP_GATE_CAN_BE_OPENED             @"bp_gate_can_be_opened"
 #define EVENT_BP_REWARD_GIVEN                   @"bp_reward_given"
 #define EVENT_BP_REWARD_TAKEN                   @"bp_reward_taken"
 #define EVENT_BP_MISSION_COMPLETED              @"bp_mission_completed"
@@ -52,8 +51,6 @@
 + (void)postScoreRecordChanged:(Score *)score;
 
 + (void)postGateOpened:(Gate *)gate;
-
-+ (void)postGateCanBeOpened:(Gate *)gate;
 
 + (void)postRewardGiven:(Reward *)reward;
 
