@@ -86,6 +86,13 @@ static NSString* TAG = @"SOOMLA Challenge";
 
 
 - (BOOL)isCompleted {
+    
+    // could happen in construction
+    // need to return false in order to register for child events
+    if (!self.missions) {
+        return NO;
+    }
+
     for (Mission* mission in self.missions) {
         if (![mission isCompleted]) {
             return NO;
