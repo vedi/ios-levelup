@@ -19,7 +19,7 @@
 #import "VirtualItemScore.h"
 #import "ScoreStorage.h"
 #import "JSONConsts.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "DictionaryFactory.h"
 
 
@@ -55,10 +55,10 @@ static DictionaryFactory* dictionaryFactory;
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.scoreId = dict[LEVELUP_SCORE_SCOREID];
-        self.name = dict[LEVELUP_NAME];
-        self.startValue = [dict[LEVELUP_SCORE_STARTVAL] doubleValue];
-        self.higherBetter = [dict[LEVELUP_SCORE_HIGHBETTER] boolValue];
+        self.scoreId = dict[LU_SCORE_SCOREID];
+        self.name = dict[LU_NAME];
+        self.startValue = [dict[LU_SCORE_STARTVAL] doubleValue];
+        self.higherBetter = [dict[LU_SCORE_HIGHBETTER] boolValue];
     }
     
     return self;
@@ -67,11 +67,11 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
             NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.scoreId, LEVELUP_SCORE_SCOREID,
-            self.name, LEVELUP_NAME,
-            self.startValue, LEVELUP_SCORE_STARTVAL,
-            self.higherBetter, LEVELUP_SCORE_HIGHBETTER,
-            TYPE_NAME, LEVELUP_TYPE,
+            self.scoreId, LU_SCORE_SCOREID,
+            self.name, LU_NAME,
+            self.startValue, LU_SCORE_STARTVAL,
+            self.higherBetter, LU_SCORE_HIGHBETTER,
+            TYPE_NAME, LU_TYPE,
             nil];
 }
 

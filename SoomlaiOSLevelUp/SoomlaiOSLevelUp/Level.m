@@ -17,7 +17,7 @@
 #import "Level.h"
 #import "LevelStorage.h"
 #import "Score.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "VirtualItemScore.h"
 #import "VirtualItemNotFoundException.h"
 #import "StoreInventory.h"
@@ -36,7 +36,7 @@ static NSString* TAG = @"SOOMLA Level";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

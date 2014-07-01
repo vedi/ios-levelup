@@ -125,7 +125,7 @@
 // Private
 
 + (NSString *)keyLevelsWithLevelId:(NSString *)levelId andPostfix:(NSString *)postfix {
-    return [NSString stringWithFormat: @"%@level.%@.%@", LEVELUP_DB_KEY_PREFIX, levelId, postfix];
+    return [NSString stringWithFormat: @"%@level.%@.%@", LU_DB_KEY_PREFIX, levelId, postfix];
 }
 
 + (NSString *)keyTimesStartedWithLevelId:(NSString *)levelId {

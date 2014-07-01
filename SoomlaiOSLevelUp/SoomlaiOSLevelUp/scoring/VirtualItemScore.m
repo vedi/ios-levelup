@@ -15,7 +15,7 @@
  */
 
 #import "VirtualItemScore.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
 #import "SoomlaUtils.h"
@@ -46,7 +46,7 @@ static NSString* TYPE_NAME = @"item";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = dict[LEVELUP_ASSOCITEMID];
+        self.associatedItemId = dict[LU_ASSOCITEMID];
     }
     
     return self;
@@ -56,8 +56,8 @@ static NSString* TYPE_NAME = @"item";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedItemId forKey:LEVELUP_ASSOCITEMID];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

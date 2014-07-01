@@ -66,8 +66,8 @@
 		EFCDC745192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */; };
 		EFCDC759192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
 		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
-		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
-		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFCDC760192E2248001D0824 /* LUJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* LUJSONConsts.m */; };
+		EFCDC761192E2248001D0824 /* LUJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* LUJSONConsts.m */; };
 		EFE7A0E51963026C0054B3E9 /* Mission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1271935BE9500FCF3C9 /* Mission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0E61963026C0054B3E9 /* BalanceMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA12F1935D56B00FCF3C9 /* BalanceMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0E71963026C0054B3E9 /* RecordMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,7 +84,7 @@
 		EFE7A0F21963026C0054B3E9 /* PurchasableGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0F31963026C0054B3E9 /* RecordGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1011933637A00FCF3C9 /* RecordGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0F41963026C0054B3E9 /* WorldCompletionGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE7A0F51963026C0054B3E9 /* BPJSONConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCDC75E192E2248001D0824 /* BPJSONConsts.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EFE7A0F51963026C0054B3E9 /* LUJSONConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCDC75E192E2248001D0824 /* LUJSONConsts.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EFE7A0F61963026C0054B3E9 /* ScoreStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0F71963026C0054B3E9 /* GateStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73CCA81932420300A171E5 /* GateStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFE7A0F81963026C0054B3E9 /* RewardStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1121933C68900FCF3C9 /* RewardStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -193,8 +193,8 @@
 		EFCDC744192E1EB6001D0824 /* SoomlaiOSLevelUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoomlaiOSLevelUpTests.m; sourceTree = "<group>"; };
 		EFCDC753192E218F001D0824 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		EFCDC754192E218F001D0824 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
-		EFCDC75E192E2248001D0824 /* BPJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPJSONConsts.h; path = data/BPJSONConsts.h; sourceTree = "<group>"; };
-		EFCDC75F192E2248001D0824 /* BPJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPJSONConsts.m; path = data/BPJSONConsts.m; sourceTree = "<group>"; };
+		EFCDC75E192E2248001D0824 /* LUJSONConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LUJSONConsts.h; path = data/LUJSONConsts.h; sourceTree = "<group>"; };
+		EFCDC75F192E2248001D0824 /* LUJSONConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LUJSONConsts.m; path = data/LUJSONConsts.m; sourceTree = "<group>"; };
 		EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreStorage.h; path = data/ScoreStorage.h; sourceTree = "<group>"; };
 		EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreStorage.m; path = data/ScoreStorage.m; sourceTree = "<group>"; };
 		EFFB7A3E192E406900BB8BB5 /* LevelUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUp.h; sourceTree = "<group>"; };
@@ -383,8 +383,8 @@
 		EFCDC75D192E2210001D0824 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDC75E192E2248001D0824 /* BPJSONConsts.h */,
-				EFCDC75F192E2248001D0824 /* BPJSONConsts.m */,
+				EFCDC75E192E2248001D0824 /* LUJSONConsts.h */,
+				EFCDC75F192E2248001D0824 /* LUJSONConsts.m */,
 				EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */,
 				EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */,
 				EF73CCA81932420300A171E5 /* GateStorage.h */,
@@ -437,7 +437,7 @@
 				EFE7A1001963026C0054B3E9 /* LevelUpEventHandling.h in Headers */,
 				EFE7A1011963026C0054B3E9 /* World.h in Headers */,
 				EFE7A1021963026D0054B3E9 /* Level.h in Headers */,
-				EFE7A0F51963026C0054B3E9 /* BPJSONConsts.h in Headers */,
+				EFE7A0F51963026C0054B3E9 /* LUJSONConsts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EFCDC760192E2248001D0824 /* LUJSONConsts.m in Sources */,
 				EF7BA0F31933204900FCF3C9 /* GatesListOR.m in Sources */,
 				EF73CCAA1932420300A171E5 /* GateStorage.m in Sources */,
 				EFCDC759192E218F001D0824 /* Score.m in Sources */,
@@ -597,7 +597,7 @@
 				EF7BA1191933CE0500FCF3C9 /* BadgeReward.m in Sources */,
 				EF7BA11D1933CFF400FCF3C9 /* RandomReward.m in Sources */,
 				EF73CCA21932293000A171E5 /* RangeScore.m in Sources */,
-				EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */,
+				EFCDC761192E2248001D0824 /* LUJSONConsts.m in Sources */,
 				EF7BA1001933424700FCF3C9 /* PurchasableGate.m in Sources */,
 				EFCDC75A192E218F001D0824 /* Score.m in Sources */,
 				EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */,

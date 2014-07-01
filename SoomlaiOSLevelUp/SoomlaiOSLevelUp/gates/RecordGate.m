@@ -17,7 +17,7 @@
 #import "RecordGate.h"
 #import "Score.h"
 #import "LevelUp.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
 
@@ -44,8 +44,8 @@ static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedScoreId = dict[LEVELUP_ASSOCSCOREID];
-        self.desiredRecord = [dict[LEVELUP_DESIRED_RECORD] doubleValue];
+        self.associatedScoreId = dict[LU_ASSOCSCOREID];
+        self.desiredRecord = [dict[LU_DESIRED_RECORD] doubleValue];
     }
     
     if (![self isOpen]) {
@@ -59,9 +59,9 @@ static NSString* TAG = @"SOOMLA RecordGate";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedScoreId forKey:LEVELUP_ASSOCSCOREID];
-    [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LEVELUP_DESIRED_RECORD];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:self.associatedScoreId forKey:LU_ASSOCSCOREID];
+    [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LU_DESIRED_RECORD];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

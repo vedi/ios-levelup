@@ -15,7 +15,7 @@
  */
 
 #import "GatesListOR.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 
 
 @implementation GatesListOR
@@ -26,7 +26,7 @@ static NSString* TYPE_NAME = @"listOR";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

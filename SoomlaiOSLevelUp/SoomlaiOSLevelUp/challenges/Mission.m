@@ -18,7 +18,7 @@
 #import "MissionStorage.h"
 #import "Reward.h"
 #import "JSONConsts.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "DictionaryFactory.h"
 #import "SoomlaUtils.h"
 
@@ -70,7 +70,7 @@ static DictionaryFactory* dictionaryFactory;
     if (self) {
         
         NSMutableArray* tmpRewards = [NSMutableArray array];
-        NSArray* rewardsArr = dict[LEVELUP_REWARDS];
+        NSArray* rewardsArr = dict[LU_REWARDS];
         
         // Iterate over all rewards in the JSON array and for each one create
         // an instance according to the reward type
@@ -91,15 +91,15 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary *)toDictionary {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                  NSStringFromClass([self class]), SOOM_CLASSNAME,
-                                 self.missionId, LEVELUP_MISSION_MISSIONID,
-                                 self.name, LEVELUP_NAME,
+                                 self.missionId, LU_MISSION_MISSIONID,
+                                 self.name, LU_NAME,
                                  nil];
     
     NSMutableArray* rewardsArr = [NSMutableArray array];
     for (Reward* reward in self.rewards) {
         [rewardsArr addObject:[reward toDictionary]];
     }
-    [dict setObject:rewardsArr forKey:LEVELUP_REWARDS];
+    [dict setObject:rewardsArr forKey:LU_REWARDS];
     
     return dict;
 }

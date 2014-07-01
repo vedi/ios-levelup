@@ -15,7 +15,7 @@
  */
 
 #import "BalanceMission.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "StoreEventHandling.h"
 #import "VirtualCurrency.h"
 #import "VirtualGood.h"
@@ -56,8 +56,8 @@ static NSString* TYPE_NAME = @"balance";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = dict[LEVELUP_ASSOCITEMID];
-        self.desiredBalance = [dict[LEVELUP_DESIRED_BALANCE] intValue];
+        self.associatedItemId = dict[LU_ASSOCITEMID];
+        self.desiredBalance = [dict[LU_DESIRED_BALANCE] intValue];
     }
     
     [self observeNotifications];
@@ -69,9 +69,9 @@ static NSString* TYPE_NAME = @"balance";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedItemId forKey:LEVELUP_ASSOCITEMID];
-    [toReturn setObject:[NSNumber numberWithInt:self.desiredBalance] forKey:LEVELUP_DESIRED_BALANCE];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:self.associatedItemId forKey:LU_ASSOCITEMID];
+    [toReturn setObject:[NSNumber numberWithInt:self.desiredBalance] forKey:LU_DESIRED_BALANCE];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

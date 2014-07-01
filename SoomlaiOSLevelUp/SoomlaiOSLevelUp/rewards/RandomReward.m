@@ -15,7 +15,7 @@
  */
 
 #import "RandomReward.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "BadgeReward.h"
 #import "VirtualItemReward.h"
 #import "SoomlaUtils.h"
@@ -46,7 +46,7 @@ static NSString* TAG = @"SOOMLA RandomReward";
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpRewards = [NSMutableArray array];
-        NSArray* rewardsArr = dict[LEVELUP_REWARDS];
+        NSArray* rewardsArr = dict[LU_REWARDS];
         
         if (!rewardsArr) {
             LogDebug(TAG, @"reward has no meaning without children");
@@ -79,8 +79,8 @@ static NSString* TAG = @"SOOMLA RandomReward";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:rewardsArr forKey:LEVELUP_REWARDS];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:rewardsArr forKey:LU_REWARDS];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

@@ -16,7 +16,7 @@
 
 #import "GatesList.h"
 #import "JSONConsts.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "GatesListAND.h"
 #import "GatesListOR.h"
 #import "DictionaryFactory.h"
@@ -66,7 +66,7 @@ static DictionaryFactory* dictionaryFactory;
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpGates = [NSMutableArray array];
-        NSArray* gateDicts = dict[LEVELUP_GATES];
+        NSArray* gateDicts = dict[LU_GATES];
 
         // Iterate over all gates in the JSON array and for each one create
         // an instance according to the gate type
@@ -101,7 +101,7 @@ static DictionaryFactory* dictionaryFactory;
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
     [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
-    [toReturn setObject:gatesArr forKey:LEVELUP_GATES];
+    [toReturn setObject:gatesArr forKey:LU_GATES];
     
     return toReturn;
 }

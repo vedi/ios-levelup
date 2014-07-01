@@ -16,7 +16,7 @@
 
 #import "GatesListAND.h"
 #import "GateStorage.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 
 
 @implementation GatesListAND
@@ -27,7 +27,7 @@ static NSString* TYPE_NAME = @"listAND";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

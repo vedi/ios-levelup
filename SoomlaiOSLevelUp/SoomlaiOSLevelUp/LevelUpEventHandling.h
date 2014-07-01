@@ -22,15 +22,15 @@
 @class Level;
 
 // Events
-#define EVENT_SCORE_RECORD_CHANGED           @"levelup_score_record_changed"
-#define EVENT_GATE_OPENED                    @"levelup_gate_opened"
-#define EVENT_REWARD_GIVEN                   @"levelup_reward_given"
-#define EVENT_REWARD_TAKEN                   @"levelup_reward_taken"
-#define EVENT_MISSION_COMPLETED              @"levelup_mission_completed"
-#define EVENT_MISSION_COMPLETION_REVOKED     @"levelup_mission_completeion_revoked"
-#define EVENT_WORLD_COMPLETED                @"levelup_world_completed"
-#define EVENT_LEVEL_STARTED                  @"levelup_level_started"
-#define EVENT_LEVEL_ENDED                    @"levelup_level_ended"
+#define EVENT_SCORE_RECORD_CHANGED           @"lu_score_record_changed"
+#define EVENT_GATE_OPENED                    @"lu_gate_opened"
+#define EVENT_REWARD_GIVEN                   @"lu_reward_given"
+#define EVENT_REWARD_TAKEN                   @"lu_reward_taken"
+#define EVENT_MISSION_COMPLETED              @"lu_mission_completed"
+#define EVENT_MISSION_COMPLETION_REVOKED     @"lu_mission_completeion_revoked"
+#define EVENT_WORLD_COMPLETED                @"lu_world_completed"
+#define EVENT_LEVEL_STARTED                  @"lu_level_started"
+#define EVENT_LEVEL_ENDED                    @"lu_level_ended"
 
 // UserInfo Elements
 #define DICT_ELEMENT_SCORE                   @"score"

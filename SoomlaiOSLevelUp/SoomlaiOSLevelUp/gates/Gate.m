@@ -16,7 +16,7 @@
 
 #import "Gate.h"
 #import "JSONConsts.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "GateStorage.h"
 #import "DictionaryFactory.h"
 #import "BalanceGate.h"
@@ -56,7 +56,7 @@ static DictionaryFactory* dictionaryFactory;
     }
     
     if (self) {
-        self.gateId = dict[LEVELUP_GATE_GATEID];
+        self.gateId = dict[LU_GATE_GATEID];
     }
     
     return self;
@@ -65,7 +65,7 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
             NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.gateId, LEVELUP_GATE_GATEID,
+            self.gateId, LU_GATE_GATEID,
             nil];
 }
 

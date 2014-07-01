@@ -25,7 +25,7 @@
 #import "GatesListOR.h"
 #import "WorldStorage.h"
 #import "JSONConsts.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "SoomlaUtils.h"
 #import "DictionaryFactory.h"
 
@@ -64,10 +64,10 @@ static DictionaryFactory* dictionaryFactory;
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
         
-        worldId = dict[LEVELUP_WORLD_WORLDID];
+        worldId = dict[LU_WORLD_WORLDID];
         
         NSMutableDictionary* tmpInnerWorlds = [NSMutableDictionary dictionary];
-        NSArray* innerWorldDicts = dict[LEVELUP_WORLDS];
+        NSArray* innerWorldDicts = dict[LU_WORLDS];
         
         // Iterate over all inner worlds in the JSON array and for each one create
         // an instance according to the world type
@@ -83,7 +83,7 @@ static DictionaryFactory* dictionaryFactory;
         
         
         NSMutableDictionary* tmpScores = [NSMutableDictionary dictionary];
-        NSArray* scoreDicts = dict[LEVELUP_SCORES];
+        NSArray* scoreDicts = dict[LU_SCORES];
         
         // Iterate over all scores in the JSON array and for each one create
         // an instance according to the score type
@@ -99,7 +99,7 @@ static DictionaryFactory* dictionaryFactory;
         
         
         NSMutableArray* tmpChallenges = [NSMutableArray array];
-        NSArray* challengeDicts = dict[LEVELUP_CHALLENGES];
+        NSArray* challengeDicts = dict[LU_CHALLENGES];
         
         // Iterate over all challenges in the JSON array and create an instance for each one
         for (NSDictionary* challengeDict in challengeDicts) {
@@ -109,7 +109,7 @@ static DictionaryFactory* dictionaryFactory;
         challenges = tmpChallenges;
 
         
-        NSDictionary* gateListDict = dict[LEVELUP_GATES];
+        NSDictionary* gateListDict = dict[LU_GATES];
         gates = [GatesList fromDictionary:gateListDict];
     }
     
@@ -120,27 +120,27 @@ static DictionaryFactory* dictionaryFactory;
     NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     
     [dict setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
-    [dict setObject:self.worldId forKey:LEVELUP_WORLD_WORLDID];
+    [dict setObject:self.worldId forKey:LU_WORLD_WORLDID];
     
     NSMutableArray* innerWorldsArr = [NSMutableArray array];
     for (NSString* innerWorldId in self.innerWorlds) {
         [innerWorldsArr addObject:[self.innerWorlds[innerWorldId] toDictionary]];
     }
-    [dict setObject:innerWorldsArr forKey:LEVELUP_WORLDS];
+    [dict setObject:innerWorldsArr forKey:LU_WORLDS];
     
     NSMutableArray* scoresArr = [NSMutableArray array];
     for (NSString* scoreId in self.scores) {
         [innerWorldsArr addObject:[self.scores[scoreId] toDictionary]];
     }
-    [dict setObject:scoresArr forKey:LEVELUP_SCORES];
+    [dict setObject:scoresArr forKey:LU_SCORES];
     
     NSMutableArray* challengesArr = [NSMutableArray array];
     for (Challenge* challenge in self.challenges) {
         [challengesArr addObject:[challenge toDictionary]];
     }
-    [dict setObject:challengesArr forKey:LEVELUP_CHALLENGES];
+    [dict setObject:challengesArr forKey:LU_CHALLENGES];
     
-    [dict setObject:self.gates.toDictionary forKey:LEVELUP_GATES];
+    [dict setObject:self.gates.toDictionary forKey:LU_GATES];
     
     return dict;
 }

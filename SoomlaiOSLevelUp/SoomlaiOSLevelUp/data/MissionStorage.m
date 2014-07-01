@@ -54,7 +54,7 @@
 
 // Private
 + (NSString *)keyMissionsWithMissionId:(NSString *)missionId andPostfix:(NSString *)postfix {
-    return [NSString stringWithFormat: @"%@missiona.%@.%@", LEVELUP_DB_KEY_PREFIX, missionId, postfix];
+    return [NSString stringWithFormat: @"%@missiona.%@.%@", LU_DB_KEY_PREFIX, missionId, postfix];
 }
 
 + (NSString *)keyMissionCompletedWithMissionId:(NSString *)missionId {

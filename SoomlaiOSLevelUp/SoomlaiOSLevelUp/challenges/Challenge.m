@@ -17,7 +17,7 @@
 #import "Challenge.h"
 #import "BalanceMission.h"
 #import "MissionStorage.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "RecordMission.h"
 #import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
@@ -51,7 +51,7 @@ static NSString* TAG = @"SOOMLA Challenge";
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpMissions = [NSMutableArray array];
-        NSArray* missionDicts = dict[LEVELUP_MISSIONS];
+        NSArray* missionDicts = dict[LU_MISSIONS];
         
         // Iterate over all missions in the JSON array and for each one create
         // an instance according to the mission type
@@ -79,8 +79,8 @@ static NSString* TAG = @"SOOMLA Challenge";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:missionsArr forKey:LEVELUP_MISSIONS];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:missionsArr forKey:LU_MISSIONS];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }

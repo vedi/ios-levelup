@@ -15,7 +15,7 @@
  */
 
 #import "LevelUp.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "Score.h"
 #import "World.h"
 #import "SoomlaUtils.h"
@@ -60,7 +60,7 @@ static NSString* TAG = @"SOOMLA LevelUp";
 }
 
 - (void)save {
-    NSString* key = [NSString stringWithFormat:@"%@model", LEVELUP_DB_KEY_PREFIX];
+    NSString* key = [NSString stringWithFormat:@"%@model", LU_DB_KEY_PREFIX];
     NSString* value = [SoomlaUtils dictToJsonString:[self toDictionary]];
     LogDebug(TAG, ([NSString stringWithFormat:@"saving LevelUp to DB. json is: %@", value]));
     [KeyValueStorage setValue:value forKey:key];
@@ -73,7 +73,7 @@ static NSString* TAG = @"SOOMLA LevelUp";
     }
     
     return [[NSDictionary alloc] initWithObjectsAndKeys:
-            initialWorldsArr, LEVELUP_WORLDS,
+            initialWorldsArr, LU_WORLDS,
             nil];
 }
 

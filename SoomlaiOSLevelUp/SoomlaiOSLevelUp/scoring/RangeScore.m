@@ -15,7 +15,7 @@
  */
 
 #import "RangeScore.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 
 
 @implementation Range
@@ -32,8 +32,8 @@
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.low = [dict[LEVELUP_SCORE_RANGE_LOW] doubleValue];
-        self.high = [dict[LEVELUP_SCORE_RANGE_HIGH] doubleValue];
+        self.low = [dict[LU_SCORE_RANGE_LOW] doubleValue];
+        self.high = [dict[LU_SCORE_RANGE_HIGH] doubleValue];
     }
     
     return self;
@@ -41,8 +41,8 @@
 
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
-            [NSNumber numberWithDouble:self.low], LEVELUP_SCORE_RANGE_LOW,
-            [NSNumber numberWithDouble:self.high], LEVELUP_SCORE_RANGE_HIGH,
+            [NSNumber numberWithDouble:self.low], LU_SCORE_RANGE_LOW,
+            [NSNumber numberWithDouble:self.high], LU_SCORE_RANGE_HIGH,
             nil];
 }
 
@@ -81,10 +81,10 @@ static NSString* TYPE_NAME = @"range";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.scoreId = dict[LEVELUP_SCORE_SCOREID];
-        self.name = dict[LEVELUP_NAME];
-        self.higherBetter = [dict[LEVELUP_SCORE_HIGHBETTER] boolValue];
-        self.range = [[Range alloc] initWithDictionary:dict[LEVELUP_SCORE_RANGE]];
+        self.scoreId = dict[LU_SCORE_SCOREID];
+        self.name = dict[LU_NAME];
+        self.higherBetter = [dict[LU_SCORE_HIGHBETTER] boolValue];
+        self.range = [[Range alloc] initWithDictionary:dict[LU_SCORE_RANGE]];
     }
     return self;
 }
@@ -92,8 +92,8 @@ static NSString* TYPE_NAME = @"range";
 - (NSDictionary*)toDictionary {
     NSDictionary* parent = [super toDictionary];
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parent];
-    [toReturn setObject:[self.range toDictionary] forKey:LEVELUP_SCORE_RANGE];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:[self.range toDictionary] forKey:LU_SCORE_RANGE];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     return toReturn;
 }
     

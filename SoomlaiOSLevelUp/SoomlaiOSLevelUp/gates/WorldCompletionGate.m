@@ -17,7 +17,7 @@
 #import "WorldCompletionGate.h"
 #import "World.h"
 #import "LevelUp.h"
-#import "BPJSONConsts.h"
+#import "LUJSONConsts.h"
 #import "LevelUpEventHandling.h"
 #import "SoomlaUtils.h"
 
@@ -41,7 +41,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedWorldId = dict[LEVELUP_ASSOCWORLDID];
+        self.associatedWorldId = dict[LU_ASSOCWORLDID];
     }
     
     if (![self isOpen]) {
@@ -55,8 +55,8 @@ static NSString* TYPE_NAME = @"worldCompletion";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedWorldId forKey:LEVELUP_ASSOCWORLDID];
-    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
+    [toReturn setObject:self.associatedWorldId forKey:LU_ASSOCWORLDID];
+    [toReturn setObject:TYPE_NAME forKey:LU_TYPE];
     
     return toReturn;
 }
