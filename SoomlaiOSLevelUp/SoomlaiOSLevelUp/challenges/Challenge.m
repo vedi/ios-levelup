@@ -16,6 +16,7 @@
 
 #import "Challenge.h"
 #import "BalanceMission.h"
+#import "MissionStorage.h"
 #import "BPJSONConsts.h"
 #import "RecordMission.h"
 #import "LevelUpEventHandling.h"
@@ -103,9 +104,8 @@ static NSString* TAG = @"SOOMLA Challenge";
 }
 
 - (void)missionCompleted:(NSNotification *)notification {
-
-    NSDictionary* userInfo = notification.userInfo;
-    Mission* mission = userInfo[DICT_ELEMENT_MISSION];
+    
+    Mission* mission = notification.userInfo[DICT_ELEMENT_MISSION];
     
     if ([self.missions containsObject:mission]) {
         BOOL completed = YES;
@@ -122,10 +122,36 @@ static NSString* TAG = @"SOOMLA Challenge";
     }
 }
 
+- (void)missionCompletionRevoked:(NSNotification *)notification {
+    
+    Mission* mission = notification.userInfo[DICT_ELEMENT_MISSION];
+    
+    
+    if ([self.missions containsObject:mission]) {
+
+        // if the challenge was completed before, but now one of its child missions
+        // was uncompleted - the challenge is revoked as well
+        if ([MissionStorage isMissionCompleted:self]) {
+            [self setCompleted:NO];
+        }
+    }
+}
+
+/**
+ Overrides parent method to customize the observed notifications for `Challenge`
+ */
 - (void)observeNotifications {
     if (![self isCompleted]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_BP_MISSION_COMPLETED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompletionRevoked:) name:EVENT_BP_MISSION_COMPLETION_REVOKED object:nil];
     }
+}
+
+/**
+ Ignore `stopObservingNotifications` since challenge can be revoked by child missions revoked
+ */
+- (void)stopObservingNotifications {
+    LogDebug(TAG, @"ignore stopObservingNotifications since challenge can be revoked by child missions revoked");
 }
 
 
