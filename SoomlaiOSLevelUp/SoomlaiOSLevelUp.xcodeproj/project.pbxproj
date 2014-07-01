@@ -68,6 +68,36 @@
 		EFCDC75A192E218F001D0824 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC754192E218F001D0824 /* Score.m */; };
 		EFCDC760192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
 		EFCDC761192E2248001D0824 /* BPJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCDC75F192E2248001D0824 /* BPJSONConsts.m */; };
+		EFE7A0E51963026C0054B3E9 /* Mission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1271935BE9500FCF3C9 /* Mission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0E61963026C0054B3E9 /* BalanceMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA12F1935D56B00FCF3C9 /* BalanceMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0E71963026C0054B3E9 /* RecordMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1331935FF2B00FCF3C9 /* RecordMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0E81963026C0054B3E9 /* ActionMission.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA13719365DF700FCF3C9 /* ActionMission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0E91963026C0054B3E9 /* Challenge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA13B19365FF000FCF3C9 /* Challenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0EA1963026C0054B3E9 /* BadgeReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1161933CE0500FCF3C9 /* BadgeReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0EB1963026C0054B3E9 /* RandomReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA11A1933CFF400FCF3C9 /* RandomReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0EC1963026C0054B3E9 /* SequenceReward.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1221934D0C300FCF3C9 /* SequenceReward.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0ED1963026C0054B3E9 /* Gate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73CCA419323E3200A171E5 /* Gate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0EE1963026C0054B3E9 /* GatesList.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0E91932555700FCF3C9 /* GatesList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0EF1963026C0054B3E9 /* GatesListAND.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0ED19331CDA00FCF3C9 /* GatesListAND.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F01963026C0054B3E9 /* GatesListOR.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0F11933204900FCF3C9 /* GatesListOR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F11963026C0054B3E9 /* BalanceGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0F51933209F00FCF3C9 /* BalanceGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F21963026C0054B3E9 /* PurchasableGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA0FD1933424700FCF3C9 /* PurchasableGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F31963026C0054B3E9 /* RecordGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1011933637A00FCF3C9 /* RecordGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F41963026C0054B3E9 /* WorldCompletionGate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA10919337A1D00FCF3C9 /* WorldCompletionGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F51963026C0054B3E9 /* BPJSONConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCDC75E192E2248001D0824 /* BPJSONConsts.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EFE7A0F61963026C0054B3E9 /* ScoreStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFB7A3A192E3E8100BB8BB5 /* ScoreStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F71963026C0054B3E9 /* GateStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73CCA81932420300A171E5 /* GateStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F81963026C0054B3E9 /* RewardStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA1121933C68900FCF3C9 /* RewardStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0F91963026C0054B3E9 /* MissionStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA12B1935C7E300FCF3C9 /* MissionStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FA1963026C0054B3E9 /* WorldStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF081C8D193708CF00847E47 /* WorldStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FB1963026C0054B3E9 /* LevelStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF081C951937252B00847E47 /* LevelStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FC1963026C0054B3E9 /* Score.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCDC753192E218F001D0824 /* Score.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FD1963026C0054B3E9 /* VirtualItemScore.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFB7A441931E25000BB8BB5 /* VirtualItemScore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FE1963026C0054B3E9 /* RangeScore.h in Headers */ = {isa = PBXBuildFile; fileRef = EF73CC9F1932292D00A171E5 /* RangeScore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A0FF1963026C0054B3E9 /* LevelUp.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFB7A3E192E406900BB8BB5 /* LevelUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A1001963026C0054B3E9 /* LevelUpEventHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFB7A491931EC5200BB8BB5 /* LevelUpEventHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A1011963026C0054B3E9 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7BA105193379E600FCF3C9 /* World.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE7A1021963026D0054B3E9 /* Level.h in Headers */ = {isa = PBXBuildFile; fileRef = EF081C91193723AD00847E47 /* Level.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFFB7A3C192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
 		EFFB7A3D192E3E8100BB8BB5 /* ScoreStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3B192E3E8100BB8BB5 /* ScoreStorage.m */; };
 		EFFB7A40192E406900BB8BB5 /* LevelUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFB7A3F192E406900BB8BB5 /* LevelUp.m */; };
@@ -101,18 +131,6 @@
 			remoteInfo = SoomlaiOSLevelUp;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		EFCDC723192E1EB5001D0824 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF081C8D193708CF00847E47 /* WorldStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldStorage.h; path = data/WorldStorage.h; sourceTree = "<group>"; };
@@ -385,6 +403,46 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EFE7A0E4196302330054B3E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE7A0E51963026C0054B3E9 /* Mission.h in Headers */,
+				EFE7A0E61963026C0054B3E9 /* BalanceMission.h in Headers */,
+				EFE7A0E71963026C0054B3E9 /* RecordMission.h in Headers */,
+				EFE7A0E81963026C0054B3E9 /* ActionMission.h in Headers */,
+				EFE7A0E91963026C0054B3E9 /* Challenge.h in Headers */,
+				EFE7A0EA1963026C0054B3E9 /* BadgeReward.h in Headers */,
+				EFE7A0EB1963026C0054B3E9 /* RandomReward.h in Headers */,
+				EFE7A0EC1963026C0054B3E9 /* SequenceReward.h in Headers */,
+				EFE7A0ED1963026C0054B3E9 /* Gate.h in Headers */,
+				EFE7A0EE1963026C0054B3E9 /* GatesList.h in Headers */,
+				EFE7A0EF1963026C0054B3E9 /* GatesListAND.h in Headers */,
+				EFE7A0F01963026C0054B3E9 /* GatesListOR.h in Headers */,
+				EFE7A0F11963026C0054B3E9 /* BalanceGate.h in Headers */,
+				EFE7A0F21963026C0054B3E9 /* PurchasableGate.h in Headers */,
+				EFE7A0F31963026C0054B3E9 /* RecordGate.h in Headers */,
+				EFE7A0F41963026C0054B3E9 /* WorldCompletionGate.h in Headers */,
+				EFE7A0F61963026C0054B3E9 /* ScoreStorage.h in Headers */,
+				EFE7A0F71963026C0054B3E9 /* GateStorage.h in Headers */,
+				EFE7A0F81963026C0054B3E9 /* RewardStorage.h in Headers */,
+				EFE7A0F91963026C0054B3E9 /* MissionStorage.h in Headers */,
+				EFE7A0FA1963026C0054B3E9 /* WorldStorage.h in Headers */,
+				EFE7A0FB1963026C0054B3E9 /* LevelStorage.h in Headers */,
+				EFE7A0FC1963026C0054B3E9 /* Score.h in Headers */,
+				EFE7A0FD1963026C0054B3E9 /* VirtualItemScore.h in Headers */,
+				EFE7A0FE1963026C0054B3E9 /* RangeScore.h in Headers */,
+				EFE7A0FF1963026C0054B3E9 /* LevelUp.h in Headers */,
+				EFE7A1001963026C0054B3E9 /* LevelUpEventHandling.h in Headers */,
+				EFE7A1011963026C0054B3E9 /* World.h in Headers */,
+				EFE7A1021963026D0054B3E9 /* Level.h in Headers */,
+				EFE7A0F51963026C0054B3E9 /* BPJSONConsts.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		EFCDC724192E1EB5001D0824 /* SoomlaiOSLevelUp */ = {
 			isa = PBXNativeTarget;
@@ -392,7 +450,7 @@
 			buildPhases = (
 				EFCDC721192E1EB5001D0824 /* Sources */,
 				EFCDC722192E1EB5001D0824 /* Frameworks */,
-				EFCDC723192E1EB5001D0824 /* CopyFiles */,
+				EFE7A0E4196302330054B3E9 /* Headers */,
 				EF081C9A1937687500847E47 /* ShellScript */,
 			);
 			buildRules = (
@@ -490,7 +548,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nif [[ -z $CREATING_UNIVERSAL_DIR ]]\nthen\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\nfi\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}/\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi\n";
+			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nif [[ -z $CREATING_UNIVERSAL_DIR ]]\nthen\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\nfi\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir -p \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}/\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -692,6 +750,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SoomlaiOSLevelUp;
+				PUBLIC_HEADERS_FOLDER_PATH = /headers/public;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
@@ -716,6 +775,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SoomlaiOSLevelUp;
+				PUBLIC_HEADERS_FOLDER_PATH = /headers/public;
 				SKIP_INSTALL = YES;
 				SOOMLA_HOME = "${SRCROOT}/../..";
 			};
