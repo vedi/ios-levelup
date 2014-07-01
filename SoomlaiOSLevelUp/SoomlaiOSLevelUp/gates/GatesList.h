@@ -21,9 +21,13 @@
     
     @private
     NSMutableArray* gates;
+
+    // does opening child gates cause us to auto-open (or just canOpen)?
+    BOOL autoOpenBehavior;
 }
 
 @property (strong, nonatomic) NSMutableArray* gates;
+@property (nonatomic) BOOL autoOpenBehavior;
 
 
 - (id)initWithGateId:(NSString *)oGateId andSingleGate:(Gate *)oSingleGate;

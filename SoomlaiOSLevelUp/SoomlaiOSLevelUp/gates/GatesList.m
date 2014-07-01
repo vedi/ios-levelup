@@ -15,26 +15,28 @@
  */
 
 #import "GatesList.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
 #import "GatesListAND.h"
 #import "GatesListOR.h"
 #import "DictionaryFactory.h"
-#import "StoreUtils.h"
-#import "LevelUpEventHandling.h"
+#import "SoomlaUtils.h"
 
 
 // TODO: Document ABSTRACT class
 @implementation GatesList
 
-@synthesize gates;
+@synthesize gates, autoOpenBehavior;
 
 static NSString* TAG = @"SOOMLA GatesList";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 - (id)initWithGateId:(NSString *)oGateId {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
+        
+        // "fake" gates with 1 sub-gate are auto open
+        self.autoOpenBehavior = YES;
     }
     return self;
 }
@@ -43,6 +45,9 @@ static NSDictionary* typeMap;
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray array];
         [self addGate:oSingleGate];
+        
+        // "fake" gates with 1 sub-gate are auto open
+        self.autoOpenBehavior = YES;
     }
     
     return self;
@@ -51,7 +56,7 @@ static NSDictionary* typeMap;
 - (id)initWithGateId:(NSString *)oGateId andGates:(NSArray*)oGates {
     if (self = [super initWithGateId:oGateId]) {
         self.gates = [NSMutableArray arrayWithArray:oGates];
-        [self observeNotifications];
+        self.autoOpenBehavior = NO;
     }
     
     return self;
@@ -74,7 +79,13 @@ static NSDictionary* typeMap;
         }
         
         self.gates = tmpGates;
-        [self observeNotifications];
+        if ([self.gates count] < 2) {
+            
+            // "fake" gates with 1 sub-gate are auto open
+            self.autoOpenBehavior = YES;
+        } else {
+            self.autoOpenBehavior = NO;
+        }
     }
     
     return self;
@@ -89,6 +100,7 @@ static NSDictionary* typeMap;
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
+    [toReturn setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     [toReturn setObject:gatesArr forKey:BP_GATES];
     
     return toReturn;
@@ -103,43 +115,30 @@ static NSDictionary* typeMap;
 }
 
 - (BOOL)tryOpenInner {
-    for (Gate* gate in self.gates) {
-        [gate tryOpen];
-    }
-    return [self isOpen];
-}
-
-- (void)observeNotifications {
-    if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gateOpened:) name:EVENT_BP_GATE_OPENED object:nil];
-    }
-}
-
-- (void)stopObservingNotifications {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)gateOpened:(NSNotification *)notification {
-    if ([self tryOpen]) {
-        [self stopObservingNotifications];
+    if (self.autoOpenBehavior) {
+        for (Gate* gate in self.gates) {
+            [gate tryOpen];
+        }
+        return [self isOpen];
+    } else {
+        if ([self canOpen]) {
+            [self forceOpen:YES];
+            return YES;
+        }
+        return NO;
     }
 }
-
 
 
 // Static methods
 
 + (GatesList *)fromDictionary:(NSDictionary *)dict {
-    return (GatesList *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (GatesList *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (void)initialize {
     if (self == [GatesList self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [GatesListAND getTypeName]: [GatesListAND class],
-                    [GatesListOR getTypeName] : [GatesListOR class]
-                    };
     }
 }
 

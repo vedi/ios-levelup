@@ -19,7 +19,7 @@
 #import "LevelUp.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 @implementation RecordGate
 
@@ -94,7 +94,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
     
     if ([score.scoreId isEqualToString:self.associatedScoreId] && [score hasRecordReachedScore:self.desiredRecord]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [LevelUpEventHandling postGateCanBeOpened:self];
+        // gate can now open
     }
 };
 

@@ -15,6 +15,7 @@
  */
 
 #import "GatesListAND.h"
+#import "GateStorage.h"
 #import "BPJSONConsts.h"
 
 
@@ -32,17 +33,26 @@ static NSString* TYPE_NAME = @"listAND";
 }
 
 - (BOOL)isOpen {
-    for (Gate* gate in self.gates) {
-        if (![gate isOpen]) {
-            return NO;
+
+    // this flag is required since `World` / `Level`
+    // actually creates a fake AND gate (list) even for a single gate
+    // it means that it should answer `YES` when the (only) child subgate is open
+    // without being required to open the (anonymous) AND parent
+    if (self.autoOpenBehavior) {
+        for (Gate* gate in self.gates) {
+            if (![gate isOpen]) {
+                return NO;
+            }
         }
+        return YES;
+    } else {
+        return [super isOpen];
     }
-    return YES;
 }
 
 - (BOOL)canOpen {
     for (Gate* gate in self.gates) {
-        if (![gate canOpen]) {
+        if (![gate isOpen]) {
             return NO;
         }
     }

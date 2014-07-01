@@ -17,12 +17,12 @@
 #import "PurchasableGate.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
-#import "EventHandling.h"
+#import "StoreEventHandling.h"
 #import "PurchasableVirtualItem.h"
 #import "PurchaseWithMarket.h"
-#import "StoreController.h"
+#import "SoomlaStore.h"
 #import "StoreInfo.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "VirtualItemNotFoundException.h"
 
 
@@ -77,8 +77,8 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
         
         // TODO: Change ios-store to accept custom payload string when buying with market item
         // For reference, in Android it is:
-        //      StoreController.getInstance().buyWithMarket(ptype.getMarketItem(), getGateId());
-        [[StoreController getInstance] buyInMarketWithMarketItem:ptype.marketItem];
+        //      SoomlaStore.getInstance().buyWithMarket(ptype.getMarketItem(), getGateId());
+        [[SoomlaStore getInstance] buyInMarketWithMarketItem:ptype.marketItem];
         return YES;
 
     } @catch (VirtualItemNotFoundException *ex) {

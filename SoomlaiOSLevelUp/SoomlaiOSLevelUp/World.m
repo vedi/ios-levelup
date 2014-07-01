@@ -24,8 +24,9 @@
 #import "GatesListAND.h"
 #import "GatesListOR.h"
 #import "WorldStorage.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "DictionaryFactory.h"
 
 @implementation World
@@ -35,7 +36,6 @@
 static NSString* TYPE_NAME = @"world";
 static NSString* TAG = @"SOOMLA World";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 
 - (id)initWithWorldId:(NSString *)oWorldId {
@@ -119,6 +119,7 @@ static NSDictionary* typeMap;
 - (NSDictionary*)toDictionary {
     NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     
+    [dict setObject:NSStringFromClass([self class]) forKey:SOOM_CLASSNAME];
     [dict setObject:self.worldId forKey:BP_WORLD_WORLDID];
     
     NSMutableArray* innerWorldsArr = [NSMutableArray array];
@@ -214,7 +215,7 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (World *)fromDictionary:(NSDictionary *)dict {
-    return (World *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (World *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (NSString *)getTypeName {
@@ -225,10 +226,6 @@ static NSDictionary* typeMap;
 + (void)initialize {
     if (self == [World self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [World getTypeName]: [World class],
-                    [Level getTypeName]: [Level class]
-                    };
     }
 }
 

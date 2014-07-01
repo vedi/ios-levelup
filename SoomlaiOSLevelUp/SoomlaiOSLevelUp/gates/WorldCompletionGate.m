@@ -19,7 +19,7 @@
 #import "LevelUp.h"
 #import "BPJSONConsts.h"
 #import "LevelUpEventHandling.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 @implementation WorldCompletionGate
 
@@ -83,7 +83,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
     
     if ([world.worldId isEqualToString:self.associatedWorldId]) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [LevelUpEventHandling postGateCanBeOpened:self];
+        // gate can now open
     }
 };
 

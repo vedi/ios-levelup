@@ -18,8 +18,8 @@
 #import "RangeScore.h"
 #import "VirtualItemScore.h"
 #import "ScoreStorage.h"
+#import "JSONConsts.h"
 #import "BPJSONConsts.h"
-#import "LevelUpEventHandling.h"
 #import "DictionaryFactory.h"
 
 
@@ -29,7 +29,6 @@
 
 static NSString* TYPE_NAME = @"score";
 static DictionaryFactory* dictionaryFactory;
-static NSDictionary* typeMap;
 
 
 - (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName {
@@ -67,6 +66,7 @@ static NSDictionary* typeMap;
 
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
+            NSStringFromClass([self class]), SOOM_CLASSNAME,
             self.scoreId, BP_SCORE_SCOREID,
             self.name, BP_NAME,
             self.startValue, BP_SCORE_STARTVAL,
@@ -91,7 +91,6 @@ static NSDictionary* typeMap;
     double record = [ScoreStorage getRecordScore:self];
     if ([self hasTempScoreReached:record]) {
         [ScoreStorage setRecord:self.tempScore toScore:self];
-        [LevelUpEventHandling postScoreRecordChanged:self];
     }
     
     [self performSaveActions];
@@ -102,8 +101,13 @@ static NSDictionary* typeMap;
 
 - (void)reset {
     self.tempScore = self.startValue;
-    [ScoreStorage setRecord:0 toScore:self];
-    [ScoreStorage setLatest:0 toScore:self];
+
+    // 0 doesn't work well (confusing) for descending score
+    // if someone set higherBetter(false) and a start value of 100
+    // I think they expect reset to go back to 100, otherwise
+    // 0 is the best and current record and can't be beat
+    [ScoreStorage setRecord:self.startValue toScore:self]; // startValue is 0
+    [ScoreStorage setLatest:self.startValue toScore:self]; // startValue is 0
 }
 
 - (BOOL)hasTempScoreReached:(double)scoreVal {
@@ -135,7 +139,7 @@ static NSDictionary* typeMap;
 // Static methods
 
 + (Score *)fromDictionary:(NSDictionary *)dict {
-    return (Score *)[dictionaryFactory createObjectWithDictionary:dict andTypeMap:typeMap];
+    return (Score *)[dictionaryFactory createObjectWithDictionary:dict];
 }
 
 + (NSString *)getTypeName {
@@ -146,11 +150,6 @@ static NSDictionary* typeMap;
 + (void)initialize {
     if (self == [Score self]) {
         dictionaryFactory = [[DictionaryFactory alloc] init];
-        typeMap = @{
-                    [Score getTypeName]             : [Score class],
-                    [RangeScore getTypeName]        : [RangeScore class],
-                    [VirtualItemScore getTypeName]  : [VirtualItemScore class]
-                    };
     }
 }
 

@@ -18,7 +18,7 @@
 #import "BPJSONConsts.h"
 #import "Score.h"
 #import "World.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "StorageManager.h"
 #import "KeyValueStorage.h"
 
@@ -61,9 +61,9 @@ static NSString* TAG = @"SOOMLA LevelUp";
 
 - (void)save {
     NSString* key = [NSString stringWithFormat:@"%@model", BP_DB_KEY_PREFIX];
-    NSString* value = [StoreUtils dictToJsonString:[self toDictionary]];
+    NSString* value = [SoomlaUtils dictToJsonString:[self toDictionary]];
     LogDebug(TAG, ([NSString stringWithFormat:@"saving LevelUp to DB. json is: %@", value]));
-    [[[StorageManager getInstance] keyValueStorage] setValue:value forKey:key];
+    [KeyValueStorage setValue:value forKey:key];
 }
 
 - (NSDictionary*)toDictionary {

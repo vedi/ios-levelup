@@ -18,11 +18,10 @@
 #import "LevelStorage.h"
 #import "Score.h"
 #import "BPJSONConsts.h"
-#import "LevelUpEventHandling.h"
 #import "VirtualItemScore.h"
 #import "VirtualItemNotFoundException.h"
 #import "StoreInventory.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 
 
 @implementation Level
@@ -85,13 +84,10 @@ static NSString* TAG = @"SOOMLA Level";
         return NO;
     }
     
-    [LevelStorage incTimesStartedForLevel:self];
     startTime = (long long)([[NSDate date] timeIntervalSince1970] * 1000);
     elapsed = 0;
     state = RUNNING;
-    
-    // Notify level has started
-    [LevelUpEventHandling postLevelStarted:self];
+    [LevelStorage incTimesStartedForLevel:self];
     
     return YES;
 }
@@ -127,9 +123,6 @@ static NSString* TAG = @"SOOMLA Level";
     double duration = [self getPlayDuration];
     state = ENDED;
     
-    // Count number of times this level was played
-    [LevelStorage incTimesPlayedForLevel:self];
-    
     // Calculate the slowest \ fastest durations of level play
     
     if (duration > [self getSlowestDuration]) {
@@ -144,8 +137,8 @@ static NSString* TAG = @"SOOMLA Level";
         [(Score*)self.scores[key] saveAndReset]; // resetting scores
     }
     
-    // Notify level has ended
-    [LevelUpEventHandling postLevelEnded:self];
+    // Count number of times this level was played
+    [LevelStorage incTimesPlayedForLevel:self];
     
     // reset timers
     startTime = 0;

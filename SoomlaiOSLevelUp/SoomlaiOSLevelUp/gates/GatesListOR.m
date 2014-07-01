@@ -32,22 +32,25 @@ static NSString* TYPE_NAME = @"listOR";
 }
 
 - (BOOL)isOpen {
-    for (Gate* gate in self.gates) {
-        if (![gate isOpen]) {
-            return YES;
+    if (self.autoOpenBehavior) {
+        for (Gate* gate in self.gates) {
+            if (![gate isOpen]) {
+                return YES;
+            }
         }
+        return NO;
+    } else {
+        return [super isOpen];
     }
-    return NO;
 }
 
 - (BOOL)canOpen {
     for (Gate* gate in self.gates) {
-        if ([gate canOpen]) {
+        if ([gate isOpen]) {
             return YES;
         }
     }
     return NO;
 }
-
 
 @end

@@ -16,12 +16,11 @@
 
 #import "BalanceGate.h"
 #import "BPJSONConsts.h"
-#import "EventHandling.h"
-#import "LevelUpEventHandling.h"
+#import "StoreEventHandling.h"
 #import "GateStorage.h"
 #import "StoreInventory.h"
 #import "VirtualItemNotFoundException.h"
-#import "StoreUtils.h"
+#import "SoomlaUtils.h"
 #import "VirtualCurrency.h"
 #import "VirtualGood.h"
 
@@ -130,7 +129,7 @@ static NSString* TAG = @"SOOMLA BalanceGate";
 - (void)checkBalance:(int)balance forItemId:(NSString*)itemId {
     if ([itemId isEqualToString:self.associatedItemId] && balance >= self.desiredBalance) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [LevelUpEventHandling postGateCanBeOpened:self];
+        // gate can open now
     }
 }
 

@@ -16,7 +16,7 @@
 
 #import "ScoreStorage.h"
 #import "LevelUp.h"
-#import "StorageManager.h"
+#import "LevelUpEventHandling.h"
 #import "KeyValueStorage.h"
 #import "Score.h"
 
@@ -29,13 +29,13 @@
     NSString* key = [self keyLatestScoreWithScoreId:scoreId];
     NSString* val = [[NSNumber numberWithDouble:latest] stringValue];
     
-    [[[StorageManager getInstance] keyValueStorage] setValue:val forKey:key];
+    [KeyValueStorage setValue:val forKey:key];
 }
 
 + (double)getLatestScore:(Score *)score {
     NSString* scoreId = score.scoreId;
     NSString* key = [self keyLatestScoreWithScoreId:scoreId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
 
     if (!val || [val length] == 0){
         return 0.0;
@@ -52,13 +52,15 @@
     NSString* key = [self keyRecordScoreWithScoreId:scoreId];
     NSString* val = [[NSNumber numberWithDouble:record] stringValue];
     
-    [[[StorageManager getInstance] keyValueStorage] setValue:val forKey:key];
+    [KeyValueStorage setValue:val forKey:key];
+    
+    [LevelUpEventHandling postScoreRecordChanged:score];
 }
 
 + (double)getRecordScore:(Score *)score {
     NSString* scoreId = score.scoreId;
     NSString* key = [self keyRecordScoreWithScoreId:scoreId];
-    NSString* val = [[[StorageManager getInstance] keyValueStorage] getValueForKey:key];
+    NSString* val = [KeyValueStorage getValueForKey:key];
     
     if (!val || [val length]==0){
         return 0.0;

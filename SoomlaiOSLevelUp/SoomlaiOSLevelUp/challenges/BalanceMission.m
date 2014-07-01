@@ -16,7 +16,7 @@
 
 #import "BalanceMission.h"
 #import "BPJSONConsts.h"
-#import "EventHandling.h"
+#import "StoreEventHandling.h"
 #import "VirtualCurrency.h"
 #import "VirtualGood.h"
 
