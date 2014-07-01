@@ -70,7 +70,7 @@
 // Private
 
 + (NSString *)keyRewardsWithRewardId:(NSString *)rewardId AndPostfix:(NSString *)postfix {
-    return [NSString stringWithFormat: @"%@rewards.%@.%@", BP_DB_KEY_PREFIX, rewardId, postfix];
+    return [NSString stringWithFormat: @"%@rewards.%@.%@", LEVELUP_DB_KEY_PREFIX, rewardId, postfix];
 }
 
 + (NSString *)keyRewardGivenWithRewardId:(NSString *)rewardId {

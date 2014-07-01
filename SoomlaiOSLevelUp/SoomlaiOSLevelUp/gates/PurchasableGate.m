@@ -48,7 +48,7 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedItemId = dict[BP_ASSOCITEMID];
+        self.associatedItemId = dict[LEVELUP_ASSOCITEMID];
     }
     
     if (![self isOpen]) {
@@ -62,8 +62,8 @@ static NSString* TAG = @"SOOMLA PurchasableGate";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedItemId forKey:BP_ASSOCITEMID];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedItemId forKey:LEVELUP_ASSOCITEMID];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }

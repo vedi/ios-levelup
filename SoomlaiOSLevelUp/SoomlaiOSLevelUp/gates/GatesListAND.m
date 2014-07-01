@@ -27,7 +27,7 @@ static NSString* TYPE_NAME = @"listAND";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }

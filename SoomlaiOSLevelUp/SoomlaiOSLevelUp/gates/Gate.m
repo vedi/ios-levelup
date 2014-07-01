@@ -56,7 +56,7 @@ static DictionaryFactory* dictionaryFactory;
     }
     
     if (self) {
-        self.gateId = dict[BP_GATE_GATEID];
+        self.gateId = dict[LEVELUP_GATE_GATEID];
     }
     
     return self;
@@ -65,7 +65,7 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
             NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.gateId, BP_GATE_GATEID,
+            self.gateId, LEVELUP_GATE_GATEID,
             nil];
 }
 

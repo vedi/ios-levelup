@@ -51,7 +51,7 @@ static NSString* TAG = @"SOOMLA Challenge";
     if (self = [super initWithDictionary:dict]) {
         
         NSMutableArray* tmpMissions = [NSMutableArray array];
-        NSArray* missionDicts = dict[BP_MISSIONS];
+        NSArray* missionDicts = dict[LEVELUP_MISSIONS];
         
         // Iterate over all missions in the JSON array and for each one create
         // an instance according to the mission type
@@ -79,8 +79,8 @@ static NSString* TAG = @"SOOMLA Challenge";
     }
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:missionsArr forKey:BP_MISSIONS];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:missionsArr forKey:LEVELUP_MISSIONS];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }
@@ -142,8 +142,8 @@ static NSString* TAG = @"SOOMLA Challenge";
  */
 - (void)observeNotifications {
     if (![self isCompleted]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_BP_MISSION_COMPLETED object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompletionRevoked:) name:EVENT_BP_MISSION_COMPLETION_REVOKED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompleted:) name:EVENT_MISSION_COMPLETED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(missionCompletionRevoked:) name:EVENT_MISSION_COMPLETION_REVOKED object:nil];
     }
 }
 

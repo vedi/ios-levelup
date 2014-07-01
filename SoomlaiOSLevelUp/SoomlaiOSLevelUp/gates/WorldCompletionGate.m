@@ -33,7 +33,7 @@ static NSString* TYPE_NAME = @"worldCompletion";
     }
     
     if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(worldCompleted:) name:EVENT_BP_WORLD_COMPLETED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(worldCompleted:) name:EVENT_WORLD_COMPLETED object:nil];
     }
     
     return self;
@@ -41,11 +41,11 @@ static NSString* TYPE_NAME = @"worldCompletion";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedWorldId = dict[BP_ASSOCWORLDID];
+        self.associatedWorldId = dict[LEVELUP_ASSOCWORLDID];
     }
     
     if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(worldCompleted:) name:EVENT_BP_WORLD_COMPLETED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(worldCompleted:) name:EVENT_WORLD_COMPLETED object:nil];
     }
     
     return self;
@@ -55,8 +55,8 @@ static NSString* TYPE_NAME = @"worldCompletion";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedWorldId forKey:BP_ASSOCWORLDID];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedWorldId forKey:LEVELUP_ASSOCWORLDID];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }

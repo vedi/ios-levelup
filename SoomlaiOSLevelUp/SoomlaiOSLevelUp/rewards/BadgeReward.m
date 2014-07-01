@@ -33,7 +33,7 @@ static NSString* TYPE_NAME = @"badge";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.iconUrl = dict[BP_REWARD_ICONURL];
+        self.iconUrl = dict[LEVELUP_REWARD_ICONURL];
     }
     
     return self;
@@ -43,8 +43,8 @@ static NSString* TYPE_NAME = @"badge";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.iconUrl forKey:BP_REWARD_ICONURL];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.iconUrl forKey:LEVELUP_REWARD_ICONURL];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }

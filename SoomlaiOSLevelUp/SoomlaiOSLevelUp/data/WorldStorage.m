@@ -50,7 +50,7 @@
 
 // Private
 + (NSString *)keyWorldsWithWorldId:(NSString *)worldId andPostfix:(NSString *)postfix {
-    return [NSString stringWithFormat: @"%@world.%@.%@", BP_DB_KEY_PREFIX, worldId, postfix];
+    return [NSString stringWithFormat: @"%@world.%@.%@", LEVELUP_DB_KEY_PREFIX, worldId, postfix];
 }
 
 + (NSString *)keyWorldCompletedWithWorldId:(NSString *)worldId {

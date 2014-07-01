@@ -22,25 +22,25 @@
 @class Level;
 
 // Events
-#define EVENT_BP_SCORE_RECORD_CHANGED           @"bp_score_record_changed"
-#define EVENT_BP_GATE_OPENED                    @"bp_gate_opened"
-#define EVENT_BP_REWARD_GIVEN                   @"bp_reward_given"
-#define EVENT_BP_REWARD_TAKEN                   @"bp_reward_taken"
-#define EVENT_BP_MISSION_COMPLETED              @"bp_mission_completed"
-#define EVENT_BP_MISSION_COMPLETION_REVOKED     @"bp_mission_completeion_revoked"
-#define EVENT_BP_WORLD_COMPLETED                @"bp_world_completed"
-#define EVENT_BP_LEVEL_STARTED                  @"bp_level_started"
-#define EVENT_BP_LEVEL_ENDED                    @"bp_level_ended"
+#define EVENT_SCORE_RECORD_CHANGED           @"levelup_score_record_changed"
+#define EVENT_GATE_OPENED                    @"levelup_gate_opened"
+#define EVENT_REWARD_GIVEN                   @"levelup_reward_given"
+#define EVENT_REWARD_TAKEN                   @"levelup_reward_taken"
+#define EVENT_MISSION_COMPLETED              @"levelup_mission_completed"
+#define EVENT_MISSION_COMPLETION_REVOKED     @"levelup_mission_completeion_revoked"
+#define EVENT_WORLD_COMPLETED                @"levelup_world_completed"
+#define EVENT_LEVEL_STARTED                  @"levelup_level_started"
+#define EVENT_LEVEL_ENDED                    @"levelup_level_ended"
 
 // UserInfo Elements
-#define DICT_ELEMENT_SCORE                      @"score"
-#define DICT_ELEMENT_GATE                       @"gate"
-#define DICT_ELEMENT_REWARD                     @"reward"
-#define DICT_ELEMENT_WORLD                      @"world"
-#define DICT_ELEMENT_MISSION                    @"mission"
-#define DICT_ELEMENT_LEVEL                      @"level"
-#define DICT_ELEMENT_IS_CHALLENGE               @"isChallenge"
-#define DICT_ELEMENT_IS_BADGE                   @"isBadge"
+#define DICT_ELEMENT_SCORE                   @"score"
+#define DICT_ELEMENT_GATE                    @"gate"
+#define DICT_ELEMENT_REWARD                  @"reward"
+#define DICT_ELEMENT_WORLD                   @"world"
+#define DICT_ELEMENT_MISSION                 @"mission"
+#define DICT_ELEMENT_LEVEL                   @"level"
+#define DICT_ELEMENT_IS_CHALLENGE            @"isChallenge"
+#define DICT_ELEMENT_IS_BADGE                @"isBadge"
 
 
 @interface LevelUpEventHandling : NSObject

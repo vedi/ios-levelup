@@ -35,7 +35,7 @@ static NSString* TAG = @"SOOMLA RecordGate";
     }
     
     if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_SCORE_RECORD_CHANGED object:nil];
     }
     
     return self;
@@ -44,12 +44,12 @@ static NSString* TAG = @"SOOMLA RecordGate";
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super initWithDictionary:dict]) {
-        self.associatedScoreId = dict[BP_ASSOCSCOREID];
-        self.desiredRecord = [dict[BP_DESIRED_RECORD] doubleValue];
+        self.associatedScoreId = dict[LEVELUP_ASSOCSCOREID];
+        self.desiredRecord = [dict[LEVELUP_DESIRED_RECORD] doubleValue];
     }
     
     if (![self isOpen]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scoreRecordChanged:) name:EVENT_SCORE_RECORD_CHANGED object:nil];
     }
     
     return self;
@@ -59,9 +59,9 @@ static NSString* TAG = @"SOOMLA RecordGate";
     NSDictionary* parentDict = [super toDictionary];
     
     NSMutableDictionary* toReturn = [[NSMutableDictionary alloc] initWithDictionary:parentDict];
-    [toReturn setObject:self.associatedScoreId forKey:BP_ASSOCSCOREID];
-    [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:BP_DESIRED_RECORD];
-    [toReturn setObject:TYPE_NAME forKey:BP_TYPE];
+    [toReturn setObject:self.associatedScoreId forKey:LEVELUP_ASSOCSCOREID];
+    [toReturn setObject:[NSNumber numberWithDouble:self.desiredRecord] forKey:LEVELUP_DESIRED_RECORD];
+    [toReturn setObject:TYPE_NAME forKey:LEVELUP_TYPE];
     
     return toReturn;
 }

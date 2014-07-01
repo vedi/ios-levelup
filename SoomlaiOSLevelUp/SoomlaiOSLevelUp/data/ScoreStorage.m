@@ -73,7 +73,7 @@
 /** Private methods **/
 
 + (NSString *)keyScoresWithScoreId:(NSString *)scoreId andPostfix:(NSString *)postfix {
-    return [NSString stringWithFormat: @"%@scores.%@.%@", BP_DB_KEY_PREFIX, scoreId, postfix];
+    return [NSString stringWithFormat: @"%@scores.%@.%@", LEVELUP_DB_KEY_PREFIX, scoreId, postfix];
 }
 
 + (NSString *)keyLatestScoreWithScoreId:(NSString *)scoreId {

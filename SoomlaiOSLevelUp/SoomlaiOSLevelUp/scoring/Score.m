@@ -55,10 +55,10 @@ static DictionaryFactory* dictionaryFactory;
 
 - (id)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
-        self.scoreId = dict[BP_SCORE_SCOREID];
-        self.name = dict[BP_NAME];
-        self.startValue = [dict[BP_SCORE_STARTVAL] doubleValue];
-        self.higherBetter = [dict[BP_SCORE_HIGHBETTER] boolValue];
+        self.scoreId = dict[LEVELUP_SCORE_SCOREID];
+        self.name = dict[LEVELUP_NAME];
+        self.startValue = [dict[LEVELUP_SCORE_STARTVAL] doubleValue];
+        self.higherBetter = [dict[LEVELUP_SCORE_HIGHBETTER] boolValue];
     }
     
     return self;
@@ -67,11 +67,11 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary*)toDictionary {
     return [[NSDictionary alloc] initWithObjectsAndKeys:
             NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.scoreId, BP_SCORE_SCOREID,
-            self.name, BP_NAME,
-            self.startValue, BP_SCORE_STARTVAL,
-            self.higherBetter, BP_SCORE_HIGHBETTER,
-            TYPE_NAME, BP_TYPE,
+            self.scoreId, LEVELUP_SCORE_SCOREID,
+            self.name, LEVELUP_NAME,
+            self.startValue, LEVELUP_SCORE_STARTVAL,
+            self.higherBetter, LEVELUP_SCORE_HIGHBETTER,
+            TYPE_NAME, LEVELUP_TYPE,
             nil];
 }
 

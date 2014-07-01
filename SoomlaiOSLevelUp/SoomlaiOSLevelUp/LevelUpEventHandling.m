@@ -22,35 +22,35 @@
 
 
 + (void)observeAllEventsWithObserver:(id)observer withSelector:(SEL)selector{
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_SCORE_RECORD_CHANGED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_GATE_OPENED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_REWARD_GIVEN object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_REWARD_GIVEN object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_MISSION_COMPLETED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_MISSION_COMPLETION_REVOKED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_WORLD_COMPLETED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_LEVEL_STARTED object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_BP_LEVEL_ENDED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_SCORE_RECORD_CHANGED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_GATE_OPENED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_REWARD_GIVEN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_REWARD_GIVEN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_MISSION_COMPLETED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_MISSION_COMPLETION_REVOKED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_WORLD_COMPLETED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_LEVEL_STARTED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:EVENT_LEVEL_ENDED object:nil];
 }
 
 + (void)postScoreRecordChanged:(Score *)score {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:score forKey:DICT_ELEMENT_SCORE];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_SCORE_RECORD_CHANGED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_SCORE_RECORD_CHANGED object:self userInfo:userInfo];
 }
 
 + (void)postGateOpened:(Gate *)gate {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:gate forKey:DICT_ELEMENT_GATE];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_GATE_OPENED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_GATE_OPENED object:self userInfo:userInfo];
 }
 
 + (void)postRewardGiven:(Reward *)reward {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_GIVEN object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_REWARD_GIVEN object:self userInfo:userInfo];
 }
 
 + (void)postRewardTaken:(Reward *)reward {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:reward forKey:DICT_ELEMENT_REWARD];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_REWARD_TAKEN object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_REWARD_TAKEN object:self userInfo:userInfo];
 }
 
 + (void)postMissionCompleted:(Mission *)mission {
@@ -58,7 +58,7 @@
                               mission, DICT_ELEMENT_MISSION,
                               [mission isKindOfClass:[Challenge class]], DICT_ELEMENT_IS_CHALLENGE,
                               nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_MISSION_COMPLETED object:self userInfo:userInfo];
 }
 
 + (void)postMissionCompletionRevoked:(Mission *)mission {
@@ -66,22 +66,22 @@
                               mission, DICT_ELEMENT_MISSION,
                               [mission isKindOfClass:[Challenge class]], DICT_ELEMENT_IS_CHALLENGE,
                               nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_MISSION_COMPLETION_REVOKED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_MISSION_COMPLETION_REVOKED object:self userInfo:userInfo];
 }
 
 + (void)postWorldCompleted:(Mission *)world {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:world forKey:DICT_ELEMENT_WORLD];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_WORLD_COMPLETED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_WORLD_COMPLETED object:self userInfo:userInfo];
 }
 
 + (void)postLevelStarted:(Level *)level {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:level forKey:DICT_ELEMENT_LEVEL];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_LEVEL_STARTED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_LEVEL_STARTED object:self userInfo:userInfo];
 }
 
 + (void)postLevelEnded:(Level *)level {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:level forKey:DICT_ELEMENT_LEVEL];
-    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_BP_LEVEL_ENDED object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_LEVEL_ENDED object:self userInfo:userInfo];
 }
 
 @end

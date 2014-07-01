@@ -70,7 +70,7 @@ static DictionaryFactory* dictionaryFactory;
     if (self) {
         
         NSMutableArray* tmpRewards = [NSMutableArray array];
-        NSArray* rewardsArr = dict[BP_REWARDS];
+        NSArray* rewardsArr = dict[LEVELUP_REWARDS];
         
         // Iterate over all rewards in the JSON array and for each one create
         // an instance according to the reward type
@@ -91,15 +91,15 @@ static DictionaryFactory* dictionaryFactory;
 - (NSDictionary *)toDictionary {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                  NSStringFromClass([self class]), SOOM_CLASSNAME,
-                                 self.missionId, BP_MISSION_MISSIONID,
-                                 self.name, BP_NAME,
+                                 self.missionId, LEVELUP_MISSION_MISSIONID,
+                                 self.name, LEVELUP_NAME,
                                  nil];
     
     NSMutableArray* rewardsArr = [NSMutableArray array];
     for (Reward* reward in self.rewards) {
         [rewardsArr addObject:[reward toDictionary]];
     }
-    [dict setObject:rewardsArr forKey:BP_REWARDS];
+    [dict setObject:rewardsArr forKey:LEVELUP_REWARDS];
     
     return dict;
 }

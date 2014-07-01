@@ -60,7 +60,7 @@ static NSString* TAG = @"SOOMLA LevelUp";
 }
 
 - (void)save {
-    NSString* key = [NSString stringWithFormat:@"%@model", BP_DB_KEY_PREFIX];
+    NSString* key = [NSString stringWithFormat:@"%@model", LEVELUP_DB_KEY_PREFIX];
     NSString* value = [SoomlaUtils dictToJsonString:[self toDictionary]];
     LogDebug(TAG, ([NSString stringWithFormat:@"saving LevelUp to DB. json is: %@", value]));
     [KeyValueStorage setValue:value forKey:key];
@@ -73,7 +73,7 @@ static NSString* TAG = @"SOOMLA LevelUp";
     }
     
     return [[NSDictionary alloc] initWithObjectsAndKeys:
-            initialWorldsArr, BP_WORLDS,
+            initialWorldsArr, LEVELUP_WORLDS,
             nil];
 }
 

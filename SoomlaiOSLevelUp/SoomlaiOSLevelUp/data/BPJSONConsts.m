@@ -19,51 +19,51 @@
 
 /** Global **/
 
-NSString *const BP_ASSOCITEMID       = @"associatedItemId";
-NSString *const BP_ASSOCSCOREID      = @"associatedScoreId";
-NSString *const BP_ASSOCWORLDID      = @"associatedWorldId";
-NSString *const BP_DESIRED_RECORD    = @"desiredRecord";
-NSString *const BP_DESIRED_BALANCE   = @"desiredBalance";
-NSString *const BP_NAME              = @"name";
-NSString *const BP_TYPE              = @"jsonType";
+NSString *const LEVELUP_ASSOCITEMID       = @"associatedItemId";
+NSString *const LEVELUP_ASSOCSCOREID      = @"associatedScoreId";
+NSString *const LEVELUP_ASSOCWORLDID      = @"associatedWorldId";
+NSString *const LEVELUP_DESIRED_RECORD    = @"desiredRecord";
+NSString *const LEVELUP_DESIRED_BALANCE   = @"desiredBalance";
+NSString *const LEVELUP_NAME              = @"name";
+NSString *const LEVELUP_TYPE              = @"jsonType";
 
 
 /** Score **/
 
-NSString *const BP_SCORES            = @"scores";
-NSString *const BP_SCORE_SCOREID     = @"scoreId";
-NSString *const BP_SCORE_STARTVAL    = @"startValue";
-NSString *const BP_SCORE_HIGHBETTER  = @"higherBetter";
+NSString *const LEVELUP_SCORES            = @"scores";
+NSString *const LEVELUP_SCORE_SCOREID     = @"scoreId";
+NSString *const LEVELUP_SCORE_STARTVAL    = @"startValue";
+NSString *const LEVELUP_SCORE_HIGHBETTER  = @"higherBetter";
 
-NSString *const BP_SCORE_RANGE       = @"range";
-NSString *const BP_SCORE_RANGE_LOW   = @"low";
-NSString *const BP_SCORE_RANGE_HIGH  = @"high";
+NSString *const LEVELUP_SCORE_RANGE       = @"range";
+NSString *const LEVELUP_SCORE_RANGE_LOW   = @"low";
+NSString *const LEVELUP_SCORE_RANGE_HIGH  = @"high";
 
 
 /** Reward **/
 
-NSString *const BP_REWARDS           = @"rewards";
-NSString *const BP_REWARD_REPEAT     = @"repeatable";
-NSString *const BP_REWARD_REWARDID   = @"rewardId";
-NSString *const BP_REWARD_AMOUNT     = @"amount";
-NSString *const BP_REWARD_ICONURL    = @"iconUrl";
+NSString *const LEVELUP_REWARDS           = @"rewards";
+NSString *const LEVELUP_REWARD_REPEAT     = @"repeatable";
+NSString *const LEVELUP_REWARD_REWARDID   = @"rewardId";
+NSString *const LEVELUP_REWARD_AMOUNT     = @"amount";
+NSString *const LEVELUP_REWARD_ICONURL    = @"iconUrl";
 
 
 /** Gate **/
 
-NSString *const BP_GATES             = @"gates";
-NSString *const BP_GATE_GATEID       = @"gateId";
+NSString *const LEVELUP_GATES             = @"gates";
+NSString *const LEVELUP_GATE_GATEID       = @"gateId";
 
 
 /** Challenge **/
 
-NSString *const BP_CHALLENGES        = @"challenges";
-NSString *const BP_MISSIONS          = @"missions";
-NSString *const BP_MISSION_MISSIONID = @"missionId";
+NSString *const LEVELUP_CHALLENGES        = @"challenges";
+NSString *const LEVELUP_MISSIONS          = @"missions";
+NSString *const LEVELUP_MISSION_MISSIONID = @"missionId";
 
 
 /** World **/
 
-NSString *const BP_WORLDS            = @"worlds";
-NSString *const BP_WORLD_WORLDID     = @"worldId";
+NSString *const LEVELUP_WORLDS            = @"worlds";
+NSString *const LEVELUP_WORLD_WORLDID     = @"worldId";
 
