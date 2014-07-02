@@ -71,10 +71,7 @@ static NSString* TAG = @"SOOMLA LevelUp";
     for (NSString* worldId in initialWorlds) {
         [initialWorldsArr addObject:initialWorlds[worldId]];
     }
-    
-    return [[NSDictionary alloc] initWithObjectsAndKeys:
-            initialWorldsArr, LU_WORLDS,
-            nil];
+    return @{LU_WORLDS: initialWorldsArr};
 }
 
 - (Score*)fetchScoreWithScoreId:(NSString *)scoreId fromWorlds:(NSDictionary *)worlds {

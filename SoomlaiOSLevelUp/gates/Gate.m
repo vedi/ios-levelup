@@ -62,10 +62,10 @@ static DictionaryFactory* dictionaryFactory;
 }
 
 - (NSDictionary*)toDictionary {
-    return [[NSDictionary alloc] initWithObjectsAndKeys:
-            NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.gateId, LU_GATE_GATEID,
-            nil];
+    return @{
+             SOOM_CLASSNAME: NSStringFromClass([self class]),
+             LU_GATE_GATEID: self.gateId
+             };
 }
 
 - (BOOL)tryOpen {

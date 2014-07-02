@@ -41,10 +41,10 @@
 }
 
 - (NSDictionary*)toDictionary {
-    return [[NSDictionary alloc] initWithObjectsAndKeys:
-            [NSNumber numberWithDouble:self.low], LU_SCORE_RANGE_LOW,
-            [NSNumber numberWithDouble:self.high], LU_SCORE_RANGE_HIGH,
-            nil];
+    return @{
+             LU_SCORE_RANGE_LOW: @(self.low),
+             LU_SCORE_RANGE_HIGH: @(self.high)
+             };
 }
 
 

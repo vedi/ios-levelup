@@ -64,13 +64,13 @@ static DictionaryFactory* dictionaryFactory;
 };
 
 - (NSDictionary*)toDictionary {
-    return [[NSDictionary alloc] initWithObjectsAndKeys:
-            NSStringFromClass([self class]), SOOM_CLASSNAME,
-            self.scoreId, LU_SCORE_SCOREID,
-            self.name, LU_NAME,
-            self.startValue, LU_SCORE_STARTVAL,
-            self.higherBetter, LU_SCORE_HIGHBETTER,
-            nil];
+    return @{
+             SOOM_CLASSNAME: NSStringFromClass([self class]),
+             LU_SCORE_SCOREID: self.scoreId,
+             LU_NAME: self.name,
+             LU_SCORE_STARTVAL: @(self.startValue),
+             LU_SCORE_HIGHBETTER: @(self.higherBetter)
+             };
 }
 
 - (BOOL)isHigherBetter {
