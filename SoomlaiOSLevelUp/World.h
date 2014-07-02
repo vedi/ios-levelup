@@ -71,7 +71,5 @@
 
 + (World *)fromDictionary:(NSDictionary *)dict;
 
-+ (NSString *)getTypeName;
-
 
 @end
