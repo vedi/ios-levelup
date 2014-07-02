@@ -13,7 +13,7 @@
 		EF081C94193723AD00847E47 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C92193723AD00847E47 /* Level.m */; };
 		EF081C971937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
 		EF081C981937252B00847E47 /* LevelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF081C961937252B00847E47 /* LevelStorage.m */; };
-		EF4CDD58194F31AC008B1CF2 /* libSoomlaiOSStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */; };
+		EF1892791963F2AE0096F624 /* libSoomlaiOSStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1892781963F28B0096F624 /* libSoomlaiOSStore.a */; };
 		EF4CDD5A194F31AC008B1CF2 /* libSoomlaiOSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4CDD59194F31AC008B1CF2 /* libSoomlaiOSCore.a */; };
 		EF73CCA11932292D00A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
 		EF73CCA21932293000A171E5 /* RangeScore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF73CCA01932292D00A171E5 /* RangeScore.m */; };
@@ -100,14 +100,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EF4CDD54194F319F008B1CF2 /* PBXContainerItemProxy */ = {
+		EF1892771963F28B0096F624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C02CEC42160DC870000AA0D2;
 			remoteInfo = SoomlaiOSStore;
 		};
-		EF4CDD56194F31A9008B1CF2 /* PBXContainerItemProxy */ = {
+		EF18927A1963F2B50096F624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
 			proxyType = 1;
@@ -130,7 +130,7 @@
 		EF081C92193723AD00847E47 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		EF081C951937252B00847E47 /* LevelStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelStorage.h; path = data/LevelStorage.h; sourceTree = "<group>"; };
 		EF081C961937252B00847E47 /* LevelStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelStorage.m; path = data/LevelStorage.m; sourceTree = "<group>"; };
-		EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoomlaiOSStore.xcodeproj; path = "../submodules/ios-store/SoomlaiOSStore.xcodeproj"; sourceTree = "<group>"; };
+		EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoomlaiOSStore.xcodeproj; path = "submodules/ios-store/SoomlaiOSStore.xcodeproj"; sourceTree = "<group>"; };
 		EF4CDD59194F31AC008B1CF2 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoomlaiOSCore.a; path = "../../../Library/Developer/Xcode/DerivedData/SoomlaiOSLevelUp-dftodavkzlghkiedetnqhlcslapb/Build/Products/Debug-iphoneos/libSoomlaiOSCore.a"; sourceTree = "<group>"; };
 		EF73CC9F1932292D00A171E5 /* RangeScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeScore.h; sourceTree = "<group>"; };
 		EF73CCA01932292D00A171E5 /* RangeScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeScore.m; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4CDD5A194F31AC008B1CF2 /* libSoomlaiOSCore.a in Frameworks */,
-				EF4CDD58194F31AC008B1CF2 /* libSoomlaiOSStore.a in Frameworks */,
+				EF1892791963F2AE0096F624 /* libSoomlaiOSStore.a in Frameworks */,
 				EFCDC729192E1EB5001D0824 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,10 +214,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF4CDD50194F319F008B1CF2 /* Products */ = {
+		EF1892741963F28B0096F624 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */,
+				EF1892781963F28B0096F624 /* libSoomlaiOSStore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EF4CDD57194F31A9008B1CF2 /* PBXTargetDependency */,
+				EF18927B1963F2B50096F624 /* PBXTargetDependency */,
 			);
 			name = SoomlaiOSLevelUp;
 			productName = SoomlaiOSLevelUp;
@@ -470,7 +470,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EF4CDD50194F319F008B1CF2 /* Products */;
+					ProductGroup = EF1892741963F28B0096F624 /* Products */;
 					ProjectRef = EF4CDD4F194F319F008B1CF2 /* SoomlaiOSStore.xcodeproj */;
 				},
 			);
@@ -483,11 +483,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EF4CDD55194F319F008B1CF2 /* libSoomlaiOSStore.a */ = {
+		EF1892781963F28B0096F624 /* libSoomlaiOSStore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSoomlaiOSStore.a;
-			remoteRef = EF4CDD54194F319F008B1CF2 /* PBXContainerItemProxy */;
+			remoteRef = EF1892771963F28B0096F624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -593,10 +593,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EF4CDD57194F31A9008B1CF2 /* PBXTargetDependency */ = {
+		EF18927B1963F2B50096F624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SoomlaiOSStore;
-			targetProxy = EF4CDD56194F31A9008B1CF2 /* PBXContainerItemProxy */;
+			targetProxy = EF18927A1963F2B50096F624 /* PBXContainerItemProxy */;
 		};
 		EFCDC73C192E1EB6001D0824 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -702,9 +702,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
-					"$(SRCROOT)/../submodules/ios-store/SoomlaiOSStore/**",
-					"$(SRCROOT)/../submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
+					"$(SRCROOT)/submodules/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -727,9 +726,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SOOMLA_HOME)/soomlibraries/ios/compilations/debug/headers/public",
-					"$(SRCROOT)/../submodules/ios-store/SoomlaiOSStore/**",
-					"$(SRCROOT)/../submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
+					"$(SRCROOT)/submodules/ios-store/SoomlaiOSStore/**",
+					"$(SRCROOT)/submodules/ios-store/submodules/soomla-ios-core/SoomlaiOSCore/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
