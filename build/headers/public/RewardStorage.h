@@ -15,7 +15,6 @@
  */
 
 @class Reward;
-@class SequenceReward;
 
 @interface RewardStorage : NSObject
 
@@ -25,8 +24,8 @@
 
 + (BOOL)isRewardGiven:(Reward *)reward;
 
-+ (int)getLastSeqIdxGivenForReward:(SequenceReward *)sequenceReward;
++ (int)getLastSeqIdxGivenForReward:(Reward *)reward;
 
-+ (void)setLastSeqIdxGiven:(int)idx ForReward:(SequenceReward *)sequenceReward;
++ (void)setLastSeqIdxGiven:(int)idx ForReward:(Reward *)reward;
 
 @end
