@@ -16,38 +16,18 @@
 
 #import "SoomlaEntity.h"
 
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+// TODO: Document abstract class
+@interface Gate : SoomlaEntity {
+    
 }
 
-@property (nonatomic) Schedule* schedule;
+- (id)initWithGateId:(NSString *)oGateId;
 
+- (id)initWithGateId:(NSString *)oGateId andName:(NSString *)oName;
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
 
 // Static methods
 
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
++ (Gate *)fromDictionary:(NSDictionary *)dict;
 
 @end

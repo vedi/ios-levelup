@@ -14,40 +14,41 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#import "Score.h"
 
-@class Schedule;
 
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface Range : Score {
+    
+    @private
+    double low;
+    double high;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (nonatomic) double low;
+@property (nonatomic) double high;
 
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+- (id)initWithLow:(double)oLow andHigh:(double)oHigh;
 
 @end
+
+
+
+
+
+@interface RangeScore : Score {
+    
+    @private
+    Range* range;
+}
+
+
+@property (strong, nonatomic) Range* range;
+
+
+- (id)initWithScoreId:(NSString *)oScoreId andRange:(Range *)oRange;
+
+- (id)initWithScoreId:(NSString *)oScoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter andRange:(Range *)oRange;
+
+@end
+
+

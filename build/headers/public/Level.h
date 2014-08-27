@@ -14,40 +14,24 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#import "World.h"
 
-@class Schedule;
+typedef NS_ENUM(NSInteger, LevelState) {
+    IDLE,
+    RUNNING,
+    PAUSED,
+    ENDED,
+    COMPLETED
+};
 
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface Level : World {
+
+    @private
+    long long startTime;
+    long long elapsed;
+    LevelState state;
 }
 
-@property (nonatomic) Schedule* schedule;
-
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+@property LevelState state;
 
 @end

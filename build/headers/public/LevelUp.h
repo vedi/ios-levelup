@@ -14,40 +14,4 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
-
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
-}
-
-@property (nonatomic) Schedule* schedule;
-
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
-
-@end
+#define LU_DB_KEY_PREFIX @"soomla.levelup."

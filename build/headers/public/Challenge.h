@@ -13,41 +13,18 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#import "Mission.h"
 
-#import "SoomlaEntity.h"
-
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface Challenge : Mission {
+    
+    @private
+    NSArray* missions;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (strong, nonatomic) NSArray* missions;
 
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions;
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions andRewards:(NSArray *)oRewards;
 
 @end

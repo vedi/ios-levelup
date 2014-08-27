@@ -14,40 +14,25 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+/**
+ This file holds the store's configurations.
+ */
 
-@class Schedule;
+/**
+ This value defines the version of the metadata located in your database.
+ 
+ @warning NEVER CHANGE THE VALUE FOR THIS VARIABLE !!!
+ */
+extern const int METADATA_VERSION;
 
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
-}
+/**
+ When set to 'YES', this removes the need to verify purchases when there's no
+ signature.
+ NOTE: This is useful while you are in development and testing stages of your 
+ game.
 
-@property (nonatomic) Schedule* schedule;
+ @warning Set to 'NO' before you publish your app!!!
+ */
+extern BOOL VERIFY_PURCHASES;
 
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
-
-@end
+extern NSString* VERIFY_URL;

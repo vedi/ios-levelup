@@ -14,40 +14,16 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#import "Gate.h"
 
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface PurchasableGate : Gate {
+    
+    @private
+    NSString* associatedItemId;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (strong, nonatomic) NSString* associatedItemId;
 
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+- (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId;
 
 @end

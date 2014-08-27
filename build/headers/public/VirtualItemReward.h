@@ -14,40 +14,19 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#import "Reward.h"
 
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface VirtualItemReward : Reward {
+    
+    @private
+    int amount;
+    NSString* associatedItemId;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (strong, nonatomic) NSString* associatedItemId;
+@property (nonatomic) int amount;
 
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andAmount:(int)oAmount andAssociatedItemId:(NSString *)oAssociatedItemId;
 
 @end

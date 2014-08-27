@@ -14,40 +14,16 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+@interface WorldStorage : NSObject
 
-@class Schedule;
++ (void)setCompleted:(BOOL)completed forWorld:(NSString *)worldId;
 
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
-}
++ (void)setCompleted:(BOOL)completed forWorld:(NSString *)worldId andNotify:(BOOL)notify;
 
-@property (nonatomic) Schedule* schedule;
++ (BOOL)isWorldCompleted:(NSString *)worldId;
 
++ (void)setReward:(NSString*)rewardId forWorld:(NSString *)worldId;
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
++ (NSString*)getAssignedReward:(NSString *)worldId;
 
 @end

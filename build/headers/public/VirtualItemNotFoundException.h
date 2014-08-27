@@ -14,40 +14,19 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
+#import <Foundation/Foundation.h>
 
-@class Schedule;
+/**
+ This exception is thrown when looking for a Virtual Item that cannot be found.
+ */
+@interface VirtualItemNotFoundException : NSException
 
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
-}
-
-@property (nonatomic) Schedule* schedule;
-
-
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+/**
+ Constructor
+ 
+ @param lookupField The field of the virtual item to look for.
+ @param lookupVal The value of the field to look for.
+ */
+- (id)initWithLookupField:(NSString*)lookupField andLookupValue:(NSString*)lookupVal;
 
 @end

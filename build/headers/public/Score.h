@@ -16,38 +16,27 @@
 
 #import "SoomlaEntity.h"
 
-@class Schedule;
-
-// TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface Score : SoomlaEntity {
+    
+    @private
+    double      startValue;
+    BOOL        higherBetter;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (nonatomic) double startValue;
+@property (nonatomic) BOOL higherBetter;
 
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
+- (id)initWithScoreId:(NSString *)oScoreId;
 
-- (id)initWithDictionary:(NSDictionary *)dict;
+- (id)initWithScoreId:(NSString *)scoreId andName:(NSString *)oName andHigherBetter:(BOOL)oHigherBetter;
 
-- (NSDictionary *)toDictionary;
+- (BOOL)isHigherBetter;
 
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)canGive;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
 
 // Static methods
 
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
++ (Score *)fromDictionary:(NSDictionary *)dict;
 
 @end
+
