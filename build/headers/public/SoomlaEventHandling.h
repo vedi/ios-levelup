@@ -18,7 +18,6 @@
 
 @interface SoomlaEventHandling : NSObject
 
-+ (void)observeAllEventsWithObserver:(id)observer withSelector:(SEL)selector;
 + (void)postRewardGiven:(Reward *)reward;
 + (void)postRewardTaken:(Reward *)reward;
 

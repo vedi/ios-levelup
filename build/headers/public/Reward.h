@@ -14,16 +14,18 @@
  limitations under the License.
  */
 
-#import "SoomlaEntity.h"
-
-@class Schedule;
-
 // TODOL document abstract class
-@interface Reward : SoomlaEntity {
-    Schedule* schedule;
+@interface Reward : NSObject {
+    
+    @private
+    NSString* rewardId;
+    NSString* name;
+    BOOL repeatable;
 }
 
-@property (nonatomic) Schedule* schedule;
+@property (strong, nonatomic) NSString* rewardId;
+@property (strong, nonatomic) NSString* name;
+@property (nonatomic) BOOL repeatable;
 
 
 - (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
@@ -35,8 +37,6 @@
 - (BOOL)give;
 
 - (BOOL)take;
-
-- (BOOL)canGive;
 
 - (BOOL)isOwned;
 
