@@ -14,19 +14,19 @@
  limitations under the License.
  */
 
-@class Reward;
-@class SequenceReward;
+#import "Gate.h"
 
-@interface RewardStorage : NSObject
+@interface BalanceGate : Gate {
 
-+ (void)setStatus:(BOOL)status forReward:(Reward *)reward;
+    @private
+    NSString*   associatedItemId;
+    int         desiredBalance;
+}
 
-+ (void)setStatus:(BOOL)status forReward:(Reward *)reward andNotify:(BOOL)notify;
+@property (strong, nonatomic) NSString* associatedItemId;
+@property (nonatomic) int desiredBalance;
 
-+ (BOOL)isRewardGiven:(Reward *)reward;
 
-+ (int)getLastSeqIdxGivenForReward:(SequenceReward *)sequenceReward;
-
-+ (void)setLastSeqIdxGiven:(int)idx ForReward:(SequenceReward *)sequenceReward;
+- (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
 @end

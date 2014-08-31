@@ -13,41 +13,18 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+#import "Mission.h"
 
-// TODOL document abstract class
-@interface Reward : NSObject {
+@interface Challenge : Mission {
     
     @private
-    NSString* rewardId;
-    NSString* name;
-    BOOL repeatable;
+    NSArray* missions;
 }
 
-@property (strong, nonatomic) NSString* rewardId;
-@property (strong, nonatomic) NSString* name;
-@property (nonatomic) BOOL repeatable;
+@property (strong, nonatomic) NSArray* missions;
 
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions;
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName;
-
-- (id)initWithDictionary:(NSDictionary *)dict;
-
-- (NSDictionary *)toDictionary;
-
-- (BOOL)give;
-
-- (BOOL)take;
-
-- (BOOL)isOwned;
-
-// Abstract methods
-
-- (BOOL)giveInner;
-
-- (BOOL)takeInner;
-
-// Static methods
-
-+ (Reward *)fromDictionary:(NSDictionary *)dict;
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName andMissions:(NSArray *)oMissions andRewards:(NSArray *)oRewards;
 
 @end
