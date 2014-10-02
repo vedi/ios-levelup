@@ -67,6 +67,14 @@
  */
 - (void)deleteKeyValWithKey:(NSString *)key;
 
+/**
+ Purges the entire DB
+ 
+ NOTE: Use with caution, since this will delete all the user's local information
+ This message is used mainly for while in testing.
+ */
+- (void)purgeDatabase;
+
 
 /** SOOMLA keys **/
 
@@ -77,8 +85,6 @@
 + (NSString*) keyGoodUpgrade:(NSString*)itemId;
 
 + (NSString*) keyCurrencyBalance:(NSString*)itemId;
-
-+ (NSString*) keyNonConsExists:(NSString*)productId;
 
 + (NSString*) keyMetaStoreInfo;
 
