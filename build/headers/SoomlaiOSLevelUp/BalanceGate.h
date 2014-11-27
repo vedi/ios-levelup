@@ -14,19 +14,19 @@
  limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "Gate.h"
 
-/**
- This exception is thrown when looking for a Virtual Item that cannot be found.
- */
-@interface VirtualItemNotFoundException : NSException
+@interface BalanceGate : Gate {
 
-/**
- Constructor
- 
- @param lookupField The field of the virtual item to look for.
- @param lookupVal The value of the field to look for.
- */
-- (id)initWithLookupField:(NSString*)lookupField andLookupValue:(NSString*)lookupVal;
+    @private
+    NSString*   associatedItemId;
+    int         desiredBalance;
+}
+
+@property (strong, nonatomic) NSString* associatedItemId;
+@property (nonatomic) int desiredBalance;
+
+
+- (id)initWithGateId:(NSString *)oGateId andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
 @end

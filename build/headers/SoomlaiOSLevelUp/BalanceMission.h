@@ -14,19 +14,16 @@
  limitations under the License.
  */
 
-#import "Reward.h"
+#import "Mission.h"
 
-@interface VirtualItemReward : Reward {
-    
-    @private
-    int amount;
-    NSString* associatedItemId;
+@interface BalanceMission : Mission {
 }
 
-@property (strong, nonatomic) NSString* associatedItemId;
-@property (nonatomic) int amount;
 
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+    andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
-- (id)initWithRewardId:(NSString *)oRewardId andName:(NSString *)oName andAmount:(int)oAmount andAssociatedItemId:(NSString *)oAssociatedItemId;
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+             andRewards:(NSArray *)oRewards andAssociatedItemId:(NSString *)oAssociatedItemId andDesiredBalance:(int)oDesiredBalance;
 
 @end

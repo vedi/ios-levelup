@@ -14,25 +14,15 @@
  limitations under the License.
  */
 
-/**
- This file holds the store's configurations.
- */
+#import "Mission.h"
 
-/**
- This value defines the version of the metadata located in your database.
- 
- @warning NEVER CHANGE THE VALUE FOR THIS VARIABLE !!!
- */
-extern const int METADATA_VERSION;
+@interface RecordMission : Mission {
+}
 
-/**
- When set to 'YES', this removes the need to verify purchases when there's no
- signature.
- NOTE: This is useful while you are in development and testing stages of your 
- game.
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+   andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord;
 
- @warning Set to 'NO' before you publish your app!!!
- */
-extern BOOL VERIFY_PURCHASES;
+- (id)initWithMissionId:(NSString *)oMissionId andName:(NSString *)oName
+             andRewards:(NSArray *)oRewards andAssociatedScoreId:(NSString *)oAssociatedScoreId andDesiredRecord:(int)oDesiredRecord;
 
-extern NSString* VERIFY_URL;
+@end
